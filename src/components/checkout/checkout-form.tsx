@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation'
 import { useCartStore } from '@/features/cart/store'
 import { computePricing, DELIVERY_ZONES } from '@/features/pricing/compute'
 import { resolveSku } from '@/features/catalog/resolve'
+import { generateDeliverySlots } from '@/features/slots/generate'
 import { toast } from 'sonner'
 import { Loader2 } from 'lucide-react'
 
@@ -15,6 +16,7 @@ export function CheckoutForm() {
   const { items, clearCart } = useCartStore()
   const [mounted, setMounted] = React.useState(false)
   const [isSubmitting, setIsSubmitting] = React.useState(false)
+  const availableSlots = React.useMemo(() => generateDeliverySlots(), [])
 
   const [formData, setFormData] = React.useState({
     name: '',
@@ -22,6 +24,7 @@ export function CheckoutForm() {
     email: '',
     zoneId: 'pickup',
     address: '',
+    slotId: availableSlots[0]?.id || '',
     notes: ''
   })
 
@@ -177,6 +180,22 @@ export function CheckoutForm() {
                 />
               </div>
             )}
+
+            <div>
+              <label className="block text-sm font-semibold text-ink mb-2">Select Delivery/Pickup Time *</label>
+              <select
+                required
+                value={formData.slotId}
+                onChange={e => setFormData({ ...formData, slotId: e.target.value })}
+                className="w-full px-4 py-3 rounded-lg border border-line focus:border-leaf-800 focus:ring-1 focus:ring-leaf-800 outline-none transition-all bg-canvas"
+              >
+                {availableSlots.map(slot => (
+                  <option key={slot.id} value={slot.id} disabled={!slot.isAvailable}>
+                    {slot.label}
+                  </option>
+                ))}
+              </select>
+            </div>
 
             <div>
               <label className="block text-sm font-semibold text-ink mb-2">Order Notes (Optional)</label>
