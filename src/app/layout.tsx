@@ -11,6 +11,7 @@ import { MobileBottomBar } from "@/components/shell/mobile-bottom-bar"
 import { QuickContact } from "@/components/shell/quick-contact"
 import { SkipLink } from "@/components/shell/skip-link"
 import { Toaster } from "@/components/ui/sonner"
+import { CartSheet } from "@/components/cart/cart-sheet"
 
 const firaSans = Fira_Sans({
   subsets: ["latin"],
@@ -62,6 +63,7 @@ export default function RootLayout({
         <MobileBottomBar />
         <QuickContact />
         <Toaster />
+        <CartSheet />
       </body>
     </html>
   )
