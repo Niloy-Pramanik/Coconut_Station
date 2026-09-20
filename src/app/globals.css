@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Canvas & surfaces ─────────────────────────────── */
+  --color-canvas: #F8F7EE;        /* page background */
+  --color-surface: #FFFFFF;       /* cards, inputs, sheets */
+  --color-sand: #EFEBD9;          /* quiet panels, sold-out fill */
+  --color-tile-from: #FFFFFF;     /* product tile gradient start */
+  --color-tile-to: #F1EFE4;       /* product tile gradient end */
+
+  /* ── Lines ────────────────────────────────────────── */
+  --color-line-soft: #E8E4D3;     /* decorative dividers */
+  --color-line: #D9D2BB;          /* card borders */
+  --color-line-strong: #857D60;   /* input borders (≥3:1 on canvas & white) */
+
+  /* ── Text ─────────────────────────────────────────── */
+  --color-ink: #1A140C;           /* body text */
+  --color-ink-soft: #4A4335;      /* secondary text */
+  --color-ink-muted: #655E49;     /* captions, placeholders (≥4.5:1) */
+  --color-espresso: #2E1E0B;      /* logo brown, script line */
+  --color-wood: #7A451A;          /* wood/coffee accent, "Classic" badge */
+
+  /* ── Leaf greens (brand) ─────────────────────────── */
+  --color-leaf-50: #F1F5E7;
+  --color-leaf-100: #E4EDD3;
+  --color-leaf-200: #CDD9B2;
+  --color-leaf-300: #B5D256;      /* lime tint — only on dark green surfaces */
+  --color-leaf-500: #7AA20B;      /* lime accent — decorative only, never text on light */
+  --color-leaf-600: #4A7C1F;
+  --color-leaf-700: #366318;      /* PRIMARY: buttons, links, icons */
+  --color-leaf-800: #2B5610;      /* headings, hover, active nav */
+  --color-leaf-900: #1F3D12;      /* footer, bulk band, focus ring */
+
+  /* ── Feedback ─────────────────────────────────────── */
+  --color-danger: #B3261E;
+  --color-danger-bg: #FBE9E7;
+  --color-warning: #7A4A00;
+  --color-warning-bg: #FDF1D8;
+  --color-info: #0F5A6B;
+  --color-info-bg: #DCF0F3;
+  --color-focus: #1F3D12;
+
+  /* ── Type ─────────────────────────────────────────── */
+  --font-sans: var(--font-fira), ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-script: var(--font-marck), "Brush Script MT", cursive;
+  --font-bn: var(--font-hind), "Noto Sans Bengali", "Kalpurush", sans-serif;
+
+  --text-xs: 0.8125rem;   --text-xs--line-height: 1.5;
+  --text-sm: 0.9375rem;   --text-sm--line-height: 1.5;
+  --text-base: 1.0625rem; --text-base--line-height: 1.65;
+  --text-lg: 1.1875rem;   --text-lg--line-height: 1.6;
+  --text-xl: 1.375rem;    --text-xl--line-height: 1.4;
+  --text-2xl: 1.75rem;    --text-2xl--line-height: 1.25;
+  --text-3xl: clamp(1.75rem, 1.3rem + 1.6vw, 2.5rem);   --text-3xl--line-height: 1.15;
+  --text-4xl: clamp(2.125rem, 1.4rem + 2.6vw, 3.5rem);  --text-4xl--line-height: 1.08;
+  --text-hero: clamp(2.75rem, 1.5rem + 4.8vw, 5.5rem);  --text-hero--line-height: 0.98;
+  --text-script: clamp(2.5rem, 1.4rem + 4.4vw, 5rem);   --text-script--line-height: 1.05;
+
+  /* ── Shape ────────────────────────────────────────── */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+  --radius-pill: 999px;
+
+  /* ── Elevation ────────────────────────────────────── */
+  --shadow-soft: 0 1px 2px rgb(46 30 11 / .06), 0 8px 24px -8px rgb(46 30 11 / .12);
+  --shadow-lift: 0 2px 4px rgb(46 30 11 / .06), 0 18px 40px -12px rgb(46 30 11 / .22);
+  --shadow-header: 0 1px 0 rgb(46 30 11 / .06), 0 10px 30px -18px rgb(46 30 11 / .35);
+  --shadow-pop: 0 4px 8px rgb(46 30 11 / .08), 0 24px 48px -16px rgb(46 30 11 / .30);
+
+  /* ── Layout ───────────────────────────────────────── */
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 96rem;
+  --container-page: 80rem;
+
+  /* ── Motion ───────────────────────────────────────── */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out-soft: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+@layer base {
+  :root {
+    --duration-fast: 140ms;
+    --duration-base: 220ms;
+    --duration-slow: 420ms;
+    --duration-hero: 900ms;
+    --header-h: 88px;               /* compact: 64px */
+    --header-h-compact: 64px;
+    --tap: 44px;
+    --z-header: 40; --z-bottom-bar: 45; --z-floating: 50; --z-sheet: 60; --z-dialog: 70; --z-toast: 80;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  /* Bangla: Hind Siliguri, generous line height, no uppercase */
+  :lang(bn) body { font-family: var(--font-bn); line-height: 1.8; }
+  :lang(bn) .uppercase { text-transform: none !important; }
+}
