@@ -1,0 +1,45 @@
+# Coconut Station — Website Build Pack
+
+Everything an AI agent team needs to build, verify and deploy the Coconut Station e-commerce website: requirements, design system, agent plan, a master prompt, per-agent prompts, brand content and prepared image assets.
+
+> **Status:** this is the *hand-off pack*, not the finished site. The website code is produced by running the master prompt (below). Nothing here is a placeholder for missing documents: the three specs are complete and cross-referenced.
+
+## Start in three steps
+1. Open this folder in an agentic coding tool (shell + file access + internet; Node ≥ 22, git, Docker or a Postgres URL).
+2. Send: **"Read `MASTER_PROMPT.md` and execute it."** (or paste the prompt block from that file).
+3. Review at the two human gates — **G2** (design, after the marketing pages) and **G6** (launch go/no-go). Then follow `DEPLOYMENT.md` (written by the agents) to put it on your domain.
+
+## What's inside
+```
+MASTER_PROMPT.md            the working prompt (orchestrator + multi-agent instructions)
+AGENTS.md  CLAUDE.md        persistent context that agent tools load automatically
+DECISIONS.md                assumptions log, pre-seeded (D-001…D-020)
+OWNER_INPUTS.md             what you still need to supply (prices, hours, numbers, accounts)
+docs/
+  01_PRD.md                 product requirements (FR/NFR IDs, catalog, commerce rules, launch checklist)
+  02_AGENT_DEVELOPMENT_PLAN.md   architecture, contracts, DB schema, phases T0.1–T6.7, parallel tracks
+  03_DESIGN_SYSTEM.md       colour/type tokens, wireframes, hero hotspots, components, motion, shot list, Bangla glossary
+  agents/                   prompts for Orchestrator, Track A (Experience), B (Commerce), C (Ops), Reviewer
+.claude/agents/             the same agents as Claude Code sub-agent definitions (thin wrappers)
+content/                    brand master plan + website content (Markdown) and the original .docx files
+assets/                     prepared images: brand/, scenes/, products/, posters/, reference/, source-originals/
+                            + asset-manifest.json (alt text EN/BN, quality level, provenance)
+bootstrap/                  place-assets.sh (moves assets into public/ + design-reference/), verify-pack.mjs
+```
+
+## What was prepared for you
+- **Specs completed:** the design system (`03`) was the missing document; it fixes tokens sampled from your mock, wireframes, hero-hotspot coordinates measured on the actual crops, motion specs and a Bangla glossary.
+- **Assets processed:** 12 product images cropped from your four posters (overlapping text removed where needed), 3 low-res placeholders for shake / basil shake / coffee (taken from the home mock), hero scene crops with the headline text removed, transparent logo files (full, cream, mark, tagline), and a manifest. Originals are kept in `assets/source-originals/`.
+
+## Read this before launch
+- **Imagery is interim.** Product photos are crops of marketing posters and the outlet/hero images are AI renders. Three SKUs (coffee, both shakes) use ~180 px placeholders and **will fail the production build** (`STRICT_LAUNCH=1`) until real photos are added (or those products are set to hidden). Shot list: `docs/03_DESIGN_SYSTEM.md` §9. The logo is a raster extraction; supply the SVG.
+- **No prices, hours, delivery zones or payment numbers exist in your source files.** The site shows safe defaults ("Ask at outlet", checkout disabled) until you fill `OWNER_INPUTS.md`.
+- **Source conflicts** were resolved with documented defaults (300 ml water, "Classic" pudding name, the vision wording, the passed 16 Aug opening date) — see `DECISIONS.md`; change any of them in one place.
+- **Bangla is machine-drafted** and flagged for native review; the two Bangla poster lines are used verbatim.
+- **Legal pages are templates** and must be reviewed by you or a lawyer. Health/wellness copy is deliberately conservative.
+- The agents **cannot** register your domain, edit DNS or create accounts. `OWNER_INPUTS.md` lists the accounts (Vercel or VPS, Postgres, Telegram bot, optional Resend/GA4) and `DEPLOYMENT.md` will give click-by-click steps.
+
+## Quick sanity check (optional)
+```bash
+node bootstrap/verify-pack.mjs
+```

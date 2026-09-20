@@ -1,0 +1,451 @@
+{
+  "version": 1,
+  "generated": "2026-09-20",
+  "qualityLevels": {
+    "final": "production-ready",
+    "poster-crop": "usable interim crop from a marketing poster",
+    "interim-raster": "AI-rendered/raster art; usable, replace when real assets exist",
+    "placeholder-low-res": "must be replaced before launch (STRICT_LAUNCH fails)"
+  },
+  "notes": [
+    "Paths are relative to public/assets/. The reference/ and source-originals/ folders are NOT served: move them to design-reference/ in task T0.1.",
+    "Bangla alt text is machine-drafted and is included in the bn-review sheet (task T5.2)."
+  ],
+  "assets": [
+    {
+      "id": "coconut-premium",
+      "kind": "product",
+      "file": "products/coconut-premium.webp",
+      "width": 560,
+      "height": 705,
+      "bytes": 92918,
+      "quality": "poster-crop",
+      "alt": {
+        "en": "Premium size live young coconut with a sealed green straw, on ice",
+        "bn": "প্রিমিয়াম সাইজের কচি ডাব, সিল করা সবুজ স্ট্র সহ"
+      },
+      "source": "crop of poster-live-coconut box=(20, 40, 580, 745)",
+      "notes": "Interim: cropped from a marketing poster. Replace with individual studio photos (design doc §9)."
+    },
+    {
+      "id": "coconut-regular",
+      "kind": "product",
+      "file": "products/coconut-regular.webp",
+      "width": 464,
+      "height": 585,
+      "bytes": 62638,
+      "quality": "poster-crop",
+      "alt": {
+        "en": "Regular size live young coconut with a sealed green straw, on ice",
+        "bn": "রেগুলার সাইজের কচি ডাব, সিল করা সবুজ স্ট্র সহ"
+      },
+      "source": "crop of poster-live-coconut box=(585, 160, 1049, 745)",
+      "notes": "Interim: cropped from a marketing poster. Replace with individual studio photos (design doc §9)."
+    },
+    {
+      "id": "coconut-lite",
+      "kind": "product",
+      "file": "products/coconut-lite.webp",
+      "width": 432,
+      "height": 545,
+      "bytes": 48692,
+      "quality": "poster-crop",
+      "alt": {
+        "en": "Lite size live young coconut with a sealed green straw, on ice",
+        "bn": "লাইট সাইজের কচি ডাব, সিল করা সবুজ স্ট্র সহ"
+      },
+      "source": "crop of poster-live-coconut box=(1060, 200, 1492, 745)",
+      "notes": "Interim: cropped from a marketing poster. Replace with individual studio photos (design doc §9)."
+    },
+    {
+      "id": "water-100ml",
+      "kind": "product",
+      "file": "products/water-100ml.webp",
+      "width": 272,
+      "height": 435,
+      "bytes": 25942,
+      "quality": "poster-crop",
+      "alt": {
+        "en": "Coconut Station 100 ml bottle of 100% natural coconut water",
+        "bn": "কোকোনাট স্টেশনের ১০০ মি.লি. ১০০% প্রাকৃতিক ডাবের পানির বোতল"
+      },
+      "source": "crop of poster-coconut-water box=(226, 385, 498, 820)",
+      "notes": "Interim: cropped from a marketing poster. Replace with individual studio photos (design doc §9)."
+    },
+    {
+      "id": "water-200ml",
+      "kind": "product",
+      "file": "products/water-200ml.webp",
+      "width": 274,
+      "height": 555,
+      "bytes": 30942,
+      "quality": "poster-crop",
+      "alt": {
+        "en": "Coconut Station 200 ml bottle of 100% natural coconut water",
+        "bn": "কোকোনাট স্টেশনের ২০০ মি.লি. ১০০% প্রাকৃতিক ডাবের পানির বোতল"
+      },
+      "source": "crop of poster-coconut-water box=(626, 265, 900, 820)",
+      "notes": "Interim: cropped from a marketing poster. Replace with individual studio photos (design doc §9)."
+    },
+    {
+      "id": "water-300ml",
+      "kind": "product",
+      "file": "products/water-300ml.webp",
+      "width": 277,
+      "height": 700,
+      "bytes": 43608,
+      "quality": "poster-crop",
+      "alt": {
+        "en": "Coconut Station 300 ml bottle of 100% natural coconut water",
+        "bn": "কোকোনাট স্টেশনের ৩০০ মি.লি. ১০০% প্রাকৃতিক ডাবের পানির বোতল"
+      },
+      "source": "crop of poster-coconut-water box=(985, 150, 1262, 850)",
+      "notes": "Interim: cropped from a marketing poster. Replace with individual studio photos (design doc §9)."
+    },
+    {
+      "id": "pudding-no-sugar",
+      "kind": "product",
+      "file": "products/pudding-no-sugar.webp",
+      "width": 460,
+      "height": 410,
+      "bytes": 30874,
+      "quality": "poster-crop",
+      "alt": {
+        "en": "No extra sugar coconut pudding in a sealed cup with a green band",
+        "bn": "নো এক্সট্রা সুগার নারিকেল পুডিং, সবুজ ব্যান্ডসহ সিল করা কাপ"
+      },
+      "source": "crop of poster-pudding box=(92, 365, 552, 775)",
+      "notes": "Interim: cropped from a marketing poster. Replace with individual studio photos (design doc §9)."
+    },
+    {
+      "id": "pudding-classic",
+      "kind": "product",
+      "file": "products/pudding-classic.webp",
+      "width": 448,
+      "height": 410,
+      "bytes": 26660,
+      "quality": "poster-crop",
+      "alt": {
+        "en": "Classic coconut pudding in a sealed cup with a brown band",
+        "bn": "ক্লাসিক নারিকেল পুডিং, বাদামি ব্যান্ডসহ সিল করা কাপ"
+      },
+      "source": "crop of poster-pudding box=(552, 365, 1000, 775)",
+      "notes": "Interim: cropped from a marketing poster. Replace with individual studio photos (design doc §9)."
+    },
+    {
+      "id": "pudding-double-layer",
+      "kind": "product",
+      "file": "products/pudding-double-layer.webp",
+      "width": 452,
+      "height": 410,
+      "bytes": 33108,
+      "quality": "poster-crop",
+      "alt": {
+        "en": "Double layer coconut pudding with a coconut-water jelly base and a green band",
+        "bn": "ডাবল লেয়ার নারিকেল পুডিং, নিচে ডাবের পানির স্তর"
+      },
+      "source": "crop of poster-pudding box=(988, 365, 1440, 775)",
+      "notes": "Interim: cropped from a marketing poster. Replace with individual studio photos (design doc §9)."
+    },
+    {
+      "id": "icecream-vanilla",
+      "kind": "product",
+      "file": "products/icecream-vanilla.webp",
+      "width": 445,
+      "height": 395,
+      "bytes": 50878,
+      "quality": "poster-crop",
+      "alt": {
+        "en": "Thai style vanilla coconut ice cream served in a coconut shell with peanuts and coconut strips",
+        "bn": "নারিকেলের খোসায় পরিবেশিত থাই স্টাইল ভ্যানিলা আইসক্রিম"
+      },
+      "source": "crop of poster-ice-cream box=(95, 335, 540, 730)",
+      "notes": "Interim: cropped from a marketing poster. Replace with individual studio photos (design doc §9)."
+    },
+    {
+      "id": "icecream-chocolate",
+      "kind": "product",
+      "file": "products/icecream-chocolate.webp",
+      "width": 430,
+      "height": 330,
+      "bytes": 47428,
+      "quality": "poster-crop",
+      "alt": {
+        "en": "Thai style chocolate coconut ice cream served in a coconut shell with peanuts and coconut strips",
+        "bn": "নারিকেলের খোসায় পরিবেশিত থাই স্টাইল চকলেট আইসক্রিম"
+      },
+      "source": "crop of poster-ice-cream box=(535, 400, 965, 730)",
+      "notes": "Interim: cropped from a marketing poster. Replace with individual studio photos (design doc §9)."
+    },
+    {
+      "id": "icecream-strawberry",
+      "kind": "product",
+      "file": "products/icecream-strawberry.webp",
+      "width": 450,
+      "height": 340,
+      "bytes": 50204,
+      "quality": "poster-crop",
+      "alt": {
+        "en": "Thai style strawberry coconut ice cream served in a coconut shell with peanuts and coconut strips",
+        "bn": "নারিকেলের খোসায় পরিবেশিত থাই স্টাইল স্ট্রবেরি আইসক্রিম"
+      },
+      "source": "crop of poster-ice-cream box=(965, 390, 1415, 730)",
+      "notes": "Interim: cropped from a marketing poster. Replace with individual studio photos (design doc §9)."
+    },
+    {
+      "id": "shake-PLACEHOLDER",
+      "kind": "product",
+      "file": "products/shake-PLACEHOLDER.webp",
+      "width": 181,
+      "height": 205,
+      "bytes": 9404,
+      "quality": "placeholder-low-res",
+      "alt": {
+        "en": "Coconut milk shake in a branded cup topped with coconut flakes",
+        "bn": "নারকেলের ফ্লেক্স দেওয়া কোকোনাট মিল্ক শেক"
+      },
+      "source": "crop of design-mock-home box=(571, 655, 752, 860)",
+      "notes": "LOW-RES PLACEHOLDER (<200 px wide). Must be replaced before launch; STRICT_LAUNCH fails while referenced."
+    },
+    {
+      "id": "coffee-PLACEHOLDER",
+      "kind": "product",
+      "file": "products/coffee-PLACEHOLDER.webp",
+      "width": 162,
+      "height": 210,
+      "bytes": 10466,
+      "quality": "placeholder-low-res",
+      "alt": {
+        "en": "Coconut coffee in a branded cup",
+        "bn": "ব্র্যান্ডেড কাপে কোকোনাট কফি"
+      },
+      "source": "crop of design-mock-home box=(728, 632, 890, 842)",
+      "notes": "LOW-RES PLACEHOLDER (<200 px wide). Must be replaced before launch; STRICT_LAUNCH fails while referenced."
+    },
+    {
+      "id": "shake-basil-PLACEHOLDER",
+      "kind": "product",
+      "file": "products/shake-basil-PLACEHOLDER.webp",
+      "width": 184,
+      "height": 227,
+      "bytes": 15130,
+      "quality": "placeholder-low-res",
+      "alt": {
+        "en": "Coconut milk shake with basil seed in a branded cup",
+        "bn": "তুকমা দেওয়া কোকোনাট মিল্ক শেক"
+      },
+      "source": "crop of design-mock-home box=(866, 615, 1050, 842)",
+      "notes": "LOW-RES PLACEHOLDER (<200 px wide). Must be replaced before launch; STRICT_LAUNCH fails while referenced."
+    },
+    {
+      "id": "poster-live-coconut",
+      "kind": "poster",
+      "file": "posters/poster-live-coconut.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 265038,
+      "quality": "interim-raster",
+      "alt": {
+        "en": "Poster: three sizes of live young coconut — Premium, Regular and Lite",
+        "bn": "পোস্টার: প্রিমিয়াম, রেগুলার ও লাইট—তিন সাইজের কচি ডাব"
+      },
+      "source": "ChatGPT Image Aug 8, 2026 at 01_48_20 AM.png",
+      "notes": "Contains baked-in text/logo; use only as full-width banners, never as product tiles. Bangla lines on pudding + ice-cream posters are reused verbatim."
+    },
+    {
+      "id": "poster-coconut-water",
+      "kind": "poster",
+      "file": "posters/poster-coconut-water.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 197984,
+      "quality": "interim-raster",
+      "alt": {
+        "en": "Poster: coconut water in 100 ml, 200 ml and 300 ml bottles",
+        "bn": "পোস্টার: ১০০, ২০০ ও ৩০০ মি.লি. ডাবের পানির বোতল"
+      },
+      "source": "ChatGPT Image Aug 8, 2026 at 01_58_43 AM.png",
+      "notes": "Contains baked-in text/logo; use only as full-width banners, never as product tiles. Bangla lines on pudding + ice-cream posters are reused verbatim."
+    },
+    {
+      "id": "poster-pudding",
+      "kind": "poster",
+      "file": "posters/poster-pudding.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 166688,
+      "quality": "interim-raster",
+      "alt": {
+        "en": "Poster: coconut pudding in three varieties",
+        "bn": "পোস্টার: তিন ধরনের নারিকেল পুডিং"
+      },
+      "source": "ChatGPT Image Aug 8, 2026 at 02_10_54 AM.png",
+      "notes": "Contains baked-in text/logo; use only as full-width banners, never as product tiles. Bangla lines on pudding + ice-cream posters are reused verbatim."
+    },
+    {
+      "id": "poster-ice-cream",
+      "kind": "poster",
+      "file": "posters/poster-ice-cream.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 317652,
+      "quality": "interim-raster",
+      "alt": {
+        "en": "Poster: Thai style coconut ice cream in vanilla, chocolate and strawberry",
+        "bn": "পোস্টার: ভ্যানিলা, চকলেট ও স্ট্রবেরি থাই স্টাইল নারিকেল আইসক্রিম"
+      },
+      "source": "ChatGPT Image Aug 8, 2026 at 02_24_27 AM.png",
+      "notes": "Contains baked-in text/logo; use only as full-width banners, never as product tiles. Bangla lines on pudding + ice-cream posters are reused verbatim."
+    },
+    {
+      "id": "hero-scene-desktop",
+      "kind": "scene",
+      "file": "scenes/hero-scene-desktop.webp",
+      "width": 971,
+      "height": 735,
+      "bytes": 118614,
+      "quality": "interim-raster",
+      "alt": {
+        "en": "Coconut Station outlet with a fresh coconut, coconut water bottle and coconut drinks and desserts on a wooden board",
+        "bn": "কোকোনাট স্টেশন আউটলেটের সামনে কচি ডাব, ডাবের পানির বোতল এবং নারিকেলের পানীয় ও ডেজার্ট"
+      },
+      "source": "crop of design-mock-home box=(565, 160, 1536, 895)",
+      "notes": "Left edge is masked into the cream canvas by CSS (design §5.1). Native 971 px wide: replace with a 2400 px art-directed render when available."
+    },
+    {
+      "id": "hero-scene-mobile",
+      "kind": "scene",
+      "file": "scenes/hero-scene-mobile.webp",
+      "width": 971,
+      "height": 728,
+      "bytes": 118828,
+      "quality": "interim-raster",
+      "alt": {
+        "en": "Coconut Station outlet with a fresh coconut, coconut water bottle and coconut drinks and desserts on a wooden board",
+        "bn": "কোকোনাট স্টেশন আউটলেটের সামনে কচি ডাব, ডাবের পানির বোতল এবং নারিকেলের পানীয় ও ডেজার্ট"
+      },
+      "source": "crop of design-mock-home box=(565, 167, 1536, 895)",
+      "notes": "Mobile source: 4:3 crop, shown under the headline."
+    },
+    {
+      "id": "outlet-exterior",
+      "kind": "scene",
+      "file": "scenes/outlet-exterior.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 184140,
+      "quality": "interim-raster",
+      "alt": {
+        "en": "Coconut Station outlet at night: cream and green storefront with a lit sign",
+        "bn": "রাতে কোকোনাট স্টেশন আউটলেট: ক্রিম ও সবুজ রঙের দোকান, আলোকিত সাইনবোর্ড"
+      },
+      "source": "Shop Exteriod.png",
+      "notes": "AI-rendered concept of the shop; replace with a real photograph of the Tangail outlet."
+    },
+    {
+      "id": "outlet-interior",
+      "kind": "scene",
+      "file": "scenes/outlet-interior.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 285582,
+      "quality": "interim-raster",
+      "alt": {
+        "en": "Inside the outlet: menu board, coconut display counter and green bar stools",
+        "bn": "আউটলেটের ভেতরে: মেনু বোর্ড, ডাবের ডিসপ্লে কাউন্টার ও সবুজ টুল"
+      },
+      "source": "Shop Interior.png",
+      "notes": "AI-rendered concept; the interior menu board lists Coconut Water as 100/200/400 ml (conflict C1, default is 300 ml)."
+    },
+    {
+      "id": "brand-banner",
+      "kind": "scene",
+      "file": "scenes/brand-banner.webp",
+      "width": 1717,
+      "height": 916,
+      "bytes": 166398,
+      "quality": "interim-raster",
+      "alt": {
+        "en": "Coconut Station logo with the line Fresh. Natural. Just for You. in front of the outlet",
+        "bn": "কোকোনাট স্টেশনের লোগো ও “ফ্রেশ। ন্যাচারাল। জাস্ট ফর ইউ।” লাইন"
+      },
+      "source": "Hero Banner.png",
+      "notes": "Use for the Open Graph card background. Contains baked-in logo."
+    },
+    {
+      "id": "logo-full",
+      "kind": "brand",
+      "file": "brand/logo-full.png",
+      "width": 619,
+      "height": 197,
+      "bytes": 108710,
+      "quality": "interim-raster",
+      "alt": {
+        "en": "Coconut Station logo",
+        "bn": "কোকোনাট স্টেশন লোগো"
+      },
+      "source": "Hero Banner.png",
+      "notes": "Transparent PNG extracted from raster art (interim). Owner should supply the vector logo (SVG)."
+    },
+    {
+      "id": "logo-full-cream",
+      "kind": "brand",
+      "file": "brand/logo-full-cream.png",
+      "width": 619,
+      "height": 197,
+      "bytes": 24613,
+      "quality": "interim-raster",
+      "alt": {
+        "en": "Coconut Station logo in cream, for dark backgrounds",
+        "bn": "গাঢ় ব্যাকগ্রাউন্ডের জন্য ক্রিম রঙের কোকোনাট স্টেশন লোগো"
+      },
+      "source": "Hero Banner.png",
+      "notes": "Mono cream version derived from logo-full alpha."
+    },
+    {
+      "id": "logo-lockup-tagline",
+      "kind": "brand",
+      "file": "brand/logo-lockup-tagline.png",
+      "width": 628,
+      "height": 252,
+      "bytes": 139768,
+      "quality": "interim-raster",
+      "alt": {
+        "en": "Coconut Station logo with the line Fresh. Natural. Just for You.",
+        "bn": "কোকোনাট স্টেশন লোগো ও ট্যাগলাইন"
+      },
+      "source": "Hero Banner.png",
+      "notes": "Interim raster."
+    },
+    {
+      "id": "logo-icon-cream",
+      "kind": "brand",
+      "file": "brand/logo-icon-cream.png",
+      "width": 512,
+      "height": 512,
+      "bytes": 50632,
+      "quality": "interim-raster",
+      "alt": {
+        "en": "Coconut Station leaf-and-coconut mark in cream, for dark backgrounds",
+        "bn": "গাঢ় ব্যাকগ্রাউন্ডের জন্য ক্রিম রঙের নারিকেল প্রতীক"
+      },
+      "source": "Hero Banner.png",
+      "notes": "Mono cream mark derived from logo-icon alpha."
+    },
+    {
+      "id": "logo-icon",
+      "kind": "brand",
+      "file": "brand/logo-icon.png",
+      "width": 512,
+      "height": 512,
+      "bytes": 126612,
+      "quality": "interim-raster",
+      "alt": {
+        "en": "Coconut Station leaf-and-coconut mark",
+        "bn": "কোকোনাট স্টেশনের নারিকেল প্রতীক"
+      },
+      "source": "Hero Banner.png",
+      "notes": "512 px square, transparent. Source for favicon/PWA icons (scripts/generate-icons.mjs)."
+    }
+  ]
+}
