@@ -1,6 +1,7 @@
 export interface SiteConfig {
   name: string;
   tagline: string;
+  description: string;
   contact: {
     phone: string | null;
     whatsapp: string | null;
@@ -39,11 +40,14 @@ export interface SiteConfig {
   imagery: {
     showIllustrativeLabel: boolean;
   };
+  openingDate: string | null; // e.g. "2026-08-16T10:00:00+06:00"
 }
 
 export const siteConfig: SiteConfig = {
   name: 'Coconut Station',
   tagline: 'Fresh. Natural. Just for You.',
+  description: 'Bringing nature\'s finest coconut experience to your everyday life.',
+  openingDate: '2026-08-16T10:00:00+06:00', // TODO_OPENING_DATE
   contact: {
     phone: 'TODO_PHONE_NUMBER', // e.g. +8801XXXXXXXXX
     whatsapp: 'TODO_WHATSAPP_NUMBER',
