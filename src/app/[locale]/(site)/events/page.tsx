@@ -5,16 +5,14 @@ import { Send, MapPin, Calendar, Users, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function EventsPage() {
-  const [status, setStatus] = React.useState<"idle" | "submitting" | "success" | "error">("idle")
   const [type, setType] = React.useState<"event" | "bulk">("event")
   const [guestCount, setGuestCount] = React.useState(50)
   
   // Rough estimate: ~80 BDT per coconut
   const estimate = guestCount * 80
   
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setStatus("submitting")
     
     const form = e.target as HTMLFormElement
     const name = (form.elements.namedItem("name") as HTMLInputElement).value
@@ -22,44 +20,13 @@ export default function EventsPage() {
     const email = (form.elements.namedItem("email") as HTMLInputElement).value
     const details = (form.elements.namedItem("details") as HTMLTextAreaElement).value
     
-    try {
-      const res = await fetch("/api/inquiries", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          type,
-          name,
-          phone,
-          email,
-          message: `Guests: ${guestCount}\n\nDetails: ${details}`,
-        })
-      })
-      
-      if (!res.ok) throw new Error("Failed to submit")
-      setStatus("success")
-      form.reset()
-    } catch (err) {
-      console.error(err)
-      setStatus("error")
-    }
+    const msg = `Hi Coconut Station! I would like to request a quote for a ${type === 'event' ? 'Catered Event' : 'Bulk Delivery'}.\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email || 'N/A'}\nGuests/Items: ${guestCount} (Est. ৳${estimate.toLocaleString()})\n\nDetails:\n${details}`
+    
+    const whatsappUrl = `https://wa.me/8801833181360?text=${encodeURIComponent(msg)}`
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
   }
 
-  if (status === "success") {
-    return (
-      <div className="container max-w-2xl mx-auto py-24 px-4 text-center">
-        <div className="w-20 h-20 bg-leaf-100 rounded-full flex items-center justify-center mx-auto mb-6 text-leaf-700">
-          <CheckCircle className="w-10 h-10" />
-        </div>
-        <h1 className="text-4xl font-extrabold text-leaf-800 uppercase mb-4">Request Received!</h1>
-        <p className="text-lg text-ink-soft mb-8">
-          Thank you for considering Coconut Station. Our team will review your requirements and get back to you within 24 hours.
-        </p>
-        <Button onClick={() => setStatus("idle")} variant="secondary">
-          Submit Another Request
-        </Button>
-      </div>
-    )
-  }
+
 
   return (
     <div className="container max-w-4xl mx-auto py-16 px-4">
@@ -155,20 +122,15 @@ export default function EventsPage() {
               />
             </div>
             
-            {status === "error" && (
-              <p className="text-sm text-danger-700 font-medium">
-                Something went wrong. Please try again.
-              </p>
-            )}
+            
             
             <Button
               type="submit"
               variant="primary"
               size="lg"
-              className="w-full mt-2"
-              disabled={status === "submitting"}
+              className="w-full mt-2 bg-[#25D366] text-white hover:bg-[#20bd5a]"
             >
-              {status === "submitting" ? "Submitting Request..." : "Request a Quote"}
+              Request Quote via WhatsApp
             </Button>
           </form>
         </div>

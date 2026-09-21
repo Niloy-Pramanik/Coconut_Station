@@ -1,27 +1,22 @@
 'use client'
 
 import * as React from 'react'
-import { Plus, Minus, ShoppingBag } from 'lucide-react'
+import { Plus, Minus, MessageCircle, Facebook } from 'lucide-react'
 import { Product, Variant } from '@/core/domain/types'
 import { isOrderable } from '@/features/catalog/utils'
-import { useCartStore } from '@/features/cart/store'
-import { toast } from 'sonner'
 
-export function AddToCartForm({ product }: { product: Product }) {
+export function DirectOrderForm({ product }: { product: Product }) {
   const [activeVariant, setActiveVariant] = React.useState<Variant>(product.variants[0])
   const [quantity, setQuantity] = React.useState(1)
-  const { addItem } = useCartStore()
-
-  const handleAdd = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!isOrderable(activeVariant)) return
-    addItem(activeVariant.sku, quantity)
-    toast.success(`Added ${quantity}x ${product.nameEn} to cart`)
-    setQuantity(1)
+  const getWhatsappUrl = () => {
+    const msg = `Hi Coconut Station! I would like to order: ${quantity}x ${product.nameEn} (${activeVariant.nameEn}) - ৳${(activeVariant.priceBDT || 0) * quantity}. Please let me know how to proceed with delivery.`
+    return `https://wa.me/8801833181360?text=${encodeURIComponent(msg)}`
   }
+  
+  const facebookUrl = 'https://m.me/coconutstation'
 
   return (
-    <form onSubmit={handleAdd} className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6">
       {/* Variant Selection */}
       {product.variants.length > 1 && (
         <div>
@@ -78,16 +73,29 @@ export function AddToCartForm({ product }: { product: Product }) {
               </button>
             </div>
             
-            <button 
-              type="submit"
-              className="h-12 px-6 flex items-center justify-center gap-2 bg-leaf-800 text-canvas font-bold rounded-lg hover:bg-leaf-900 transition-colors focus-ring"
-            >
-              <ShoppingBag className="w-5 h-5" />
-              Add to Cart
-            </button>
+            <div className="flex gap-3">
+              <a 
+                href={getWhatsappUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="h-12 px-6 flex items-center justify-center gap-2 bg-[#25D366] text-white font-bold rounded-lg hover:bg-[#20bd5a] transition-colors shadow-sm focus-ring"
+              >
+                <MessageCircle className="w-5 h-5" />
+                WhatsApp
+              </a>
+              <a 
+                href={facebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="h-12 px-6 flex items-center justify-center gap-2 bg-[#1877F2] text-white font-bold rounded-lg hover:bg-[#166fe5] transition-colors shadow-sm focus-ring"
+              >
+                <Facebook className="w-5 h-5" />
+                Facebook
+              </a>
+            </div>
           </div>
         )}
       </div>
-    </form>
+    </div>
   )
 }

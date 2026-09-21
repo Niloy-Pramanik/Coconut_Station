@@ -90,17 +90,7 @@ export function Header() {
             <Globe className="h-5 w-5" strokeWidth={1.75} />
           </button>
 
-          <Link href="/cart" className="relative flex items-center justify-center h-11 w-11 rounded-full text-ink hover:bg-leaf-50 hover:text-leaf-800 transition-colors focus-ring">
-            <ShoppingBag className="h-5 w-5" strokeWidth={1.75} />
-            {cartItemCount > 0 && (
-              <div
-                className="absolute right-0 top-0 h-5 min-w-[20px] bg-leaf-700 text-white border-canvas rounded-pill flex items-center justify-center px-1 text-[10px] font-bold"
-              >
-                {cartItemCount}
-              </div>
-            )}
-            <span className="sr-only">Cart</span>
-          </Link>
+
 
           <Button asChild variant="primary" className="hidden lg:inline-flex">
             <Link href="/outlets">Find an Outlet</Link>

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Link } from "@/i18n/routing"
 import { ArrowLeft } from 'lucide-react'
 import { getProductBySlug, getVisibleCatalog } from '@/features/catalog/resolve'
-import { AddToCartForm } from '@/components/menu/add-to-cart-form'
+import { DirectOrderForm } from '@/components/menu/direct-order-form'
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
@@ -89,7 +89,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             )}
 
             <div className="mt-auto pt-8 border-t border-line">
-              <AddToCartForm product={product} />
+              <DirectOrderForm product={product} />
             </div>
           </div>
         </div>
