@@ -87,6 +87,11 @@ export function Footer() {
                   WhatsApp Us
                 </a>
               )}
+              {siteConfig.contact.email && (
+                <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-white transition-colors w-fit focus-ring rounded-sm">
+                  {siteConfig.contact.email}
+                </a>
+              )}
               <div className="flex flex-col gap-1 mt-2">
                 <Link href="/privacy" className="hover:text-white transition-colors w-fit focus-ring rounded-sm">Privacy Policy</Link>
                 <Link href="/terms" className="hover:text-white transition-colors w-fit focus-ring rounded-sm">Terms of Service</Link>

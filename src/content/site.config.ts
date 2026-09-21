@@ -5,6 +5,7 @@ export interface SiteConfig {
   contact: {
     phone: string | null;
     whatsapp: string | null;
+    email: string | null;
   };
   outlets: Array<{
     id: string;
@@ -52,8 +53,9 @@ export const siteConfig: SiteConfig = {
   description: 'Bringing nature\'s finest coconut experience to your everyday life.',
   openingDate: '2026-08-16T10:00:00+06:00', // TODO_OPENING_DATE
   contact: {
-    phone: 'TODO_PHONE_NUMBER', // e.g. +8801XXXXXXXXX
-    whatsapp: 'TODO_WHATSAPP_NUMBER',
+    phone: null,
+    whatsapp: null,
+    email: 'smshoaib001@gmail.com',
   },
   outlets: [
     {
@@ -85,7 +87,7 @@ export const siteConfig: SiteConfig = {
     },
   },
   social: {
-    facebook: null, // TODO_FACEBOOK
+    facebook: 'https://facebook.com/coconutstationbd', // TODO_FACEBOOK
     instagram: null, // TODO_INSTAGRAM
     tiktok: null, // TODO_TIKTOK
     youtube: null, // TODO_YOUTUBE
