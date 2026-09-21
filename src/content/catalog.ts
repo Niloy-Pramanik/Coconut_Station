@@ -117,7 +117,7 @@ export const catalog: Product[] = [
         nameBn: 'ক্লাসিক',
         priceBDT: 120,
         imageAlt: 'Classic Coconut Pudding',
-        imageSrc: '/assets/products/pudding-classic-v2.webp',
+        imageSrc: '/assets/products/pudding-classic-v2.png',
       },
       {
         sku: 'pudding-no-sugar',
@@ -179,7 +179,7 @@ export const catalog: Product[] = [
         nameBn: 'ভ্যানিলা',
         priceBDT: 150,
         imageAlt: 'Vanilla Thai Coconut Ice Cream',
-        imageSrc: '/assets/products/icecream-vanilla-v2.webp',
+        imageSrc: '/assets/products/icecream-vanilla-v2.png',
       },
       {
         sku: 'thai-ice-cream-chocolate',

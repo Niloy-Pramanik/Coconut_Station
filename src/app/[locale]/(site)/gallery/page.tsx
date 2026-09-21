@@ -12,7 +12,7 @@ const GALLERY_IMAGES = [
   { id: 1, src: "/assets/scenes/outlet-exterior.webp", alt: "Outlet Exterior", aspect: "aspect-[4/3]" },
   { id: 2, src: "/assets/products/water-1l.webp", alt: "Coconut Water 1L", aspect: "aspect-[3/4]" },
   { id: 3, src: "/assets/scenes/outlet-interior.webp", alt: "Outlet Interior", aspect: "aspect-[1/1]" },
-  { id: 4, src: "/assets/products/pudding-classic-v2.webp", alt: "Coconut Pudding", aspect: "aspect-[4/5]" },
+  { id: 4, src: "/assets/products/pudding-classic-v2.png", alt: "Coconut Pudding", aspect: "aspect-[4/5]" },
   { id: 5, src: "/assets/products/coconut-regular.webp", alt: "Regular Coconut", aspect: "aspect-[3/4]" },
   { id: 6, src: "/assets/products/water-500ml.webp", alt: "Coconut Water 500ml", aspect: "aspect-[1/1]" },
 ]
