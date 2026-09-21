@@ -2,7 +2,7 @@ import * as React from "react"
 import { Metadata } from "next"
 import Image from "next/image"
 import { Link } from "@/i18n/routing"
-import { MapPin, Clock } from "lucide-react"
+import { MapPin, Clock, Facebook } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/content/site.config"
 
@@ -58,12 +58,18 @@ export default function OutletsPage() {
                   </div>
                 </div>
 
-                <div className="mt-auto">
+                <div className="mt-auto flex flex-col gap-3">
                   <Button asChild variant="primary" className="w-full">
                     <Link href={outlet.directionsUrl || "#"} target={outlet.directionsUrl ? "_blank" : undefined} rel={outlet.directionsUrl ? "noopener noreferrer" : undefined}>
                       <MapPin className="w-5 h-5 mr-2" />
                       Get directions
                     </Link>
+                  </Button>
+                  <Button asChild variant="secondary" className="w-full bg-leaf-100 text-leaf-900 hover:bg-leaf-200 border-0">
+                    <a href="https://www.facebook.com/coconutstationbd" target="_blank" rel="noopener noreferrer">
+                      <Facebook className="w-5 h-5 mr-2" />
+                      Visit our Facebook Page
+                    </a>
                   </Button>
                 </div>
               </div>
