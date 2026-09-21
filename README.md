@@ -2,7 +2,7 @@
 
 Welcome to the official web application for **Coconut Station**! This repository powers our e-commerce platform and marketing presence, showcasing our pure, natural coconut products—from fresh smart-cut coconuts to our signature shakes and desserts.
 
-🌐 **Live Website:** [https://coconut-station.vercel.app](https://coconut-station.vercel.app)
+🌐 **Live Website:** [https://www.coconutstation.com/](https://www.coconutstation.com/)
 
 ---
 
