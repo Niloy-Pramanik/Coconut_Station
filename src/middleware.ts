@@ -27,6 +27,8 @@ export async function middleware(request: NextRequest) {
     if (!token) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
+    // Return early for API routes so next-intl doesn't rewrite them
+    return NextResponse.next()
   }
 
   return intlMiddleware(request);
@@ -34,5 +36,6 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   // Match only internationalized pathnames and admin api
-  matcher: ['/', '/(en|bn)/:path*', '/admin/:path*', '/api/admin/:path*']
+  // The negative lookahead ignores API routes, static files, and _next internals
+  matcher: ['/', '/(en|bn)/:path*', '/((?!api|_next|_vercel|.*\\..*).*)', '/api/admin/:path*']
 };
