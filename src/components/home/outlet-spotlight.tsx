@@ -55,19 +55,24 @@ export function OutletSpotlight() {
               />
             </motion.div>
             
-            {/* Secondary Image (Interior) */}
+            {/* Secondary Element (Interactive Map) */}
             <motion.div
-              className="absolute right-0 bottom-0 w-3/5 h-3/5 rounded-xl overflow-hidden shadow-lift z-20 border-4 border-canvas"
+              className="absolute right-0 bottom-0 w-[65%] h-[60%] rounded-xl overflow-hidden shadow-lift z-20 border-4 border-canvas bg-leaf-50 flex"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-10%" }}
               transition={{ duration: 0.5, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             >
-              <Image
-                src="/assets/scenes/outlet-interior.webp"
-                alt={`${outlet.name} Interior`}
-                fill
-                className="object-cover"
+              <iframe 
+                src="https://www.google.com/maps?q=Tangail,+Bangladesh,+1900&output=embed" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen={false} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full object-cover saturate-[0.85] contrast-[1.05]"
+                title="Tangail Outlet Location Map"
               />
             </motion.div>
           </div>

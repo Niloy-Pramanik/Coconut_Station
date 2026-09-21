@@ -8,7 +8,9 @@ import { AddToCartForm } from '@/components/menu/add-to-cart-form'
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const product = await getProductBySlug(slug)
+  console.log('DEBUG SLUG:', slug);
+  const product = await getProductBySlug(slug);
+  console.log('DEBUG PRODUCT:', product?.slug);
   if (!product) return { title: 'Not Found' }
   return {
     title: `${product.nameEn} | Coconut Station`,

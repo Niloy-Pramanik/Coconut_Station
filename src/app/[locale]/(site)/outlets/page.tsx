@@ -30,11 +30,16 @@ export default function OutletsPage() {
           {outlets.map((outlet) => (
             <div key={outlet.id} className="bg-leaf-50 rounded-xl overflow-hidden shadow-soft flex flex-col">
               <div className="relative h-64 w-full bg-leaf-100">
-                <Image
-                  src="/assets/scenes/outlet-exterior.webp"
-                  alt={outlet.name}
-                  fill
-                  className="object-cover"
+                <iframe 
+                  src="https://www.google.com/maps?q=Tangail,+Bangladesh,+1900&output=embed" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen={false} 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full object-cover saturate-[0.85] contrast-[1.05]"
+                  title={`${outlet.name} Location Map`}
                 />
               </div>
               
