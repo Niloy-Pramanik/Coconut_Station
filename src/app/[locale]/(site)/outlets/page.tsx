@@ -29,7 +29,7 @@ export default function OutletsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {outlets.map((outlet) => (
             <div key={outlet.id} className="bg-leaf-50 rounded-xl overflow-hidden shadow-soft flex flex-col">
-              <div className="relative h-64 w-full bg-leaf-100">
+              <div className="relative aspect-[4/3] w-full bg-leaf-100">
                 <Image
                   src="/assets/scenes/outlet-exterior.webp"
                   alt={outlet.name}
@@ -38,31 +38,7 @@ export default function OutletsPage() {
                 />
               </div>
               
-              <a 
-                href="https://maps.google.com/?q=24.2513,89.9167" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="relative h-48 w-full block group cursor-pointer"
-              >
-                <div className="absolute inset-0 bg-ink/10 group-hover:bg-transparent transition-colors z-10 pointer-events-none" />
-                <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="bg-canvas/95 backdrop-blur-md px-4 py-2 rounded-full text-leaf-900 text-sm font-bold shadow-lift flex items-center gap-2 transform translate-y-2 group-hover:translate-y-0 transition-transform">
-                    <MapPin className="w-4 h-4" />
-                    Open Maps
-                  </div>
-                </div>
-                <iframe 
-                  src="https://maps.google.com/maps?q=24.2513,89.9167&z=15&output=embed" 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0 }} 
-                  allowFullScreen={false} 
-                  loading="lazy" 
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full h-full object-cover saturate-[0.85] contrast-[1.05] pointer-events-none"
-                  title={`${outlet.name} Location Map`}
-                />
-              </a>
+              
               
               <div className="p-8 flex-1 flex flex-col">
                 <h2 className="text-3xl font-bold text-leaf-900 mb-6">{outlet.name}</h2>
@@ -106,6 +82,33 @@ export default function OutletsPage() {
             </Button>
           </div>
         </div>
+      
+        {/* Full-width Map Below Grid */}
+        <a 
+          href="https://maps.google.com/?q=24.2513,89.9167" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="mt-16 block w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-soft border-4 border-canvas relative group cursor-pointer"
+        >
+          <div className="absolute inset-0 bg-ink/5 group-hover:bg-transparent transition-colors z-10 pointer-events-none" />
+          <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+            <div className="bg-canvas/95 backdrop-blur-md px-6 py-3 rounded-full text-leaf-900 font-bold shadow-lift flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform">
+              <MapPin className="w-5 h-5" />
+              Open in Google Maps
+            </div>
+          </div>
+          <iframe 
+            src="https://maps.google.com/maps?q=24.2513,89.9167&z=15&output=embed" 
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen={false} 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full h-full object-cover saturate-[0.85] contrast-[1.05] pointer-events-none"
+            title="Tangail Outlet Location Map"
+          />
+        </a>
       </div>
     </div>
   )
