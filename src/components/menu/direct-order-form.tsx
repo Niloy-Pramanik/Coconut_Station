@@ -46,7 +46,7 @@ export function DirectOrderForm({ product }: { product: Product }) {
         <div className="flex-1">
           {activeVariant.priceBDT && (
             <div className="text-3xl font-bold text-leaf-900 mb-1">
-              ৳{activeVariant.priceBDT.toLocaleString('en-IN')}
+              ৳{(activeVariant.priceBDT * quantity).toLocaleString('en-IN')}
             </div>
           )}
           <div className="text-sm text-ink-soft">
@@ -77,24 +77,22 @@ export function DirectOrderForm({ product }: { product: Product }) {
             </div>
             
             <div className="flex gap-3">
-              <a 
-                href={getWhatsappUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button 
+                type="button"
+                onClick={() => window.open(getWhatsappUrl(), '_blank')}
                 className="h-12 px-6 flex items-center justify-center gap-2 bg-leaf-800 text-canvas font-bold rounded-lg hover:bg-leaf-900 transition-colors shadow-sm focus-ring"
               >
                 <MessageCircle className="w-5 h-5" />
                 WhatsApp
-              </a>
-              <a 
-                href={facebookUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+              </button>
+              <button 
+                type="button"
+                onClick={() => window.open(facebookUrl, '_blank')}
                 className="h-12 px-6 flex items-center justify-center gap-2 bg-leaf-100 text-leaf-900 font-bold rounded-lg hover:bg-leaf-200 transition-colors shadow-sm focus-ring"
               >
                 <Facebook className="w-5 h-5" />
                 Facebook
-              </a>
+              </button>
             </div>
           </div>
         )}
