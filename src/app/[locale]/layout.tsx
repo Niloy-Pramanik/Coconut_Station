@@ -25,7 +25,8 @@ export const viewport: Viewport = {
   themeColor: "#052210", // leaf-900
   width: "device-width",
   initialScale: 1,
-  maximumScale: 5,
+  maximumScale: 1,
+  userScalable: false,
 }
 
 export const metadata: Metadata = {

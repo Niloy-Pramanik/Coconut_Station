@@ -20,13 +20,6 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export async function generateStaticParams() {
-  const posts = getPosts()
-  return posts.map((post) => ({
-    slug: post.slug,
-  }))
-}
-
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug)
   
