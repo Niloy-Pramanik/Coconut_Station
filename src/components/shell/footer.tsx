@@ -77,9 +77,9 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <h3 className="font-semibold text-lg">Contact Us</h3>
             <div className="flex flex-col gap-3 text-leaf-100">
-              {siteConfig.contact.phone && (
-                <a href={`tel:${siteConfig.contact.phone}`} className="hover:text-white transition-colors w-fit focus-ring rounded-sm">
-                  {siteConfig.contact.phone}
+              {siteConfig.social.facebook && (
+                <a href={siteConfig.social.facebook} target="_blank" rel="noreferrer" className="hover:text-white transition-colors w-fit focus-ring rounded-sm">
+                  Facebook Page
                 </a>
               )}
               {siteConfig.contact.whatsapp && (
