@@ -358,7 +358,7 @@ export function CheckoutForm() {
             {isSubmitting ? (
               <><Loader2 className="w-5 h-5 animate-spin" /> Processing...</>
             ) : (
-              'Place Order (Cash on Delivery)'
+              'Place Order & Confirm via WhatsApp'
             )}
           </button>
 
