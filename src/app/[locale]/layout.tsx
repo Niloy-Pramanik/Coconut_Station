@@ -1,4 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl';
+import NextTopLoader from 'nextjs-toploader';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
@@ -61,6 +62,7 @@ export default async function LocaleLayout({
     <html lang={locale} className={`${fontFira.variable} ${fontMarck.variable} ${fontHind.variable} antialiased scroll-smooth`}>
       <body className="flex min-h-screen flex-col bg-canvas font-sans text-ink selection:bg-leaf-700 selection:text-white">
         <NextIntlClientProvider messages={messages}>
+          <NextTopLoader color="#0D4F25" showSpinner={false} />
           <CatalogProvider catalog={catalog}>
             <SkipLink />
             <AnnouncementBar />
