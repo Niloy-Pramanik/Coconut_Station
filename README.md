@@ -1,13 +1,30 @@
-# Coconut Station — Website Build Pack
+# Coconut Station 🥥
 
-Everything an AI agent team needs to build, verify and deploy the Coconut Station e-commerce website: requirements, design system, agent plan, a master prompt, per-agent prompts, brand content and prepared image assets.
+Welcome to the official web application for **Coconut Station**! This repository powers our e-commerce platform and marketing presence, showcasing our pure, natural coconut products—from fresh smart-cut coconuts to our signature shakes and desserts.
 
-> **Status:** this is the *hand-off pack*, not the finished site. The website code is produced by running the master prompt (below). Nothing here is a placeholder for missing documents: the three specs are complete and cross-referenced.
+🌐 **Live Website:** [https://coconut-station.vercel.app](https://coconut-station.vercel.app)
 
-## Start in three steps
-1. Open this folder in an agentic coding tool (shell + file access + internet; Node ≥ 22, git, Docker or a Postgres URL).
-2. Send: **"Read `MASTER_PROMPT.md` and execute it."** (or paste the prompt block from that file).
-3. Review at the two human gates — **G2** (design, after the marketing pages) and **G6** (launch go/no-go). Then follow `DEPLOYMENT.md` (written by the agents) to put it on your domain.
+---
+
+## 🚀 About the Project
+Built with modern web technologies, this platform delivers a seamless, responsive, and high-performance experience. It allows customers to browse our catalog, check allergen information, and explore our growing list of outlets.
+
+### Tech Stack
+- **Framework:** Next.js (React)
+- **Styling:** Tailwind CSS
+- **Deployment:** Vercel
+
+## 🛠 Getting Started (Local Development)
+1. Clone the repository and navigate into the directory.
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+3. Run the development server:
+   ```bash
+   pnpm dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## What's inside
 ```
