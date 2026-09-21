@@ -38,7 +38,12 @@ export default function OutletsPage() {
                 />
               </div>
               
-              <div className="relative h-48 w-full group cursor-pointer" onClick={() => window.open('https://maps.google.com/?q=24.2513,89.9167', '_blank')}>
+              <a 
+                href="https://maps.google.com/?q=24.2513,89.9167" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="relative h-48 w-full block group cursor-pointer"
+              >
                 <div className="absolute inset-0 bg-ink/10 group-hover:bg-transparent transition-colors z-10 pointer-events-none" />
                 <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
                   <div className="bg-canvas/95 backdrop-blur-md px-4 py-2 rounded-full text-leaf-900 text-sm font-bold shadow-lift flex items-center gap-2 transform translate-y-2 group-hover:translate-y-0 transition-transform">
@@ -57,7 +62,7 @@ export default function OutletsPage() {
                   className="w-full h-full object-cover saturate-[0.85] contrast-[1.05] pointer-events-none"
                   title={`${outlet.name} Location Map`}
                 />
-              </div>
+              </a>
               
               <div className="p-8 flex-1 flex flex-col">
                 <h2 className="text-3xl font-bold text-leaf-900 mb-6">{outlet.name}</h2>
