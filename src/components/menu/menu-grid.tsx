@@ -3,7 +3,6 @@
 import * as React from 'react'
 import Image from 'next/image'
 import { Link } from "@/i18n/routing"
-import { MessageCircle, Facebook } from 'lucide-react'
 import { Product, Variant } from '@/core/domain/types'
 import { isOrderable } from '@/features/catalog/utils'
 
@@ -58,14 +57,6 @@ export function MenuGrid({ products }: { products: Product[] }) {
 function ProductCard({ product }: { product: Product }) {
   // Default to first variant
   const [activeVariant, setActiveVariant] = React.useState<Variant>(product.variants[0])
-
-  const getWhatsappUrl = () => {
-    const priceText = activeVariant.priceBDT ? `৳${activeVariant.priceBDT}` : 'Price not set';
-    const msg = `Hi Coconut Station! I would like to order: 1x ${product.nameEn} (${activeVariant.nameEn}) - ${priceText}. Please let me know how to proceed with delivery.`
-    return `https://wa.me/8801796894640?text=${encodeURIComponent(msg)}`
-  }
-  
-  const facebookUrl = 'https://m.me/coconutstationbdbd'
 
   return (
     <div className="group bg-canvas border border-line rounded-2xl overflow-hidden hover:border-leaf-300 transition-colors flex flex-col h-full">
@@ -124,26 +115,12 @@ function ProductCard({ product }: { product: Product }) {
             )}
             {product.status === 'active' && (
               <div className="flex gap-2 relative z-20">
-                <a 
-                  href={getWhatsappUrl()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 bg-leaf-800 text-canvas hover:bg-leaf-900 py-2 px-3 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors focus-ring text-sm"
-                  aria-label="Order via WhatsApp"
+                <Link
+                  href={`/menu/${product.slug}`}
+                  className="w-full bg-leaf-800 text-canvas hover:bg-leaf-900 py-2.5 px-3 rounded-lg font-bold flex items-center justify-center transition-colors focus-ring text-sm"
                 >
-                  <MessageCircle className="w-4 h-4" />
-                  WhatsApp
-                </a>
-                <a 
-                  href={facebookUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 bg-leaf-100 text-leaf-900 hover:bg-leaf-200 py-2 px-3 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors focus-ring text-sm"
-                  aria-label="Order via Facebook"
-                >
-                  <Facebook className="w-4 h-4" />
-                  Facebook
-                </a>
+                  Order now
+                </Link>
               </div>
             )}
           </div>
