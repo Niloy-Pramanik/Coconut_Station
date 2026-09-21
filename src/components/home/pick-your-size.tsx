@@ -70,6 +70,8 @@ export function PickYourSize() {
   const [activeCategory, setActiveCategory] = React.useState<"coconut" | "water">("coconut")
   const [activeSizeId, setActiveSizeId] = React.useState(SIZES.coconut[1].id) // Default Regular
 
+  const [quantity, setQuantity] = React.useState(1)
+
   const sizes = SIZES[activeCategory]
   const activeSize = sizes.find((s) => s.id === activeSizeId) || sizes[0]
 
@@ -77,6 +79,17 @@ export function PickYourSize() {
   const handleCategoryChange = (cat: "coconut" | "water") => {
     setActiveCategory(cat)
     setActiveSizeId(SIZES[cat][1].id)
+    setQuantity(1)
+  }
+
+  // Parse numeric price for calculation
+  const numericPrice = parseInt(activeSize.price.replace(/\D/g, ""), 10)
+  const totalPrice = numericPrice * quantity
+
+  const getWhatsappUrl = () => {
+    const productName = activeCategory === "coconut" ? "Live Coconut" : "Coconut Water"
+    const msg = `Hi Coconut Station! I would like to order: ${quantity}x ${productName} (${activeSize.name}) - ৳${totalPrice}. Please let me know how to proceed with delivery.`
+    return `https://wa.me/8801796894640?text=${encodeURIComponent(msg)}`
   }
 
   return (
@@ -143,7 +156,10 @@ export function PickYourSize() {
               {sizes.map((size) => (
                 <button
                   key={size.id}
-                  onClick={() => setActiveSizeId(size.id)}
+                  onClick={() => {
+                    setActiveSizeId(size.id)
+                    setQuantity(1)
+                  }}
                   className={`px-5 py-2 rounded-pill border-[1.5px] text-sm font-semibold transition-colors focus-ring ${
                     activeSizeId === size.id
                       ? "border-leaf-700 bg-leaf-50 text-leaf-800"
@@ -157,11 +173,11 @@ export function PickYourSize() {
             </div>
 
             {/* Details & CTA */}
-            <div className="flex items-end justify-between border-t border-line pt-6">
+            <div className="flex items-end justify-between border-t border-line pt-6 flex-wrap gap-6">
               <div className="overflow-hidden">
                 <AnimatePresence mode="popLayout">
                   <motion.div
-                    key={activeSize.id}
+                    key={activeSize.id + quantity}
                     initial={{ y: 10, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -10, opacity: 0 }}
@@ -169,31 +185,51 @@ export function PickYourSize() {
                   >
                     <p className="text-ink-muted font-medium mb-1">{activeSize.ml}</p>
                     <div className="text-3xl font-bold text-leaf-800 tabular-nums">
-                      {activeSize.price}
+                      ৳{totalPrice.toLocaleString('en-IN')}
                     </div>
                   </motion.div>
                 </AnimatePresence>
               </div>
               
-              <div className="flex gap-2">
-                <a 
-                  href={`https://wa.me/8801796894640?text=${encodeURIComponent(`Hi Coconut Station! I would like to order: 1x ${activeCategory === "coconut" ? "Live Coconut" : "Coconut Water"} (${activeSize.name}) - ${activeSize.price}. Please let me know how to proceed with delivery.`)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="h-10 px-4 flex items-center justify-center gap-2 bg-leaf-800 text-canvas hover:bg-leaf-900 transition-colors rounded-md font-semibold text-sm"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  WhatsApp
-                </a>
-                <a 
-                  href="https://m.me/coconutstationbd"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="h-10 px-4 flex items-center justify-center gap-2 bg-leaf-100 text-leaf-900 hover:bg-leaf-200 transition-colors rounded-md font-semibold text-sm"
-                >
-                  <Facebook className="w-4 h-4" />
-                  Facebook
-                </a>
+              <div className="flex flex-col gap-3">
+                {/* Quantity Selector */}
+                <div className="flex items-center gap-4 bg-line-soft rounded-lg p-1 w-fit">
+                  <button
+                    type="button"
+                    onClick={() => setQuantity(q => Math.max(1, q - 1))}
+                    disabled={quantity <= 1}
+                    className="w-8 h-8 flex items-center justify-center rounded bg-canvas text-ink font-bold hover:bg-white disabled:opacity-50 disabled:cursor-not-allowed shadow-sm transition-colors"
+                  >
+                    -
+                  </button>
+                  <span className="w-4 text-center font-bold text-ink">{quantity}</span>
+                  <button
+                    type="button"
+                    onClick={() => setQuantity(q => Math.min(99, q + 1))}
+                    className="w-8 h-8 flex items-center justify-center rounded bg-canvas text-ink font-bold hover:bg-white shadow-sm transition-colors"
+                  >
+                    +
+                  </button>
+                </div>
+
+                <div className="flex gap-2">
+                  <button 
+                    type="button"
+                    onClick={() => window.open(getWhatsappUrl(), '_blank')}
+                    className="h-10 px-4 flex items-center justify-center gap-2 bg-leaf-800 text-canvas hover:bg-leaf-900 transition-colors rounded-md font-semibold text-sm focus-ring"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    WhatsApp
+                  </button>
+                  <button 
+                    type="button"
+                    onClick={() => window.open("https://m.me/coconutstationbd", '_blank')}
+                    className="h-10 px-4 flex items-center justify-center gap-2 bg-leaf-100 text-leaf-900 hover:bg-leaf-200 transition-colors rounded-md font-semibold text-sm focus-ring"
+                  >
+                    <Facebook className="w-4 h-4" />
+                    Facebook
+                  </button>
+                </div>
               </div>
             </div>
           </div>
