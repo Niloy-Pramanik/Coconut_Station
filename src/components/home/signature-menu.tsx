@@ -68,35 +68,37 @@ export function SignatureMenu() {
                   <h3 className="text-xl font-semibold text-ink mb-1 group-hover:text-leaf-800 transition-colors">
                     {product.nameEn}
                   </h3>
-                  <div className="flex items-center justify-between mt-2">
+                  <div className="flex items-center justify-between mb-3">
                     {variant.priceBDT && (
                       <span className="text-leaf-900 font-bold">
                         ৳{variant.priceBDT}
                       </span>
                     )}
-                    {product.status === 'active' && (
-                      <div className="flex gap-2 ml-auto">
-                        <a 
-                          href={`https://wa.me/8801796894640?text=${encodeURIComponent(`Hi Coconut Station! I would like to order: 1x ${product.nameEn} (${variant.nameEn}) - ${variant.priceBDT ? `৳${variant.priceBDT}` : 'Price not set'}. Please let me know how to proceed with delivery.`)}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-center h-8 w-8 rounded-full bg-leaf-800 text-canvas hover:bg-leaf-900 transition-colors"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          <MessageCircle className="h-4 w-4" />
-                        </a>
-                        <a 
-                          href="https://m.me/coconutstationbd"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-center h-8 w-8 rounded-full bg-leaf-100 text-leaf-900 hover:bg-leaf-200 transition-colors"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          <Facebook className="h-4 w-4" />
-                        </a>
-                      </div>
-                    )}
                   </div>
+                  {product.status === 'active' && (
+                    <div className="flex gap-2 w-full mt-auto">
+                      <a 
+                        href={`https://wa.me/8801796894640?text=${encodeURIComponent(`Hi Coconut Station! I would like to order: 1x ${product.nameEn} (${variant.nameEn}) - ${variant.priceBDT ? `৳${variant.priceBDT}` : 'Price not set'}. Please let me know how to proceed with delivery.`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="h-9 flex-1 flex items-center justify-center gap-1.5 bg-leaf-800 text-canvas hover:bg-leaf-900 transition-colors rounded-md font-semibold text-xs"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <MessageCircle className="w-3.5 h-3.5" />
+                        WhatsApp
+                      </a>
+                      <a 
+                        href="https://m.me/coconutstationbd"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="h-9 flex-1 flex items-center justify-center gap-1.5 bg-leaf-100 text-leaf-900 hover:bg-leaf-200 transition-colors rounded-md font-semibold text-xs"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <Facebook className="w-3.5 h-3.5" />
+                        Facebook
+                      </a>
+                    </div>
+                  )}
                 </Link>
               </motion.div>
             )
