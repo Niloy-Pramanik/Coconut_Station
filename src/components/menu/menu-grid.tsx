@@ -128,7 +128,7 @@ function ProductCard({ product }: { product: Product }) {
                   href={getWhatsappUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 bg-[#25D366] text-white hover:bg-[#20bd5a] py-2 px-3 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors focus-ring text-sm"
+                  className="flex-1 bg-leaf-800 text-canvas hover:bg-leaf-900 py-2 px-3 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors focus-ring text-sm"
                   aria-label="Order via WhatsApp"
                 >
                   <MessageCircle className="w-4 h-4" />
@@ -138,7 +138,7 @@ function ProductCard({ product }: { product: Product }) {
                   href={facebookUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 bg-[#1877F2] text-white hover:bg-[#166fe5] py-2 px-3 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors focus-ring text-sm"
+                  className="flex-1 bg-leaf-100 text-leaf-900 hover:bg-leaf-200 py-2 px-3 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors focus-ring text-sm"
                   aria-label="Order via Facebook"
                 >
                   <Facebook className="w-4 h-4" />

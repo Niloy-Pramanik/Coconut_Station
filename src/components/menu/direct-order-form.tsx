@@ -81,7 +81,7 @@ export function DirectOrderForm({ product }: { product: Product }) {
                 href={getWhatsappUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-12 px-6 flex items-center justify-center gap-2 bg-[#25D366] text-white font-bold rounded-lg hover:bg-[#20bd5a] transition-colors shadow-sm focus-ring"
+                className="h-12 px-6 flex items-center justify-center gap-2 bg-leaf-800 text-canvas font-bold rounded-lg hover:bg-leaf-900 transition-colors shadow-sm focus-ring"
               >
                 <MessageCircle className="w-5 h-5" />
                 WhatsApp
@@ -90,7 +90,7 @@ export function DirectOrderForm({ product }: { product: Product }) {
                 href={facebookUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-12 px-6 flex items-center justify-center gap-2 bg-[#1877F2] text-white font-bold rounded-lg hover:bg-[#166fe5] transition-colors shadow-sm focus-ring"
+                className="h-12 px-6 flex items-center justify-center gap-2 bg-leaf-100 text-leaf-900 font-bold rounded-lg hover:bg-leaf-200 transition-colors shadow-sm focus-ring"
               >
                 <Facebook className="w-5 h-5" />
                 Facebook

@@ -4,18 +4,14 @@ import * as React from "react"
 import { Link } from "@/i18n/routing"
 import Image from "next/image"
 import { motion } from "motion/react"
-import { Plus } from "lucide-react"
+import { MessageCircle, Facebook } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useCatalog } from "@/components/catalog-provider"
-import { isOrderable } from "@/features/catalog/utils"
-import { useCartStore } from "@/features/cart/store"
-import { toast } from "sonner"
 
 export function SignatureMenu() {
   const catalog = useCatalog()
   const products = catalog.filter(p => p.status !== 'hidden').sort((a, b) => a.sort - b.sort).slice(0, 8)
-  const { addItem } = useCartStore()
-
+  
   return (
     <section className="py-24 bg-canvas overflow-hidden">
       <div className="container px-4 max-w-7xl mx-auto mb-12 flex items-end justify-between">
@@ -46,8 +42,7 @@ export function SignatureMenu() {
           {products.map((product, i) => {
             const variant = product.variants[0]
             if (!variant) return null
-            const orderable = isOrderable(variant)
-
+            
             return (
               <motion.div
                 key={product.slug}
@@ -73,24 +68,33 @@ export function SignatureMenu() {
                   <h3 className="text-xl font-semibold text-ink mb-1 group-hover:text-leaf-800 transition-colors">
                     {product.nameEn}
                   </h3>
-                  <div className="flex items-center justify-between">
-                    <span className="text-leaf-700 font-semibold">
-                      {variant.priceBDT ? `৳${variant.priceBDT}` : 'Ask at outlet'}
-                    </span>
-                    {orderable && (
-                      <Button
-                        variant="secondary"
-                        size="icon"
-                        className="h-8 w-8 rounded-full border-line text-ink-soft hover:text-leaf-800 hover:border-leaf-700 hover:bg-leaf-50"
-                        onClick={(e) => {
-                          e.preventDefault()
-                          addItem(variant.sku, 1)
-                          toast.success(`Added ${product.nameEn} to cart`)
-                        }}
-                        aria-label={`Add ${product.nameEn} to cart`}
-                      >
-                        <Plus className="h-4 w-4" />
-                      </Button>
+                  <div className="flex items-center justify-between mt-2">
+                    {variant.priceBDT && (
+                      <span className="text-leaf-900 font-bold">
+                        ৳{variant.priceBDT}
+                      </span>
+                    )}
+                    {product.status === 'active' && (
+                      <div className="flex gap-2 ml-auto">
+                        <a 
+                          href={`https://wa.me/8801796894640?text=${encodeURIComponent(`Hi Coconut Station! I would like to order: 1x ${product.nameEn} (${variant.nameEn}) - ${variant.priceBDT ? `৳${variant.priceBDT}` : 'Price not set'}. Please let me know how to proceed with delivery.`)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center h-8 w-8 rounded-full bg-leaf-800 text-canvas hover:bg-leaf-900 transition-colors"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <MessageCircle className="h-4 w-4" />
+                        </a>
+                        <a 
+                          href="https://m.me/coconutstationbd"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center h-8 w-8 rounded-full bg-leaf-100 text-leaf-900 hover:bg-leaf-200 transition-colors"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <Facebook className="h-4 w-4" />
+                        </a>
+                      </div>
                     )}
                   </div>
                 </Link>
