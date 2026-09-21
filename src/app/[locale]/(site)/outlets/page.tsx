@@ -22,7 +22,7 @@ export default function OutletsPage() {
             Our Outlets
           </h1>
           <p className="text-xl text-ink-soft leading-relaxed max-w-2xl mx-auto">
-            Find the freshest coconuts at our dedicated stations. We are continually growing to bring nature's perfect drink closer to you.
+            Find the freshest coconuts at our dedicated stations. We are continually growing to bring nature&apos;s perfect drink closer to you.
           </p>
         </header>
 
@@ -30,15 +30,31 @@ export default function OutletsPage() {
           {outlets.map((outlet) => (
             <div key={outlet.id} className="bg-leaf-50 rounded-xl overflow-hidden shadow-soft flex flex-col">
               <div className="relative h-64 w-full bg-leaf-100">
+                <Image
+                  src="/assets/scenes/outlet-exterior.webp"
+                  alt={outlet.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              
+              <div className="relative h-48 w-full group cursor-pointer" onClick={() => window.open('https://maps.google.com/?q=24.2513,89.9167', '_blank')}>
+                <div className="absolute inset-0 bg-ink/10 group-hover:bg-transparent transition-colors z-10 pointer-events-none" />
+                <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="bg-canvas/95 backdrop-blur-md px-4 py-2 rounded-full text-leaf-900 text-sm font-bold shadow-lift flex items-center gap-2 transform translate-y-2 group-hover:translate-y-0 transition-transform">
+                    <MapPin className="w-4 h-4" />
+                    Open Maps
+                  </div>
+                </div>
                 <iframe 
-                  src="https://www.google.com/maps?q=Tangail,+Bangladesh,+1900&output=embed" 
+                  src="https://maps.google.com/maps?q=24.2513,89.9167&z=15&output=embed" 
                   width="100%" 
                   height="100%" 
                   style={{ border: 0 }} 
                   allowFullScreen={false} 
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full h-full object-cover saturate-[0.85] contrast-[1.05]"
+                  className="w-full h-full object-cover saturate-[0.85] contrast-[1.05] pointer-events-none"
                   title={`${outlet.name} Location Map`}
                 />
               </div>

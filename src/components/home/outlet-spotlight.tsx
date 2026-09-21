@@ -55,7 +55,7 @@ export function OutletSpotlight() {
               />
             </motion.div>
             
-            {/* Secondary Element (Interactive Map) */}
+            {/* Secondary Image (Interior) */}
             <motion.div
               className="absolute right-0 bottom-0 w-[65%] h-[60%] rounded-xl overflow-hidden shadow-lift z-20 border-4 border-canvas bg-leaf-50 flex"
               initial={{ opacity: 0, y: 20 }}
@@ -63,16 +63,11 @@ export function OutletSpotlight() {
               viewport={{ once: true, margin: "-10%" }}
               transition={{ duration: 0.5, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             >
-              <iframe 
-                src="https://www.google.com/maps?q=Tangail,+Bangladesh,+1900&output=embed" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen={false} 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-full object-cover saturate-[0.85] contrast-[1.05]"
-                title="Tangail Outlet Location Map"
+              <Image
+                src="/assets/scenes/outlet-interior.webp"
+                alt={`${outlet.name} Interior`}
+                fill
+                className="object-cover"
               />
             </motion.div>
           </div>
@@ -120,6 +115,35 @@ export function OutletSpotlight() {
             </div>
           </div>
         </div>
+
+        {/* Full-width Map Below */}
+        <motion.div 
+          className="mt-16 w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-soft border-4 border-canvas relative group cursor-pointer"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-5%" }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          onClick={() => window.open('https://maps.google.com/?q=24.2513,89.9167', '_blank')}
+        >
+          <div className="absolute inset-0 bg-ink/5 group-hover:bg-transparent transition-colors z-10 pointer-events-none" />
+          <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+            <div className="bg-canvas/95 backdrop-blur-md px-6 py-3 rounded-full text-leaf-900 font-bold shadow-lift flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform">
+              <MapPin className="w-5 h-5" />
+              Open in Google Maps
+            </div>
+          </div>
+          <iframe 
+            src="https://maps.google.com/maps?q=24.2513,89.9167&z=15&output=embed" 
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen={false} 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full h-full object-cover saturate-[0.85] contrast-[1.05] pointer-events-none"
+            title="Tangail Outlet Location Map"
+          />
+        </motion.div>
       </div>
     </section>
   )
