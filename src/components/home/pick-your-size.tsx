@@ -3,10 +3,7 @@
 import * as React from "react"
 import Image from "next/image"
 import { motion, AnimatePresence } from "motion/react"
-import { Plus } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useCartStore } from "@/features/cart/store"
-import { toast } from "sonner"
+import { MessageCircle, Facebook } from "lucide-react"
 
 const CATEGORIES = [
   { id: "coconut", label: "Live Coconut" },
@@ -178,18 +175,26 @@ export function PickYourSize() {
                 </AnimatePresence>
               </div>
               
-              <Button 
-                variant="primary" 
-                size="md"
-                onClick={() => {
-                  const sku = activeCategory === 'coconut' ? 'coconut-regular' : `coconut-water-${activeSize.id.replace('ml', '')}`
-                  useCartStore.getState().addItem(sku, 1)
-                  toast.success(`Added ${activeSize.name} to cart`)
-                }}
-              >
-                <Plus className="w-5 h-5 mr-1" />
-                Add to cart
-              </Button>
+              <div className="flex gap-2">
+                <a 
+                  href={`https://wa.me/8801796894640?text=${encodeURIComponent(`Hi Coconut Station! I would like to order: 1x ${activeCategory === "coconut" ? "Live Coconut" : "Coconut Water"} (${activeSize.name}) - ${activeSize.price}. Please let me know how to proceed with delivery.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="h-10 px-4 flex items-center justify-center gap-2 bg-leaf-800 text-canvas hover:bg-leaf-900 transition-colors rounded-md font-semibold text-sm"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  WhatsApp
+                </a>
+                <a 
+                  href="https://m.me/coconutstationbd"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="h-10 px-4 flex items-center justify-center gap-2 bg-leaf-100 text-leaf-900 hover:bg-leaf-200 transition-colors rounded-md font-semibold text-sm"
+                >
+                  <Facebook className="w-4 h-4" />
+                  Facebook
+                </a>
+              </div>
             </div>
           </div>
         </div>
