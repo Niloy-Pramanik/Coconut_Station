@@ -52,7 +52,7 @@ export function SignatureMenu() {
                 viewport={{ once: true, margin: "-10%" }}
                 transition={{ duration: 0.42, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
               >
-                <Link href={`/menu/${product.slug}`} className="block group focus-ring rounded-lg">
+                <Link href={`/menu/${product.slug}`} className="flex flex-col h-full group focus-ring rounded-lg">
                   <div className="relative aspect-square mb-4 tile transition-transform duration-320 group-hover:shadow-lift group-hover:-translate-y-1 bg-leaf-50 rounded-lg p-6 flex flex-col justify-end overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-t from-leaf-100/50 to-transparent" />
                     <div className="relative h-full w-full">
