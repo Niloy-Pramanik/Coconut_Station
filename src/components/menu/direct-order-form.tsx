@@ -14,7 +14,7 @@ export function DirectOrderForm({ product }: { product: Product }) {
     return `https://wa.me/8801796894640?text=${encodeURIComponent(msg)}`
   }
   
-  const facebookUrl = 'https://m.me/coconutstation'
+  const facebookUrl = 'https://m.me/coconutstationbdbd'
 
   return (
     <div className="flex flex-col gap-6">
@@ -44,9 +44,11 @@ export function DirectOrderForm({ product }: { product: Product }) {
       {/* Price & Add to Cart */}
       <div className="flex flex-col sm:flex-row sm:items-end gap-6 pt-4">
         <div className="flex-1">
-          <div className="text-3xl font-bold text-leaf-900 mb-1">
-            {activeVariant.priceBDT ? `৳${activeVariant.priceBDT.toLocaleString('en-IN')}` : 'Ask at outlet'}
-          </div>
+          {activeVariant.priceBDT && (
+            <div className="text-3xl font-bold text-leaf-900 mb-1">
+              ৳{activeVariant.priceBDT.toLocaleString('en-IN')}
+            </div>
+          )}
           <div className="text-sm text-ink-soft">
             {product.status === 'coming_soon' ? 'Coming Soon' : 'Price is VAT inclusive.'}
           </div>

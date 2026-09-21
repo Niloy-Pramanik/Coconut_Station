@@ -21,7 +21,7 @@ export default function CheckoutSuccessPage({
     : `Hello Coconut Station! I just placed an order on your website. I would like to confirm my order and arrange delivery.`
   
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
-  const facebookUrl = `https://www.facebook.com/coconutstation` // Placeholder
+  const facebookUrl = `https://www.facebook.com/coconutstationbd` // Placeholder
 
   return (
     <div className="bg-canvas min-h-screen pt-32 pb-32 flex items-center justify-center">

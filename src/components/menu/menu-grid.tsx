@@ -65,7 +65,7 @@ function ProductCard({ product }: { product: Product }) {
     return `https://wa.me/8801796894640?text=${encodeURIComponent(msg)}`
   }
   
-  const facebookUrl = 'https://m.me/coconutstation'
+  const facebookUrl = 'https://m.me/coconutstationbdbd'
 
   return (
     <div className="group bg-canvas border border-line rounded-2xl overflow-hidden hover:border-leaf-300 transition-colors flex flex-col h-full">
@@ -116,29 +116,33 @@ function ProductCard({ product }: { product: Product }) {
             </div>
           )}
           
-          <div className="flex items-center justify-between">
-            <div className="font-bold text-lg text-leaf-900">
-              {activeVariant.priceBDT ? `৳${activeVariant.priceBDT.toLocaleString('en-IN')}` : 'Ask at outlet'}
-            </div>
-            {product.status === 'active' && true && (
+          <div className="flex flex-col gap-3 mt-4">
+            {activeVariant.priceBDT && (
+              <div className="font-bold text-lg text-leaf-900 mb-1">
+                ৳{activeVariant.priceBDT.toLocaleString('en-IN')}
+              </div>
+            )}
+            {product.status === 'active' && (
               <div className="flex gap-2 relative z-20">
                 <a 
                   href={getWhatsappUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white p-2 rounded-full transition-colors focus-ring"
+                  className="flex-1 bg-[#25D366] text-white hover:bg-[#20bd5a] py-2 px-3 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors focus-ring text-sm"
                   aria-label="Order via WhatsApp"
                 >
-                  <MessageCircle className="w-5 h-5" />
+                  <MessageCircle className="w-4 h-4" />
+                  WhatsApp
                 </a>
                 <a 
                   href={facebookUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#1877F2]/10 text-[#1877F2] hover:bg-[#1877F2] hover:text-white p-2 rounded-full transition-colors focus-ring"
+                  className="flex-1 bg-[#1877F2] text-white hover:bg-[#166fe5] py-2 px-3 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors focus-ring text-sm"
                   aria-label="Order via Facebook"
                 >
-                  <Facebook className="w-5 h-5" />
+                  <Facebook className="w-4 h-4" />
+                  Facebook
                 </a>
               </div>
             )}
