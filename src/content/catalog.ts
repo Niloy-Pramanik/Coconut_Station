@@ -95,7 +95,7 @@ export const catalog: Product[] = [
         nameBn: '৫০০ মিলি',
         priceBDT: 150,
         imageAlt: 'Glass Bottle Coconut Water',
-        imageSrc: '/assets/products/shake-PLACEHOLDER.webp',
+        imageSrc: '/assets/products/water-glass.webp',
       }
     ]
   },
@@ -157,7 +157,7 @@ export const catalog: Product[] = [
         nameBn: 'কাপ',
         priceBDT: 80,
         imageAlt: 'Coconut Meat Cup',
-        imageSrc: '/assets/products/shake-PLACEHOLDER.webp',
+        imageSrc: '/assets/products/coconut-meat.webp',
       }
     ]
   },
@@ -217,7 +217,7 @@ export const catalog: Product[] = [
         nameBn: 'রেগুলার',
         priceBDT: 180,
         imageAlt: 'Coconut Milk Shake',
-        imageSrc: '/assets/products/shake-PLACEHOLDER.webp',
+        imageSrc: '/assets/products/shake-classic.webp',
       }
     ]
   },
@@ -239,7 +239,7 @@ export const catalog: Product[] = [
         nameBn: 'রেগুলার',
         priceBDT: 200,
         imageAlt: 'Coconut Milk Shake with Basil Seed',
-        imageSrc: '/assets/products/shake-basil-PLACEHOLDER.webp',
+        imageSrc: '/assets/products/shake-basil.webp',
       }
     ]
   },
@@ -261,7 +261,7 @@ export const catalog: Product[] = [
         nameBn: 'রেগুলার',
         priceBDT: 150,
         imageAlt: 'Coconut Coffee',
-        imageSrc: '/assets/products/coffee-PLACEHOLDER.webp',
+        imageSrc: '/assets/products/coffee.webp',
       }
     ]
   }
