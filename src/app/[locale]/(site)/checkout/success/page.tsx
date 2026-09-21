@@ -13,7 +13,7 @@ export default function CheckoutSuccessPage({
   searchParams: { order?: string }
 }) {
   const orderNumber = searchParams.order
-  const whatsappNumber = "8801833181360"
+  const whatsappNumber = "8801796894640"
   
   // Format the pre-filled message
   const message = orderNumber 

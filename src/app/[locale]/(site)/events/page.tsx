@@ -22,7 +22,7 @@ export default function EventsPage() {
     
     const msg = `Hi Coconut Station! I would like to request a quote for a ${type === 'event' ? 'Catered Event' : 'Bulk Delivery'}.\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email || 'N/A'}\nGuests/Items: ${guestCount} (Est. ৳${estimate.toLocaleString()})\n\nDetails:\n${details}`
     
-    const whatsappUrl = `https://wa.me/8801833181360?text=${encodeURIComponent(msg)}`
+    const whatsappUrl = `https://wa.me/8801796894640?text=${encodeURIComponent(msg)}`
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
   }
 

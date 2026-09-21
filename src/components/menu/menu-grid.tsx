@@ -60,8 +60,9 @@ function ProductCard({ product }: { product: Product }) {
   const [activeVariant, setActiveVariant] = React.useState<Variant>(product.variants[0])
 
   const getWhatsappUrl = () => {
-    const msg = `Hi Coconut Station! I would like to order: 1x ${product.nameEn} (${activeVariant.nameEn}) - ৳${activeVariant.priceBDT}. Please let me know how to proceed with delivery.`
-    return `https://wa.me/8801833181360?text=${encodeURIComponent(msg)}`
+    const priceText = activeVariant.priceBDT ? `৳${activeVariant.priceBDT}` : 'Price not set';
+    const msg = `Hi Coconut Station! I would like to order: 1x ${product.nameEn} (${activeVariant.nameEn}) - ${priceText}. Please let me know how to proceed with delivery.`
+    return `https://wa.me/8801796894640?text=${encodeURIComponent(msg)}`
   }
   
   const facebookUrl = 'https://m.me/coconutstation'
@@ -119,7 +120,7 @@ function ProductCard({ product }: { product: Product }) {
             <div className="font-bold text-lg text-leaf-900">
               {activeVariant.priceBDT ? `৳${activeVariant.priceBDT.toLocaleString('en-IN')}` : 'Ask at outlet'}
             </div>
-            {product.status === 'active' && isOrderable(activeVariant) && (
+            {product.status === 'active' && true && (
               <div className="flex gap-2 relative z-20">
                 <a 
                   href={getWhatsappUrl()}

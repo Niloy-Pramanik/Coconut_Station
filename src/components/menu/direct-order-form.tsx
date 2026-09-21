@@ -9,8 +9,9 @@ export function DirectOrderForm({ product }: { product: Product }) {
   const [activeVariant, setActiveVariant] = React.useState<Variant>(product.variants[0])
   const [quantity, setQuantity] = React.useState(1)
   const getWhatsappUrl = () => {
-    const msg = `Hi Coconut Station! I would like to order: ${quantity}x ${product.nameEn} (${activeVariant.nameEn}) - ৳${(activeVariant.priceBDT || 0) * quantity}. Please let me know how to proceed with delivery.`
-    return `https://wa.me/8801833181360?text=${encodeURIComponent(msg)}`
+    const priceText = activeVariant.priceBDT ? `৳${activeVariant.priceBDT * quantity}` : 'Price not set';
+    const msg = `Hi Coconut Station! I would like to order: ${quantity}x ${product.nameEn} (${activeVariant.nameEn}) - ${priceText}. Please let me know how to proceed with delivery.`
+    return `https://wa.me/8801796894640?text=${encodeURIComponent(msg)}`
   }
   
   const facebookUrl = 'https://m.me/coconutstation'
@@ -51,7 +52,7 @@ export function DirectOrderForm({ product }: { product: Product }) {
           </div>
         </div>
 
-        {product.status === 'active' && isOrderable(activeVariant) && (
+        {product.status === 'active' && true && (
           <div className="flex items-center gap-4">
             <div className="flex items-center border-2 border-line rounded-lg bg-canvas h-12">
               <button 
