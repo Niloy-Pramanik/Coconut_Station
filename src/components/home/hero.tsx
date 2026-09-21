@@ -7,7 +7,6 @@ import { motion, useReducedMotion } from "motion/react"
 import { siteConfig } from "@/content/site.config"
 import { Button } from "@/components/ui/button"
 import { TrustStrip } from "./trust-strip"
-import { HeroHotspots } from "./hero-hotspots"
 import { IconSprig } from "@/components/icons"
 
 const EASE_OUT_SOFT: [number, number, number, number] = [0.22, 1, 0.36, 1]
@@ -22,7 +21,7 @@ export function Hero() {
   } = getImageProps({
     ...commonProps,
     src: "/assets/scenes/hero-scene-desktop.webp",
-    className: "object-cover object-right sm:object-center",
+    className: "object-cover object-center",
   })
   
   const {
@@ -30,7 +29,7 @@ export function Hero() {
   } = getImageProps({
     ...commonProps,
     src: "/assets/scenes/hero-scene-mobile.webp",
-    className: "object-cover object-right",
+    className: "object-cover object-center",
   })
 
   // Framer Motion variants
@@ -57,7 +56,7 @@ export function Hero() {
         <picture>
           <source media="(min-width: 1024px)" srcSet={desktopSrcSet} />
           <source media="(max-width: 1023px)" srcSet={mobileSrcSet} />
-          <img {...desktopRest} alt="Coconut Station Fresh Products" fetchPriority="high" className="object-cover object-right lg:object-center w-full h-full" />
+          <img {...desktopRest} alt="Coconut Station Fresh Products" fetchPriority="high" className="object-cover object-center w-full h-full" />
         </picture>
         {/* Left Gradient Mask */}
         <div className="absolute inset-0 bg-gradient-to-r from-canvas via-canvas/80 to-transparent w-full lg:w-2/3" />
@@ -144,7 +143,6 @@ export function Hero() {
         </div>
       </div>
 
-      <HeroHotspots />
       <TrustStrip />
     </section>
   )
