@@ -7,7 +7,7 @@ describe("getOpeningState", () => {
     name: "Coconut Station",
     tagline: "",
     description: "",
-    contact: { phone: "", whatsapp: "" },
+    contact: { phone: "", whatsapp: "", email: null },
     openingDate: "2026-08-16T10:00:00+06:00",
     outlets: [
       {
