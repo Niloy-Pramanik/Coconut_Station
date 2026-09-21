@@ -54,7 +54,7 @@ const HOTSPOTS = [
     mobile: { left: "9.9%", top: "79.4%" },
     name: "Coconut Pudding",
     priceText: "from ৳90",
-    image: "/assets/products/pudding-classic.webp",
+    image: "/assets/products/pudding-classic-v2.webp",
     link: "/menu/coconut-pudding",
     isOutlet: false,
   },

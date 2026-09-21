@@ -73,7 +73,7 @@ export const catalog: Product[] = [
         nameBn: '১০০ মিলি',
         priceBDT: 30,
         imageAlt: '100ml Fresh Coconut Water',
-        imageSrc: '/assets/products/water-100ml.webp',
+        imageSrc: '/assets/products/water-100ml-v2.webp',
       }
     ]
   },
@@ -117,7 +117,7 @@ export const catalog: Product[] = [
         nameBn: 'ক্লাসিক',
         priceBDT: 120,
         imageAlt: 'Classic Coconut Pudding',
-        imageSrc: '/assets/products/pudding-classic.webp',
+        imageSrc: '/assets/products/pudding-classic-v2.webp',
       },
       {
         sku: 'pudding-no-sugar',
@@ -125,7 +125,7 @@ export const catalog: Product[] = [
         nameBn: 'চিনি ছাড়া',
         priceBDT: 120,
         imageAlt: 'No Sugar Coconut Pudding',
-        imageSrc: '/assets/products/pudding-no-sugar.webp',
+        imageSrc: '/assets/products/pudding-no-sugar-v2.webp',
       },
       {
         sku: 'pudding-double-layer',
@@ -135,7 +135,7 @@ export const catalog: Product[] = [
         descriptionBn: 'ডাবের পানি ও দুধের সমন্বয়ে তৈরি ডাবল লেয়ার পুডিং।',
         priceBDT: 150,
         imageAlt: 'Double Layer Coconut Pudding',
-        imageSrc: '/assets/products/pudding-double-layer.webp',
+        imageSrc: '/assets/products/pudding-double-layer-v2.webp',
       }
     ]
   },
@@ -179,7 +179,7 @@ export const catalog: Product[] = [
         nameBn: 'ভ্যানিলা',
         priceBDT: 150,
         imageAlt: 'Vanilla Thai Coconut Ice Cream',
-        imageSrc: '/assets/products/icecream-vanilla.webp',
+        imageSrc: '/assets/products/icecream-vanilla-v2.webp',
       },
       {
         sku: 'thai-ice-cream-chocolate',

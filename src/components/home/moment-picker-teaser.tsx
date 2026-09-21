@@ -31,7 +31,7 @@ const MOMENTS = [
     title: "Guilt-free Dessert",
     blurb: "Satisfy your sweet tooth with our natural, low-sugar treats.",
     products: [
-      { id: "pudding", name: "Coconut Pudding", price: "৳90", image: "/assets/products/pudding-classic.webp" },
+      { id: "pudding", name: "Coconut Pudding", price: "৳90", image: "/assets/products/pudding-classic-v2.webp" },
       { id: "shake", name: "Classic Shake", price: "৳140", image: "/assets/posters/poster-pudding.webp" },
     ],
   },
