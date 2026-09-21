@@ -41,6 +41,9 @@ export interface SiteConfig {
     showIllustrativeLabel: boolean;
   };
   openingDate: string | null; // e.g. "2026-08-16T10:00:00+06:00"
+  hero: {
+    mode: 'video' | 'scene';
+  };
 }
 
 export const siteConfig: SiteConfig = {
@@ -89,5 +92,8 @@ export const siteConfig: SiteConfig = {
   },
   imagery: {
     showIllustrativeLabel: true,
+  },
+  hero: {
+    mode: 'scene',
   },
 };

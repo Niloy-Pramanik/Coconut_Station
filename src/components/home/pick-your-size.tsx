@@ -5,6 +5,8 @@ import Image from "next/image"
 import { motion, AnimatePresence } from "motion/react"
 import { Plus } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useCartStore } from "@/features/cart/store"
+import { toast } from "sonner"
 
 const CATEGORIES = [
   { id: "coconut", label: "Live Coconut" },
@@ -176,7 +178,15 @@ export function PickYourSize() {
                 </AnimatePresence>
               </div>
               
-              <Button variant="primary" size="md">
+              <Button 
+                variant="primary" 
+                size="md"
+                onClick={() => {
+                  const sku = activeCategory === 'coconut' ? 'coconut-regular' : `coconut-water-${activeSize.id.replace('ml', '')}`
+                  useCartStore.getState().addItem(sku, 1)
+                  toast.success(`Added ${activeSize.name} to cart`)
+                }}
+              >
                 <Plus className="w-5 h-5 mr-1" />
                 Add to cart
               </Button>

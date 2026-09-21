@@ -6,8 +6,9 @@ import { ArrowLeft } from 'lucide-react'
 import { getProductBySlug, getVisibleCatalog } from '@/features/catalog/resolve'
 import { AddToCartForm } from '@/components/menu/add-to-cart-form'
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const product = getProductBySlug(params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const product = await getProductBySlug(slug)
   if (!product) return { title: 'Not Found' }
   return {
     title: `${product.nameEn} | Coconut Station`,
@@ -16,12 +17,13 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export async function generateStaticParams() {
-  const products = getVisibleCatalog()
+  const products = await getVisibleCatalog()
   return products.map((p) => ({ slug: p.slug }))
 }
 
-export default function ProductPage({ params }: { params: { slug: string } }) {
-  const product = getProductBySlug(params.slug)
+export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const product = await getProductBySlug(slug)
   if (!product) notFound()
 
   // Simple JSON-LD for SEO
@@ -59,7 +61,8 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
               src={product.variants[0]?.imageSrc} 
               alt={product.variants[0]?.imageAlt}
               fill
-              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-contain p-4 sm:p-8"
               priority
             />
           </div>

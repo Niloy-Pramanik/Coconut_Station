@@ -1,0 +1,23 @@
+Key,English,Bangla (Translation),Status
+Index.title,Welcome to Coconut Station,কোকোনাট স্টেশনে স্বাগতম,Review
+Index.description,Your source for fresh coconuts.,টাটকা ডাবের জন্য আপনার গন্তব্য।,Review
+Events.title,Events & Bulk Orders,ইভেন্ট এবং বাল্ক অর্ডার,Review
+Events.eventDetails,Event Details,ইভেন্টের বিস্তারিত,Review
+Events.eventType,Event Type,ইভেন্টের ধরন,Review
+Events.date,Date,তারিখ,Review
+Events.guests,Estimated Guests,অতিথির সংখ্যা (আনুমানিক),Review
+Events.area,Venue Area / City,এলাকা / শহর,Review
+Events.selectItems,Select Items,আইটেম নির্বাচন করুন,Review
+Events.contactInfo,Contact Details,যোগাযোগের তথ্য,Review
+Events.submit,Request Quote,উদ্ধৃতি (Quote) অনুরোধ করুন,Review
+Events.success,Your inquiry has been received!,আপনার অনুরোধটি গৃহীত হয়েছে!,Review
+Admin.eventDate,Event Date,ইভেন্টের তারিখ,Review
+Admin.guests,Guests,অতিথির সংখ্যা,Review
+Admin.area,Area,এলাকা,Review
+Admin.items,Items,আইটেম,Review
+Catalog.live-coconut,Live Young Coconut,কাঁচা ডাব,Review
+Catalog.coconut-water,Coconut Water,ডাবের পানি,Review
+Catalog.coconut-pudding,Coconut Pudding,ডাবের পুডিং,Review
+Catalog.coconut-milk-shake,Coconut Milk Shake,কোকোনাট মিল্ক শেক,Review
+Catalog.thai-ice-cream,Thai Style Coconut Ice Cream,থাই স্টাইল কোকোনাট আইসক্রিম,Review
+Blog.hydration-basics,Hydration Basics: Why Coconut Water?,হাইড্রেশনের মূলকথা: কেন ডাবের পানি?,Review

@@ -1,4 +1,5 @@
 import { Hero } from "@/components/home/hero"
+import { HeroVideo } from "@/components/home/hero-video"
 import { PickYourSize } from "@/components/home/pick-your-size"
 import { SignatureMenu } from "@/components/home/signature-menu"
 import { WhyCoconut } from "@/components/home/why-coconut"
@@ -20,7 +21,7 @@ export const metadata = buildMetadata({
 export default function HomePage() {
   return (
     <>
-      <Hero />
+      {siteConfig.hero.mode === 'video' ? <HeroVideo /> : <Hero />}
       <PickYourSize />
       <SignatureMenu />
       <WhyCoconut />

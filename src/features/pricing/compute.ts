@@ -1,4 +1,5 @@
-import { resolveSku, isOrderable } from "@/features/catalog/resolve"
+import { isOrderable } from "@/features/catalog/utils"
+import { Product } from "@/core/domain/types"
 
 export interface CartItem {
   sku: string
@@ -41,7 +42,7 @@ export const DELIVERY_ZONES: Record<string, DeliveryZone> = {
  * Computes pricing for a given list of cart items and delivery zone.
  * It strictly validates that all items exist and have a valid price.
  */
-export function computePricing(items: CartItem[], zoneId: string = 'pickup', discountAmount: number = 0): PricingResult {
+export function computePricing(items: CartItem[], catalog: Product[], zoneId: string = 'pickup', discountAmount: number = 0): PricingResult {
   const result: PricingResult = {
     subtotal: 0,
     deliveryFee: 0,
@@ -57,18 +58,26 @@ export function computePricing(items: CartItem[], zoneId: string = 'pickup', dis
       continue
     }
 
-    const resolved = resolveSku(item.sku)
-    if (!resolved) {
+    let resolvedVariant = null
+    for (const p of catalog) {
+      const v = p.variants.find(v => v.sku === item.sku)
+      if (v) {
+        resolvedVariant = v
+        break
+      }
+    }
+
+    if (!resolvedVariant) {
       result.errors.push(`Unknown SKU: ${item.sku}`)
       continue
     }
 
-    if (!isOrderable(resolved.variant) || resolved.variant.priceBDT === null) {
+    if (!isOrderable(resolvedVariant) || resolvedVariant.priceBDT === null) {
       result.errors.push(`SKU is not orderable at this time: ${item.sku}`)
       continue
     }
 
-    result.subtotal += resolved.variant.priceBDT * item.quantity
+    result.subtotal += resolvedVariant.priceBDT * item.quantity
   }
 
   // 2. Validate Delivery Zone

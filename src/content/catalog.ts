@@ -1,4 +1,4 @@
-import { Product } from "@/features/catalog/types"
+import { Product } from "@/core/domain/types"
 
 export const catalog: Product[] = [
   {
@@ -95,7 +95,7 @@ export const catalog: Product[] = [
         nameBn: '৫০০ মিলি',
         priceBDT: null,
         imageAlt: 'Glass Bottle Coconut Water',
-        imageSrc: '/assets/products/placeholder.webp',
+        imageSrc: '/assets/products/shake-PLACEHOLDER.webp',
       }
     ]
   },
@@ -157,7 +157,7 @@ export const catalog: Product[] = [
         nameBn: 'কাপ',
         priceBDT: null,
         imageAlt: 'Coconut Meat Cup',
-        imageSrc: '/assets/products/placeholder.webp',
+        imageSrc: '/assets/products/shake-PLACEHOLDER.webp',
       }
     ]
   },
@@ -217,7 +217,7 @@ export const catalog: Product[] = [
         nameBn: 'রেগুলার',
         priceBDT: null,
         imageAlt: 'Coconut Milk Shake',
-        imageSrc: '/assets/products/shake-placeholder.webp',
+        imageSrc: '/assets/products/shake-PLACEHOLDER.webp',
       }
     ]
   },
@@ -239,7 +239,7 @@ export const catalog: Product[] = [
         nameBn: 'রেগুলার',
         priceBDT: null,
         imageAlt: 'Coconut Milk Shake with Basil Seed',
-        imageSrc: '/assets/products/shake-basil-placeholder.webp',
+        imageSrc: '/assets/products/shake-basil-PLACEHOLDER.webp',
       }
     ]
   },
@@ -261,7 +261,7 @@ export const catalog: Product[] = [
         nameBn: 'রেগুলার',
         priceBDT: null,
         imageAlt: 'Coconut Coffee',
-        imageSrc: '/assets/products/coffee-placeholder.webp',
+        imageSrc: '/assets/products/coffee-PLACEHOLDER.webp',
       }
     ]
   }

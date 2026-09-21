@@ -138,7 +138,7 @@ export function HeroHotspots() {
                       src={hotspot.image}
                       alt={hotspot.name}
                       fill
-                      className="object-cover"
+                      className="object-contain p-1"
                     />
                   </div>
                   <div className="flex flex-col flex-1 justify-center">

@@ -2,5 +2,23 @@
   "Index": {
     "title": "Welcome to Coconut Station",
     "description": "Your source for fresh coconuts."
+  },
+  "Events": {
+    "title": "Events & Bulk Orders",
+    "eventDetails": "Event Details",
+    "eventType": "Event Type",
+    "date": "Date",
+    "guests": "Estimated Guests",
+    "area": "Venue Area / City",
+    "selectItems": "Select Items",
+    "contactInfo": "Contact Details",
+    "submit": "Request Quote",
+    "success": "Your inquiry has been received!"
+  },
+  "Admin": {
+    "eventDate": "Event Date",
+    "guests": "Guests",
+    "area": "Area",
+    "items": "Items"
   }
 }

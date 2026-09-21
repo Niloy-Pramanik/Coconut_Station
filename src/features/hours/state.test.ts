@@ -23,6 +23,7 @@ describe("getOpeningState", () => {
     payments: { wallets: { bkash: null, nagad: null, rocket: null } },
     social: { facebook: null, instagram: null, tiktok: null, youtube: null },
     imagery: { showIllustrativeLabel: true },
+    hero: { mode: 'scene' },
   }
 
   it("should return pre_opening state before opening date", () => {

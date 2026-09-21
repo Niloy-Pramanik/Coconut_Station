@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useCartStore } from '@/features/cart/store'
 import { computePricing, DELIVERY_ZONES } from '@/features/pricing/compute'
-import { resolveSku } from '@/features/catalog/resolve'
+import { useResolveSku, useCatalog } from '@/components/catalog-provider'
 import { generateDeliverySlots } from '@/features/slots/generate'
 import { toast } from 'sonner'
 import { Loader2 } from 'lucide-react'
@@ -14,8 +14,16 @@ import { Loader2 } from 'lucide-react'
 export function CheckoutForm() {
   const router = useRouter()
   const { items, clearCart } = useCartStore()
+  const resolveSku = useResolveSku()
+  const catalog = useCatalog()
   const [mounted, setMounted] = React.useState(false)
   const [isSubmitting, setIsSubmitting] = React.useState(false)
+  
+  const [promoCode, setPromoCode] = React.useState('')
+  const [appliedPromo, setAppliedPromo] = React.useState<{ code: string, discountAmount: number } | null>(null)
+  const [promoError, setPromoError] = React.useState('')
+  const [isApplyingPromo, setIsApplyingPromo] = React.useState(false)
+  
   const availableSlots = React.useMemo(() => generateDeliverySlots(), [])
 
   const [formData, setFormData] = React.useState({
@@ -45,7 +53,39 @@ export function CheckoutForm() {
     )
   }
 
-  const pricing = computePricing(items, formData.zoneId)
+  const pricing = computePricing(items, catalog, formData.zoneId, appliedPromo?.discountAmount || 0)
+
+  const handleApplyPromo = async () => {
+    if (!promoCode) return
+    setIsApplyingPromo(true)
+    setPromoError('')
+    
+    try {
+      const res = await fetch('/api/promo', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code: promoCode, orderSubtotal: pricing.subtotal })
+      })
+      const data = await res.json()
+      
+      if (!res.ok) {
+        setPromoError(data.error || 'Failed to apply promo code')
+        setAppliedPromo(null)
+      } else {
+        setAppliedPromo({ code: data.code, discountAmount: data.discountAmount })
+        setPromoCode('')
+      }
+    } catch (e) {
+      setPromoError('Network error')
+    } finally {
+      setIsApplyingPromo(false)
+    }
+  }
+
+  const handleRemovePromo = () => {
+    setAppliedPromo(null)
+    setPromoError('')
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -69,7 +109,8 @@ export function CheckoutForm() {
           },
           deliveryZoneId: formData.zoneId,
           deliveryAddress: formData.address,
-          deliveryNotes: formData.notes
+          deliveryNotes: formData.notes,
+          promoCode: appliedPromo?.code
         })
       })
 
@@ -229,7 +270,8 @@ export function CheckoutForm() {
                       src={variant.imageSrc}
                       alt={variant.imageAlt}
                       fill
-                      className="object-cover"
+                      sizes="64px"
+                      className="object-contain p-1"
                     />
                   </div>
                   <div className="flex-1 flex flex-col justify-center">
@@ -249,6 +291,43 @@ export function CheckoutForm() {
             })}
           </div>
 
+          <div className="border-t border-line/50 pt-4 mb-6">
+            <div className="flex gap-2 mb-2">
+              <input 
+                type="text"
+                value={promoCode}
+                onChange={(e) => setPromoCode(e.target.value)}
+                placeholder="Promo code"
+                disabled={!!appliedPromo || isApplyingPromo}
+                className="flex-1 px-3 py-2 text-sm rounded-lg border border-line focus:border-leaf-800 focus:ring-1 focus:ring-leaf-800 outline-none uppercase bg-canvas disabled:opacity-50"
+              />
+              {appliedPromo ? (
+                <button
+                  type="button"
+                  onClick={handleRemovePromo}
+                  className="px-4 py-2 bg-red-100 text-red-700 rounded-lg text-sm font-semibold hover:bg-red-200 transition-colors"
+                >
+                  Remove
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  onClick={handleApplyPromo}
+                  disabled={!promoCode || isApplyingPromo}
+                  className="px-4 py-2 bg-ink text-canvas rounded-lg text-sm font-semibold hover:bg-ink/90 transition-colors disabled:opacity-50 flex items-center justify-center min-w-[80px]"
+                >
+                  {isApplyingPromo ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Apply'}
+                </button>
+              )}
+            </div>
+            {promoError && (
+              <div className="text-red-600 text-xs mt-1">{promoError}</div>
+            )}
+            {appliedPromo && (
+              <div className="text-leaf-700 text-xs mt-1">Promo code applied successfully!</div>
+            )}
+          </div>
+
           <div className="border-t border-line/50 pt-4 space-y-3 mb-6">
             <div className="flex justify-between text-ink-soft text-sm">
               <span>Subtotal</span>
@@ -258,6 +337,12 @@ export function CheckoutForm() {
               <span>Delivery Fee</span>
               <span>{pricing.deliveryFee === 0 ? 'Free' : `৳${pricing.deliveryFee.toLocaleString('en-IN')}`}</span>
             </div>
+            {pricing.discount > 0 && (
+              <div className="flex justify-between text-leaf-700 text-sm font-semibold">
+                <span>Discount ({appliedPromo?.code})</span>
+                <span>-৳{pricing.discount.toLocaleString('en-IN')}</span>
+              </div>
+            )}
           </div>
 
           <div className="border-t border-leaf-900/10 pt-4 mb-8 flex justify-between items-end">

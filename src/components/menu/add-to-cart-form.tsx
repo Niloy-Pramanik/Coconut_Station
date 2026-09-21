@@ -2,8 +2,8 @@
 
 import * as React from 'react'
 import { Plus, Minus, ShoppingBag } from 'lucide-react'
-import { Product, Variant } from '@/features/catalog/types'
-import { isOrderable } from '@/features/catalog/resolve'
+import { Product, Variant } from '@/core/domain/types'
+import { isOrderable } from '@/features/catalog/utils'
 import { useCartStore } from '@/features/cart/store'
 import { toast } from 'sonner'
 

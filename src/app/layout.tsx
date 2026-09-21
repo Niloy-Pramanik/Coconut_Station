@@ -12,6 +12,9 @@ import { QuickContact } from "@/components/shell/quick-contact"
 import { SkipLink } from "@/components/shell/skip-link"
 import { Toaster } from "@/components/ui/sonner"
 import { CartSheet } from "@/components/cart/cart-sheet"
+import { CatalogProvider } from "@/components/catalog-provider"
+import { getHydratedCatalog } from "@/features/catalog/resolve"
+import { ConsentBanner } from "@/components/shell/consent-banner"
 
 const firaSans = Fira_Sans({
   subsets: ["latin"],
@@ -43,27 +46,32 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const catalog = await getHydratedCatalog()
+  
   return (
     <html lang="en" className={`${firaSans.variable} ${marckScript.variable} antialiased scroll-smooth`}>
       <body className="flex min-h-screen flex-col bg-canvas font-sans text-ink selection:bg-leaf-700 selection:text-white">
-        <SkipLink />
-        <AnnouncementBar />
-        <Header />
-        
-        <main id="main-content" className="flex-1 outline-none relative z-0">
-          {children}
-        </main>
+        <CatalogProvider catalog={catalog}>
+          <SkipLink />
+          <AnnouncementBar />
+          <Header />
+          
+          <main id="main-content" className="flex-1 outline-none relative z-0">
+            {children}
+          </main>
 
-        <Footer />
-        <MobileBottomBar />
-        <QuickContact />
-        <Toaster />
-        <CartSheet />
+          <Footer />
+          <MobileBottomBar />
+          <QuickContact />
+          <Toaster />
+          <CartSheet />
+          <ConsentBanner />
+        </CatalogProvider>
       </body>
     </html>
   )

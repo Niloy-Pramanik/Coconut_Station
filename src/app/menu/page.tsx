@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   description: 'Explore our full menu of natural coconut water, desserts, and shakes.',
 }
 
-export default function MenuPage() {
-  const products = getVisibleCatalog()
+export default async function MenuPage() {
+  const products = await getVisibleCatalog()
 
   return (
     <div className="bg-canvas min-h-screen pt-24 pb-32">

@@ -18,28 +18,28 @@ export interface BlogPostTeaser {
 // Temporary mock data until T2.7 is implemented
 const MOCK_POSTS: BlogPostTeaser[] = [
   {
-    slug: "hydration-basics",
-    title: "Hydration Basics: Why Coconut Water?",
-    excerpt: "Discover the science behind natural electrolytes and why they beat artificial sports drinks.",
-    date: "2026-09-15",
-    cover: "/assets/products/water-500ml.webp", // placeholder
+    slug: "health-benefits-of-coconut-water",
+    title: "5 Reasons to Drink Coconut Water Every Day",
+    excerpt: "Discover the natural hydration power and electrolyte balance that comes with nature's sports drink.",
+    cover: "/assets/posters/poster-coconut-water.webp",
+    date: "2024-03-12",
     category: "Wellness",
   },
   {
-    slug: "morning-walk-ritual",
-    title: "A Morning Walk Ritual",
-    excerpt: "How a fresh coconut can transform your early morning routine.",
-    date: "2026-09-10",
-    cover: "/assets/products/coconut-regular.webp", // placeholder
-    category: "Lifestyle",
+    slug: "from-tree-to-bottle",
+    title: "From Tree to Bottle: Our Process",
+    excerpt: "We crack them fresh every morning. Learn about our commitment to zero-additive processing.",
+    cover: "/assets/posters/poster-live-coconut.webp",
+    date: "2024-03-08",
+    category: "Process",
   },
   {
-    slug: "choosing-your-coconut-size",
-    title: "Choosing Your Coconut Size",
-    excerpt: "Premium, Regular, or Lite? A guide to finding the perfect coconut for your thirst.",
-    date: "2026-09-05",
-    cover: "/assets/products/coconut-premium.webp", // placeholder
-    category: "Guide",
+    slug: "zero-waste-promise",
+    title: "Our Zero Waste Promise",
+    excerpt: "How we turn coconut shells into sustainable packaging and fuel. Nothing goes to waste.",
+    cover: "/assets/posters/poster-ice-cream.webp",
+    date: "2024-03-01",
+    category: "Sustainability",
   },
 ]
 

@@ -12,11 +12,14 @@ import {
 } from '@/components/ui/sheet'
 import { useCartStore } from '@/features/cart/store'
 import { computePricing } from '@/features/pricing/compute'
-import { resolveSku } from '@/features/catalog/resolve'
+import { useResolveSku, useCatalog } from '@/components/catalog-provider'
 
 export function CartSheet() {
   const { items, isSheetOpen, setSheetOpen, updateQuantity, removeItem } = useCartStore()
-  const pricing = computePricing(items, 'pickup') // Defaulting to pickup for drawer preview
+  const catalog = useCatalog()
+  const pricing = computePricing(items, catalog, 'pickup') // Defaulting to pickup for drawer preview
+  
+  const resolveSku = useResolveSku()
   
   // Need this to prevent hydration mismatch for persisted store
   const [mounted, setMounted] = React.useState(false)
@@ -62,7 +65,8 @@ export function CartSheet() {
                         src={variant.imageSrc}
                         alt={variant.imageAlt}
                         fill
-                        className="object-cover"
+                        sizes="80px"
+                        className="object-contain p-1"
                       />
                     </div>
                     <div className="flex-1 flex flex-col justify-between">

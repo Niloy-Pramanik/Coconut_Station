@@ -5,6 +5,8 @@ import { routing } from '@/i18n/routing';
 import type { Metadata } from "next";
 import { fontFira, fontMarck, fontHind } from '@/lib/fonts';
 import "../globals.css";
+import { CookieBanner } from '@/components/ui/cookie-banner';
+import { AnalyticsScripts } from '@/features/analytics/scripts';
 
 export const metadata: Metadata = {
   title: "Coconut Station",
@@ -34,7 +36,9 @@ export default async function LocaleLayout({
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}
+          <CookieBanner />
         </NextIntlClientProvider>
+        <AnalyticsScripts />
       </body>
     </html>
   );

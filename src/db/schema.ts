@@ -47,3 +47,56 @@ export const orderItemsRelations = relations(orderItems, ({ one }) => ({
     references: [orders.id],
   }),
 }))
+
+export const orderAuditEvents = pgTable('order_audit_events', {
+  id: serial('id').primaryKey(),
+  orderId: integer('order_id').notNull().references(() => orders.id),
+  action: text('action').notNull(), // e.g., 'status_changed', 'payment_verified'
+  previousStatus: text('previous_status'),
+  newStatus: text('new_status'),
+  notes: text('notes'),
+  actor: text('actor').notNull().default('system'), // 'admin' or 'system'
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+})
+
+export const catalogOverrides = pgTable('catalog_overrides', {
+  sku: text('sku').primaryKey(),
+  isSoldOut: boolean('is_sold_out').notNull().default(false),
+  priceBDT: integer('price_bdt'),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+})
+
+export const promoCodes = pgTable('promo_codes', {
+  code: text('code').primaryKey(),
+  discountAmount: integer('discount_amount'), // Flat discount in BDT
+  discountPercent: integer('discount_percent'), // Percentage discount (0-100)
+  isActive: boolean('is_active').notNull().default(true),
+  minOrderValue: integer('min_order_value').default(0), // Minimum order total to apply
+  maxUses: integer('max_uses'), // Null means unlimited
+  timesUsed: integer('times_used').default(0),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+})
+
+export const inquiries = pgTable('inquiries', {
+  id: serial('id').primaryKey(),
+  type: text('type').notNull(), // 'contact', 'event', 'bulk'
+  name: text('name').notNull(),
+  email: text('email'),
+  phone: text('phone').notNull(),
+  eventDate: text('event_date'),
+  guests: integer('guests'),
+  area: text('area'),
+  items: text('items'), // json array of items
+  details: text('details'),
+  status: text('status').notNull().default('new'), // 'new', 'read', 'replied'
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+})
+
+export const subscribers = pgTable('subscribers', {
+  id: serial('id').primaryKey(),
+  contact: text('contact').notNull(), // email or phone
+  city: text('city').notNull(), // dhaka, bogura, other
+  consent: boolean('consent').notNull().default(true),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+})
+

@@ -4,8 +4,8 @@ import * as React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Plus } from 'lucide-react'
-import { Product, Variant } from '@/features/catalog/types'
-import { isOrderable } from '@/features/catalog/resolve'
+import { Product, Variant } from '@/core/domain/types'
+import { isOrderable } from '@/features/catalog/utils'
 import { useCartStore } from '@/features/cart/store'
 import { toast } from 'sonner'
 
@@ -76,7 +76,8 @@ function ProductCard({ product }: { product: Product }) {
           src={activeVariant.imageSrc}
           alt={activeVariant.imageAlt}
           fill
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-contain p-4 sm:p-6 group-hover:scale-105 transition-transform duration-500"
         />
         {product.status === 'coming_soon' && (
           <div className="absolute top-4 left-4 bg-ink/90 text-canvas px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-pill">

@@ -14,7 +14,7 @@ const MOMENTS = [
     blurb: "Start your day with natural hydration and a clean energy kick.",
     products: [
       { id: "water", name: "Coconut Water", price: "৳50", image: "/assets/products/water-300ml.webp" },
-      { id: "coffee", name: "Coconut Coffee", price: "৳120", image: "/assets/products/coffee-PLACEHOLDER.webp" },
+      { id: "coffee", name: "Coconut Coffee", price: "৳120", image: "/assets/posters/poster-coconut-water.webp" },
     ],
   },
   {
@@ -23,7 +23,7 @@ const MOMENTS = [
     blurb: "Replenish your electrolytes naturally after a hard session.",
     products: [
       { id: "water-large", name: "Coconut Water 1L", price: "৳180", image: "/assets/products/water-1l.webp" },
-      { id: "meat", name: "Fresh Coconut Meat", price: "৳60", image: "/assets/products/meat-PLACEHOLDER.webp" },
+      { id: "meat", name: "Fresh Coconut Meat", price: "৳60", image: "/assets/posters/poster-live-coconut.webp" },
     ],
   },
   {
@@ -32,7 +32,7 @@ const MOMENTS = [
     blurb: "Satisfy your sweet tooth with our natural, low-sugar treats.",
     products: [
       { id: "pudding", name: "Coconut Pudding", price: "৳90", image: "/assets/products/pudding-classic.webp" },
-      { id: "shake", name: "Classic Shake", price: "৳140", image: "/assets/products/shake-PLACEHOLDER.webp" },
+      { id: "shake", name: "Classic Shake", price: "৳140", image: "/assets/posters/poster-pudding.webp" },
     ],
   },
 ]

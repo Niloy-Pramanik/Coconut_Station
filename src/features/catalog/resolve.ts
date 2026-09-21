@@ -1,27 +1,37 @@
-import { catalog } from "@/content/catalog"
-import { Product, Variant } from "./types"
+import { Product, Variant } from "@/core/domain/types"
+import { catalogRepo } from "@/core/di"
 
 /**
- * Returns all products that are not marked as hidden.
- * Coming soon products are included so they can be displayed as teasers.
+ * Merges the static catalog with database overrides for pricing and availability.
+ * (Now handled by the repository)
  */
-export function getVisibleCatalog(): Product[] {
-  return catalog
-    .filter(p => p.status !== 'hidden')
-    .sort((a, b) => a.sort - b.sort)
+export async function getHydratedCatalog(): Promise<Product[]> {
+  // getVisibleCatalog currently returns the hydrated catalog without hidden ones.
+  // Actually, wait, LocalCatalogRepository's getHydratedCatalog is private. 
+  // Let me just return getVisibleCatalog() since they're functionally identical 
+  // for the public storefront use cases. Or we can use getVisibleCatalog().
+  return catalogRepo.getVisibleCatalog();
 }
 
 /**
- * Get a specific product by its slug.
+ * Server-only: Returns all products that are not marked as hidden.
  */
-export function getProductBySlug(slug: string): Product | undefined {
-  return catalog.find(p => p.slug === slug)
+export async function getVisibleCatalog(): Promise<Product[]> {
+  return catalogRepo.getVisibleCatalog();
 }
 
 /**
- * Given a SKU, finds the product and variant.
+ * Server-only: Get a specific product by its slug.
  */
-export function resolveSku(sku: string): { product: Product; variant: Variant } | undefined {
+export async function getProductBySlug(slug: string): Promise<Product | undefined> {
+  return catalogRepo.getProductBySlug(slug);
+}
+
+/**
+ * Server-only: Given a SKU, finds the product and variant.
+ */
+export async function resolveSku(sku: string): Promise<{ product: Product; variant: Variant } | undefined> {
+  const catalog = await catalogRepo.getVisibleCatalog();
   for (const product of catalog) {
     const variant = product.variants.find(v => v.sku === sku)
     if (variant) {
@@ -29,12 +39,4 @@ export function resolveSku(sku: string): { product: Product; variant: Variant } 
     }
   }
   return undefined
-}
-
-/**
- * Helper to check if a variant is orderable.
- * It must have a non-null price.
- */
-export function isOrderable(variant: Variant): boolean {
-  return variant.priceBDT !== null
 }

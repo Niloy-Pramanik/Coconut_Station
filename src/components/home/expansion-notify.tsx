@@ -7,14 +7,33 @@ import { Button } from "@/components/ui/button"
 export function ExpansionNotify() {
   const [status, setStatus] = React.useState<"idle" | "submitting" | "success" | "error">("idle")
   
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setStatus("submitting")
-    // Mock submission
-    setTimeout(() => {
+    
+    const form = e.target as HTMLFormElement
+    const city = (form.elements.namedItem("city") as HTMLSelectElement).value
+    const contact = (form.elements.namedItem("contact") as HTMLInputElement).value
+    
+    try {
+      const res = await fetch("/api/inquiries", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "expansion",
+          name: "Anonymous",
+          phone: contact,
+          message: `Interested in expansion to: ${city}`,
+        })
+      })
+      
+      if (!res.ok) throw new Error("Failed to submit")
       setStatus("success")
-      ;(e.target as HTMLFormElement).reset()
-    }, 1000)
+      form.reset()
+    } catch (err) {
+      console.error(err)
+      setStatus("error")
+    }
   }
 
   return (
@@ -39,15 +58,18 @@ export function ExpansionNotify() {
             <form onSubmit={handleSubmit} className="w-full max-w-md flex flex-col gap-4">
               <div className="flex flex-col sm:flex-row gap-3">
                 <select
+                  name="city"
                   required
+                  defaultValue=""
                   className="px-4 py-3 rounded-lg border-line bg-canvas text-ink focus:border-leaf-700 focus:ring-1 focus:ring-leaf-700 outline-none transition-shadow"
                   aria-label="Select City"
                 >
-                  <option value="" disabled selected>Select City</option>
+                  <option value="" disabled>Select City</option>
                   <option value="dhaka">Dhaka</option>
                   <option value="bogura">Bogura</option>
                 </select>
                 <input
+                  name="contact"
                   type="text"
                   required
                   placeholder="Email or Phone Number"
