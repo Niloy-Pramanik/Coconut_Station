@@ -59,7 +59,12 @@ export function TrustStrip() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
       >
-        <div className="flex w-full items-center gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide lg:justify-between lg:gap-4 lg:overflow-visible lg:pb-0">
+        <div 
+          className="flex w-full items-center gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide lg:justify-between lg:gap-4 lg:overflow-visible lg:pb-0"
+          tabIndex={0}
+          role="region"
+          aria-label="Trust indicators"
+        >
           <TooltipProvider delayDuration={300}>
             {TRUST_ITEMS.map((item, index) => {
               const Icon = item.icon

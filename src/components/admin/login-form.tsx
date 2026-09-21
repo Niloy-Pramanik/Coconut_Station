@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation"
 import { toast } from "sonner"
 import { Loader2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { loginAction } from "@/app/admin/login/actions"
+import { loginAction } from "@/app/[locale]/admin/login/actions"
 
 export function LoginForm() {
   const router = useRouter()

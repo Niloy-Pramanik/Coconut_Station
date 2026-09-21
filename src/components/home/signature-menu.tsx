@@ -34,7 +34,12 @@ export function SignatureMenu() {
 
       <div className="w-full">
         {/* Horizontal Scroll Snap Carousel */}
-        <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide px-4 lg:px-8 pb-8 gap-6 -mx-4 lg:-mx-8">
+        <div 
+          className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide px-4 lg:px-8 pb-8 gap-6 -mx-4 lg:-mx-8"
+          tabIndex={0}
+          role="region"
+          aria-label="Signature drinks"
+        >
           {/* spacer for first item */}
           <div className="shrink-0 w-0 lg:w-[max(0px,calc((100vw-80rem)/2))]" />
           
