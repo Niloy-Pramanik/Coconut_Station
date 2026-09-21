@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from "@/i18n/routing"
 import { Trash2, Plus, Minus, ShoppingBag } from 'lucide-react'
 import {
   Sheet,

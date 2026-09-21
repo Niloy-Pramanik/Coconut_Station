@@ -1,9 +1,9 @@
 "use client"
 
 import * as React from "react"
-import Link from "next/link"
+import { Link } from "@/i18n/routing"
 import Image from "next/image"
-import { usePathname } from "next/navigation"
+import { usePathname } from "@/i18n/routing"
 import { ShoppingBag, Menu, Globe } from "lucide-react"
 
 import { cn } from "@/lib/utils"

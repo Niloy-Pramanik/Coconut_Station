@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, useScroll, useSpring, useTransform } from 'motion/react'
 import { siteConfig } from '@/content/site.config'
-import Link from 'next/link'
+import { Link } from "@/i18n/routing"
 import Image from 'next/image'
 import { ArrowRight, PlayCircle, ShieldCheck } from 'lucide-react'
 

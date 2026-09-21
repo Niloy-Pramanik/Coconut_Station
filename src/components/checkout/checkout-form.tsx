@@ -2,8 +2,8 @@
 
 import * as React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { Link } from "@/i18n/routing"
+import { useRouter } from "@/i18n/routing"
 import { useCartStore } from '@/features/cart/store'
 import { computePricing, DELIVERY_ZONES } from '@/features/pricing/compute'
 import { useResolveSku, useCatalog } from '@/components/catalog-provider'

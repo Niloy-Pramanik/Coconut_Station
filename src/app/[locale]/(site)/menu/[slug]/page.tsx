@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from "@/i18n/routing"
 import { ArrowLeft } from 'lucide-react'
 import { getProductBySlug, getVisibleCatalog } from '@/features/catalog/resolve'
 import { AddToCartForm } from '@/components/menu/add-to-cart-form'

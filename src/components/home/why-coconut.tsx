@@ -4,7 +4,7 @@ import * as React from "react"
 import { motion } from "motion/react"
 import { IconNatural, IconFreshDaily, IconHygienic } from "@/components/icons"
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
+import { Link } from "@/i18n/routing"
 
 const FACTS = [
   {

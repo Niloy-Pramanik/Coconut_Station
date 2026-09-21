@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from "@/i18n/routing"
 import { Plus } from 'lucide-react'
 import { Product, Variant } from '@/core/domain/types'
 import { isOrderable } from '@/features/catalog/utils'

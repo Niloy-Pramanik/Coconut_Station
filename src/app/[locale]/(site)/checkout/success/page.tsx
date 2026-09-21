@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from "@/i18n/routing"
 import { CheckCircle2 } from 'lucide-react'
 import { Metadata } from 'next'
 
