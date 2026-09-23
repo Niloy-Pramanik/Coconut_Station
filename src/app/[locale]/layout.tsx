@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import { NextIntlClientProvider } from 'next-intl';
 import NextTopLoader from 'nextjs-toploader';
 import { getMessages } from 'next-intl/server';
@@ -82,6 +83,7 @@ export default async function LocaleLayout({
           </CatalogProvider>
         </NextIntlClientProvider>
         <AnalyticsScripts />
+        <Analytics />
       </body>
     </html>
   );

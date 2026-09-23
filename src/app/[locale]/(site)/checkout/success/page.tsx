@@ -14,12 +14,12 @@ export default function CheckoutSuccessPage({
 }) {
   const orderNumber = searchParams.order
   const whatsappNumber = "8801796894640"
-  
+
   // Format the pre-filled message
-  const message = orderNumber 
+  const message = orderNumber
     ? `Hello Coconut Station! I just placed Order #${orderNumber} on your website. I would like to confirm my order and arrange delivery.`
     : `Hello Coconut Station! I just placed an order on your website. I would like to confirm my order and arrange delivery.`
-  
+
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
   const facebookUrl = `https://www.facebook.com/coconutstationbd` // Placeholder
 
@@ -31,11 +31,11 @@ export default function CheckoutSuccessPage({
             <CheckCircle2 className="w-12 h-12 text-leaf-800" />
           </div>
         </div>
-        
+
         <h1 className="text-4xl font-extrabold text-leaf-900 mb-4">
           Order Placed!
         </h1>
-        
+
         <p className="text-lg text-ink-soft mb-8 leading-relaxed">
           Almost there! To finalize your order and arrange home delivery, please <strong className="text-ink">send us a message</strong> on WhatsApp or Facebook.
         </p>
@@ -48,7 +48,7 @@ export default function CheckoutSuccessPage({
         )}
 
         <div className="flex flex-col gap-4 max-w-sm mx-auto">
-          <a 
+          <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -57,8 +57,8 @@ export default function CheckoutSuccessPage({
             <MessageCircle className="w-5 h-5 mr-3" />
             Confirm on WhatsApp
           </a>
-          
-          <a 
+
+          <a
             href={facebookUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -69,7 +69,7 @@ export default function CheckoutSuccessPage({
           </a>
 
           <div className="mt-6">
-            <Link 
+            <Link
               href="/menu"
               className="inline-flex items-center justify-center h-12 px-8 bg-canvas text-ink-soft font-bold rounded-lg hover:text-ink hover:bg-leaf-50 transition-colors"
             >
