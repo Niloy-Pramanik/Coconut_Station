@@ -1,0 +1,522 @@
+TimeUTC,timestampInMs,requestPath,requestMethod,requestQueryString,responseStatusCode,requestId,requestUserAgent,level,environment,branch,vercelCache,type,function,host,deploymentDomain,deploymentId,durationMs,region,maxMemoryUsed,memorySize,message,projectId,traceId,sessionId,invocationId,instanceId,concurrency,workflowRunId,workflowStepId
+2026-09-23 12:57:47,1790168267702,www.coconutstation.com/,GET,nxtPlocale=en,200,pdjzn-1790168266501-ef839fe56139,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",error,production,main,MISS,function,/[locale],www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,,,,,"Failed to fetch catalog overrides, returning static catalog: Error: Failed query: select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""
+params: 
+    at eB.queryWithCache (.next/server/chunks/ssr/src_1v9cc11._.js:28:33964)
+    at async (.next/server/chunks/ssr/src_1v9cc11._.js:28:36373)
+    at async Object.getHydratedCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:6499)
+    at async Object.getVisibleCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:7307)
+    at async Q (.next/server/chunks/ssr/[root-of-the-server]__0smdevw._.js:1:11837) {
+  query: 'select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""',
+  params: [],
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:5432
+      at <unknown> (Error: connect ECONNREFUSED 127.0.0.1:5432) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 5432
+  }
+}",prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,,,,,
+2026-09-23 12:57:46,1790168266501,www.coconutstation.com/,GET,nxtPlocale=en,200,pdjzn-1790168266501-ef839fe56139,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",,production,main,MISS,function,/[locale],www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,377,iad1,240,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M375FYQN9P17JPGPAPT3RENM,Dxzo3n8e0m6O,1,,
+2026-09-23 12:57:46,1790168266501,www.coconutstation.com/,GET,nxtPlocale=en,200,pdjzn-1790168266501-ef839fe56139,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,596,sin1,216,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M375FXS1F2MQW8HFNBCF5676,YnjEp1DN4Kya,1,,
+2026-09-23 12:50:48,1790167848572,www.coconutstation.com/,GET,_rsc=oRZxILQ1iT-_yfxP,200,2tgkn-1790167848572-c0e8c8db6c38,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,8,bom1,214,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M37535M7ES2ZJ8VAECN4VK1X,J1kvUOFiNb5b,1,,
+2026-09-23 12:50:48,1790167848572,www.coconutstation.com/,GET,_rsc=oRZxILQ1iT-_yfxP,200,2tgkn-1790167848572-c0e8c8db6c38,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,11,iad1,259,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M37535QSSG6P9NY0VFYZ33Y8,odAxs9kmjFHZ,1,,
+2026-09-23 12:50:26,1790167826988,www.coconutstation.com/outlets,GET,_rsc=P146tV0leL2maVHx&nxtPlocale=en,200,8jk9s-1790167826988-2242dc695df9,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/outlets.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,9,iad1,259,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M3752GNGCMGW9QYHQ1DXA4NC,odAxs9kmjFHZ,1,,
+2026-09-23 12:50:26,1790167826988,www.coconutstation.com/outlets,GET,_rsc=P146tV0leL2maVHx&nxtPlocale=en,200,8jk9s-1790167826988-2242dc695df9,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,10,bom1,214,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M3752GHSCACZD513K1AK4SMG,J1kvUOFiNb5b,1,,
+2026-09-23 12:50:26,1790167826024,www.coconutstation.com/menu,GET,_rsc=f8xsfO5udUYwziP1&nxtPlocale=en,200,5dgst-1790167825864-2b6af263a60a,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",error,production,main,MISS,function,/[locale]/menu,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,,,,,"Failed to fetch catalog overrides, returning static catalog: Error: Failed query: select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""
+params: 
+    at eB.queryWithCache (.next/server/chunks/ssr/src_1v9cc11._.js:28:33964)
+    at async (.next/server/chunks/ssr/src_1v9cc11._.js:28:36373)
+    at async Object.getHydratedCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:6499)
+    at async Object.getVisibleCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:7307)
+    at async e (.next/server/chunks/ssr/[root-of-the-server]__08hg23b._.js:1:4454) {
+  query: 'select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""',
+  params: [],
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:5432
+      at <unknown> (Error: connect ECONNREFUSED 127.0.0.1:5432) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 5432
+  }
+}",prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,,,,,
+2026-09-23 12:50:25,1790167825864,www.coconutstation.com/menu,GET,_rsc=f8xsfO5udUYwziP1&nxtPlocale=en,200,5dgst-1790167825864-2b6af263a60a,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,69,iad1,259,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M3752FJJ57VT6MS2P7A3SA7X,odAxs9kmjFHZ,1,,
+2026-09-23 12:50:25,1790167825864,www.coconutstation.com/menu,GET,_rsc=f8xsfO5udUYwziP1&nxtPlocale=en,200,5dgst-1790167825864-2b6af263a60a,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,10,bom1,213,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M3752FEW1CY0J0M9Y3NGC2DA,J1kvUOFiNb5b,1,,
+2026-09-23 12:50:11,1790167811814,www.coconutstation.com/api/inquiries,POST,,500,mptxj-1790167810859-c872257b1ebc,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",error,production,main,MISS,function,/api/inquiries,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,,,,,"Error saving inquiry: Error: Failed query: insert into ""inquiries"" (""id"", ""type"", ""name"", ""email"", ""phone"", ""event_date"", ""guests"", ""area"", ""items"", ""details"", ""status"", ""created_at"") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, default, default)
+params: expansion,Anonymous,,01875254291,,,,,Interested in expansion to: dhaka
+    at nq.queryWithCache (.next/server/chunks/src_db_index_ts_1ci4-7l._.js:28:33964)
+    at async n (.next/server/chunks/[root-of-the-server]__0650u6v._.js:1:2134)
+    at async J (.next/server/chunks/[root-of-the-server]__0650u6v._.js:1:5503)
+    at async Z (.next/server/chunks/[root-of-the-server]__0650u6v._.js:1:6581)
+    at async Module.q [as handler] (.next/server/chunks/[root-of-the-server]__0650u6v._.js:1:8638)
+    at async handler (___next_launcher.cjs:224:7) {
+  query: 'insert into ""inquiries"" (""id"", ""type"", ""name"", ""email"", ""phone"", ""event_date"", ""guests"", ""area"", ""items"", ""details"", ""status"", ""created_at"") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, default, default)',
+  params: [
+    'expansion',
+    'Anonymous',
+    null,
+    '01875254291',
+    null,
+    null,
+    null,
+    null,
+    'Interested in expansion to: dhaka'
+  ],
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:5432
+      at <unknown> (Error: connect ECONNREFUSED 127.0.0.1:5432) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 5432
+  }
+}",prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,,,,,
+2026-09-23 12:50:10,1790167810859,www.coconutstation.com/api/inquiries,POST,,500,mptxj-1790167810859-c872257b1ebc,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/api/inquiries,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,754,iad1,226,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M37520WQ6K390BWGDK0YJPFD,7U9T2XCtW2On,1,,
+2026-09-23 12:49:30,1790167770448,www.coconutstation.com/,GET,_rsc=vuO3s-p_cG5ElR9B&nxtPlocale=en,200,4h6w2-1790167770448-91878f507180,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,8,iad1,257,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M3750SEDK7HRPH7ZX34J5YQA,odAxs9kmjFHZ,1,,
+2026-09-23 12:49:30,1790167770448,www.coconutstation.com/,GET,_rsc=vuO3s-p_cG5ElR9B&nxtPlocale=en,200,4h6w2-1790167770448-91878f507180,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,9,bom1,213,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M3750SAS8DCGPQM3NGPFQ9BM,J1kvUOFiNb5b,1,,
+2026-09-23 12:49:29,1790167769076,www.coconutstation.com/menu/coconut-coffee,GET,_rsc=bSyHYeeyIPU5R54L&nxtPlocale=en&nxtPslug=coconut-coffee,200,jqc9b-1790167768720-31ef731bb91a,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",error,production,main,MISS,function,/[locale]/menu/[slug],www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,,,,,"Failed to fetch catalog overrides, returning static catalog: Error: Failed query: select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""
+params: 
+    at eB.queryWithCache (.next/server/chunks/ssr/src_1v9cc11._.js:28:33964)
+    at async (.next/server/chunks/ssr/src_1v9cc11._.js:28:36373)
+    at async Object.getHydratedCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:6499)
+    at async Object.getProductBySlug (.next/server/chunks/ssr/src_1v9cc11._.js:1:7431)
+    at async i (.next/server/chunks/ssr/[root-of-the-server]__1_chgq0._.js:1:5011) {
+  query: 'select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""',
+  params: [],
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:5432
+      at <unknown> (Error: connect ECONNREFUSED 127.0.0.1:5432) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 5432
+  }
+}",prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,,,,,
+2026-09-23 12:49:29,1790167769079,www.coconutstation.com/menu/coconut-coffee,GET,_rsc=bSyHYeeyIPU5R54L&nxtPlocale=en&nxtPslug=coconut-coffee,200,jqc9b-1790167768720-31ef731bb91a,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",error,production,main,MISS,function,/[locale]/menu/[slug],www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,,,,,"Failed to fetch catalog overrides, returning static catalog: Error: Failed query: select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""
+params: 
+    at eB.queryWithCache (.next/server/chunks/ssr/src_1v9cc11._.js:28:33964)
+    at async (.next/server/chunks/ssr/src_1v9cc11._.js:28:36373)
+    at async Object.getHydratedCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:6499)
+    at async Object.getProductBySlug (.next/server/chunks/ssr/src_1v9cc11._.js:1:7431)
+    at async Module.h [as generateMetadata] (.next/server/chunks/ssr/[root-of-the-server]__1_chgq0._.js:1:4831) {
+  query: 'select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""',
+  params: [],
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:5432
+      at <unknown> (Error: connect ECONNREFUSED 127.0.0.1:5432) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 5432
+  }
+}",prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,,,,,
+2026-09-23 12:49:28,1790167768720,www.coconutstation.com/menu/coconut-coffee,GET,_rsc=bSyHYeeyIPU5R54L&nxtPlocale=en&nxtPslug=coconut-coffee,200,jqc9b-1790167768720-31ef731bb91a,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu/[slug].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,14,iad1,257,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M3750QYTQPPCH2TEXHBKXFEG,odAxs9kmjFHZ,1,,
+2026-09-23 12:49:28,1790167768720,www.coconutstation.com/menu/coconut-coffee,GET,_rsc=bSyHYeeyIPU5R54L&nxtPlocale=en&nxtPslug=coconut-coffee,200,jqc9b-1790167768720-31ef731bb91a,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,10,bom1,213,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M3750QTE9YR19XSYF449HKQV,J1kvUOFiNb5b,1,,
+2026-09-23 12:49:25,1790167765130,www.coconutstation.com/menu,GET,_rsc=f8xsfO5udUYwziP1,200,drflr-1790167764969-5833f913c0af,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",error,production,main,MISS,function,/[locale]/menu,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,,,,,"Failed to fetch catalog overrides, returning static catalog: Error: Failed query: select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""
+params: 
+    at eB.queryWithCache (.next/server/chunks/ssr/src_1v9cc11._.js:28:33964)
+    at async (.next/server/chunks/ssr/src_1v9cc11._.js:28:36373)
+    at async Object.getHydratedCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:6499)
+    at async Object.getVisibleCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:7307)
+    at async e (.next/server/chunks/ssr/[root-of-the-server]__08hg23b._.js:1:4454) {
+  query: 'select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""',
+  params: [],
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:5432
+      at <unknown> (Error: connect ECONNREFUSED 127.0.0.1:5432) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 5432
+  }
+}",prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,,,,,
+2026-09-23 12:49:24,1790167764969,www.coconutstation.com/menu,GET,_rsc=f8xsfO5udUYwziP1,200,drflr-1790167764969-5833f913c0af,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,8,bom1,213,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M3750KZYF4P9PFPA3PJW0DZM,J1kvUOFiNb5b,1,,
+2026-09-23 12:49:24,1790167764969,www.coconutstation.com/menu,GET,_rsc=f8xsfO5udUYwziP1,200,drflr-1790167764969-5833f913c0af,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,12,iad1,257,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M3750M3KT488HSWAH8R719MJ,odAxs9kmjFHZ,1,,
+2026-09-23 12:49:23,1790167763516,www.coconutstation.com/,GET,_rsc=oRZxILQ1iT-_yfxP&nxtPlocale=en,200,r9phg-1790167763516-858224fbecc9,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,9,iad1,257,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M3750JNVS0ASD196HH9F9AFD,odAxs9kmjFHZ,1,,
+2026-09-23 12:49:23,1790167763516,www.coconutstation.com/,GET,_rsc=oRZxILQ1iT-_yfxP&nxtPlocale=en,200,r9phg-1790167763516-858224fbecc9,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,10,bom1,212,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M3750JJ7617XDQGBWHCKFKGD,J1kvUOFiNb5b,1,,
+2026-09-23 12:49:12,1790167752740,www.coconutstation.com/outlets,GET,_rsc=bVCeaEQygKBDdJWA,200,rzb28-1790167752740-407f01f810f7,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,8,bom1,212,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M375081A1BKB8KTVZZD0FCQ7,J1kvUOFiNb5b,1,,
+2026-09-23 12:49:12,1790167752740,www.coconutstation.com/outlets,GET,_rsc=bVCeaEQygKBDdJWA,200,rzb28-1790167752740-407f01f810f7,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/outlets.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,12,iad1,256,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M3750851CA45435YFFX3WJKH,odAxs9kmjFHZ,1,,
+2026-09-23 12:49:10,1790167750155,www.coconutstation.com/events,GET,_rsc=F_dv5qoq3CaiKYdK&nxtPlocale=en,200,zft4n-1790167750155-9c3a88c1cd90,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/events.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,11,iad1,255,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M37505M9ETYY4YB1AHQ3GS3T,odAxs9kmjFHZ,1,,
+2026-09-23 12:49:10,1790167750155,www.coconutstation.com/events,GET,_rsc=F_dv5qoq3CaiKYdK&nxtPlocale=en,200,zft4n-1790167750155-9c3a88c1cd90,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,9,bom1,212,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M37505GRASKS17MN8TCEF6V2,J1kvUOFiNb5b,1,,
+2026-09-23 12:49:08,1790167748831,www.coconutstation.com/outlets,GET,_rsc=P146tV0leL2maVHx&nxtPlocale=en,200,zft4n-1790167748831-34ffd744c4a2,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/outlets.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,11,iad1,254,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M37504AY8F4NRH04DJXNB2Y3,odAxs9kmjFHZ,1,,
+2026-09-23 12:49:08,1790167748831,www.coconutstation.com/outlets,GET,_rsc=P146tV0leL2maVHx&nxtPlocale=en,200,zft4n-1790167748831-34ffd744c4a2,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,9,bom1,212,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M3750476GKHJZSCQBJRN5QAB,J1kvUOFiNb5b,1,,
+2026-09-23 12:49:06,1790167746449,www.coconutstation.com/menu,GET,_rsc=vQspc_Cv0ctAxZWR&nxtPlocale=en,200,nlvll-1790167746289-75efce84f1fa,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",error,production,main,MISS,function,/[locale]/menu,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,,,,,"Failed to fetch catalog overrides, returning static catalog: Error: Failed query: select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""
+params: 
+    at eB.queryWithCache (.next/server/chunks/ssr/src_1v9cc11._.js:28:33964)
+    at async (.next/server/chunks/ssr/src_1v9cc11._.js:28:36373)
+    at async Object.getHydratedCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:6499)
+    at async Object.getVisibleCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:7307)
+    at async e (.next/server/chunks/ssr/[root-of-the-server]__08hg23b._.js:1:4454) {
+  query: 'select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""',
+  params: [],
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:5432
+      at <unknown> (Error: connect ECONNREFUSED 127.0.0.1:5432) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 5432
+  }
+}",prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,,,,,
+2026-09-23 12:49:06,1790167746289,www.coconutstation.com/menu,GET,_rsc=vQspc_Cv0ctAxZWR&nxtPlocale=en,200,nlvll-1790167746289-75efce84f1fa,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,14,iad1,253,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M37501VW6G0PWKD155BCAC5S,odAxs9kmjFHZ,1,,
+2026-09-23 12:49:06,1790167746289,www.coconutstation.com/menu,GET,_rsc=vQspc_Cv0ctAxZWR&nxtPlocale=en,200,nlvll-1790167746289-75efce84f1fa,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,10,bom1,212,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M37501QR0QTNJM5VRCZXSMQ3,J1kvUOFiNb5b,1,,
+2026-09-23 12:48:56,1790167736266,www.coconutstation.com/menu/coconut-water,GET,_rsc=gnwLXvv9dJ3LAFNZ&nxtPlocale=en&nxtPslug=coconut-water,200,kvfcl-1790167736113-33161284b819,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",error,production,main,MISS,function,/[locale]/menu/[slug],www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,,,,,"Failed to fetch catalog overrides, returning static catalog: Error: Failed query: select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""
+params: 
+    at eB.queryWithCache (.next/server/chunks/ssr/src_1v9cc11._.js:28:33964)
+    at async (.next/server/chunks/ssr/src_1v9cc11._.js:28:36373)
+    at async Object.getHydratedCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:6499)
+    at async Object.getProductBySlug (.next/server/chunks/ssr/src_1v9cc11._.js:1:7431)
+    at async i (.next/server/chunks/ssr/[root-of-the-server]__1_chgq0._.js:1:5011) {
+  query: 'select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""',
+  params: [],
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:5432
+      at <unknown> (Error: connect ECONNREFUSED 127.0.0.1:5432) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 5432
+  }
+}",prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,,,,,
+2026-09-23 12:48:56,1790167736267,www.coconutstation.com/menu/coconut-water,GET,_rsc=gnwLXvv9dJ3LAFNZ&nxtPlocale=en&nxtPslug=coconut-water,200,kvfcl-1790167736113-33161284b819,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",error,production,main,MISS,function,/[locale]/menu/[slug],www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,,,,,"Failed to fetch catalog overrides, returning static catalog: Error: Failed query: select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""
+params: 
+    at eB.queryWithCache (.next/server/chunks/ssr/src_1v9cc11._.js:28:33964)
+    at async (.next/server/chunks/ssr/src_1v9cc11._.js:28:36373)
+    at async Object.getHydratedCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:6499)
+    at async Object.getProductBySlug (.next/server/chunks/ssr/src_1v9cc11._.js:1:7431)
+    at async Module.h [as generateMetadata] (.next/server/chunks/ssr/[root-of-the-server]__1_chgq0._.js:1:4831) {
+  query: 'select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""',
+  params: [],
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:5432
+      at <unknown> (Error: connect ECONNREFUSED 127.0.0.1:5432) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 5432
+  }
+}",prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,,,,,
+2026-09-23 12:48:56,1790167736113,www.coconutstation.com/menu/coconut-water,GET,_rsc=gnwLXvv9dJ3LAFNZ&nxtPlocale=en&nxtPslug=coconut-water,200,kvfcl-1790167736113-33161284b819,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu/[slug].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,14,iad1,253,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374ZQXRNN501NPV3PJTD02N,odAxs9kmjFHZ,1,,
+2026-09-23 12:48:56,1790167736113,www.coconutstation.com/menu/coconut-water,GET,_rsc=gnwLXvv9dJ3LAFNZ&nxtPlocale=en&nxtPslug=coconut-water,200,kvfcl-1790167736113-33161284b819,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,8,bom1,211,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374ZQSSMA4NK4VV22X1GXKZ,J1kvUOFiNb5b,1,,
+2026-09-23 12:48:53,1790167733053,www.coconutstation.com/menu,GET,_rsc=f8xsfO5udUYwziP1&nxtPlocale=en,200,jvn77-1790167732905-0ca88295dc30,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",error,production,main,MISS,function,/[locale]/menu,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,,,,,"Failed to fetch catalog overrides, returning static catalog: Error: Failed query: select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""
+params: 
+    at eB.queryWithCache (.next/server/chunks/ssr/src_1v9cc11._.js:28:33964)
+    at async (.next/server/chunks/ssr/src_1v9cc11._.js:28:36373)
+    at async Object.getHydratedCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:6499)
+    at async Object.getVisibleCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:7307)
+    at async e (.next/server/chunks/ssr/[root-of-the-server]__08hg23b._.js:1:4454) {
+  query: 'select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""',
+  params: [],
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:5432
+      at <unknown> (Error: connect ECONNREFUSED 127.0.0.1:5432) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 5432
+  }
+}",prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,,,,,
+2026-09-23 12:48:52,1790167732905,www.coconutstation.com/menu,GET,_rsc=f8xsfO5udUYwziP1&nxtPlocale=en,200,jvn77-1790167732905-0ca88295dc30,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,12,iad1,253,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374ZMSAVR883AJQ9YG563GF,odAxs9kmjFHZ,1,,
+2026-09-23 12:48:52,1790167732905,www.coconutstation.com/menu,GET,_rsc=f8xsfO5udUYwziP1&nxtPlocale=en,200,jvn77-1790167732905-0ca88295dc30,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,10,bom1,211,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374ZMNKANH1DWZFYM1P4CXT,J1kvUOFiNb5b,1,,
+2026-09-23 12:48:18,1790167698643,www.coconutstation.com/,GET,_rsc=oRZxILQ1iT-_yfxP&nxtPlocale=en,200,kvfcl-1790167698643-486bed6600d1,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,9,iad1,252,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374YKAMHEB47FS125KH5D90,odAxs9kmjFHZ,1,,
+2026-09-23 12:48:18,1790167698643,www.coconutstation.com/,GET,_rsc=oRZxILQ1iT-_yfxP&nxtPlocale=en,200,kvfcl-1790167698643-486bed6600d1,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,10,bom1,211,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374YK6XN8CSJ36AGHRZX6MX,J1kvUOFiNb5b,1,,
+2026-09-23 12:48:05,1790167685380,www.coconutstation.com/outlets,GET,_rsc=WZ_hfV2lRfPkI-Cb&nxtPlocale=en,200,vzv54-1790167685380-b3e7296cd795,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/outlets.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,13,iad1,252,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374Y6BXP0GG53TQHEXAAVDZ,odAxs9kmjFHZ,1,,
+2026-09-23 12:48:05,1790167685380,www.coconutstation.com/outlets,GET,_rsc=WZ_hfV2lRfPkI-Cb&nxtPlocale=en,200,vzv54-1790167685380-b3e7296cd795,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,9,bom1,210,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374Y68AHM9CY1B5PPXQCH78,J1kvUOFiNb5b,1,,
+2026-09-23 12:48:03,1790167683655,www.coconutstation.com/why-coconut,GET,_rsc=N1U-kzUsQtmFnvmq&nxtPlocale=en,200,77ksl-1790167683655-1910e20b36b8,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/why-coconut.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,9,iad1,252,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374Y4Q57V90X3EATEX6234M,odAxs9kmjFHZ,1,,
+2026-09-23 12:48:03,1790167683655,www.coconutstation.com/why-coconut,GET,_rsc=N1U-kzUsQtmFnvmq&nxtPlocale=en,200,77ksl-1790167683655-1910e20b36b8,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,23,bom1,210,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374Y4JR0Q8GQYKZK8RKZ84D,J1kvUOFiNb5b,1,,
+2026-09-23 12:47:42,1790167662200,www.coconutstation.com/menu,GET,_rsc=f8xsfO5udUYwziP1&nxtPlocale=en,200,qlz7c-1790167662049-f3dfb94cd8b0,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",error,production,main,MISS,function,/[locale]/menu,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,,,,,"Failed to fetch catalog overrides, returning static catalog: Error: Failed query: select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""
+params: 
+    at eB.queryWithCache (.next/server/chunks/ssr/src_1v9cc11._.js:28:33964)
+    at async (.next/server/chunks/ssr/src_1v9cc11._.js:28:36373)
+    at async Object.getHydratedCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:6499)
+    at async Object.getVisibleCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:7307)
+    at async e (.next/server/chunks/ssr/[root-of-the-server]__08hg23b._.js:1:4454) {
+  query: 'select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""',
+  params: [],
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:5432
+      at <unknown> (Error: connect ECONNREFUSED 127.0.0.1:5432) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 5432
+  }
+}",prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,,,,,
+2026-09-23 12:47:42,1790167662049,www.coconutstation.com/menu,GET,_rsc=f8xsfO5udUYwziP1&nxtPlocale=en,200,qlz7c-1790167662049-f3dfb94cd8b0,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,12,iad1,252,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374XFK5RY1DDCY6XEMNCAB8,odAxs9kmjFHZ,1,,
+2026-09-23 12:47:42,1790167662049,www.coconutstation.com/menu,GET,_rsc=f8xsfO5udUYwziP1&nxtPlocale=en,200,qlz7c-1790167662049-f3dfb94cd8b0,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,22,bom1,218,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374XFF857B5VWNZMQCX0Z0Z,J1kvUOFiNb5b,1,,
+2026-09-23 12:47:37,1790167657728,www.coconutstation.com/blog,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en,200,4h6w2-1790167657728-3fbc99a79f63,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/blog.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,15,iad1,252,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374XBC0M0YF10CA1W8RYRHR,odAxs9kmjFHZ,1,,
+2026-09-23 12:47:37,1790167657728,www.coconutstation.com/blog,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en,200,4h6w2-1790167657728-3fbc99a79f63,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,14,bom1,218,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374XB85Z85PN2CR7XXHDDW4,J1kvUOFiNb5b,1,,
+2026-09-23 12:47:37,1790167657657,www.coconutstation.com/blog/from-tree-to-bottle,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en&nxtPslug=from-tree-to-bottle,200,xgc96-1790167657657-122b6f6a5e4b,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/blog/[slug].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,14,iad1,252,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374XB9VG2D9RK4K4FRTBBT9,odAxs9kmjFHZ,1,,
+2026-09-23 12:47:37,1790167657657,www.coconutstation.com/blog/from-tree-to-bottle,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en&nxtPslug=from-tree-to-bottle,200,xgc96-1790167657657-122b6f6a5e4b,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,33,bom1,218,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374XB5XT68AP2WRVGAMGN4F,J1kvUOFiNb5b,1,,
+2026-09-23 12:47:37,1790167657657,www.coconutstation.com/blog/zero-waste-promise,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en&nxtPslug=zero-waste-promise,200,7td8c-1790167657657-da6108b39607,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/blog/[slug].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,13,iad1,234,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374XB9K2448FAE27GQPR1N2,Dxzo3n8e0m6O,1,,
+2026-09-23 12:47:37,1790167657657,www.coconutstation.com/blog/zero-waste-promise,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en&nxtPslug=zero-waste-promise,200,7td8c-1790167657657-da6108b39607,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,10,bom1,218,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374XB5Y737B5E6P4XKFJZFM,amPaoaZZXOQG,1,,
+2026-09-23 12:47:37,1790167657657,www.coconutstation.com/blog/health-benefits-of-coconut-water,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en&nxtPslug=health-benefits-of-coconut-water,200,72zkt-1790167657657-4f6a2e4e7e55,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/blog/[slug].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,9,iad1,243,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374XB9FKYNV01RXBD0MR0GK,lVVtoUufnL91,1,,
+2026-09-23 12:47:37,1790167657657,www.coconutstation.com/blog/health-benefits-of-coconut-water,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en&nxtPslug=health-benefits-of-coconut-water,200,72zkt-1790167657657-4f6a2e4e7e55,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,10,bom1,221,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374XB5WECFQ803G32YAC7T1,Nf3HNauptrMN,1,,
+2026-09-23 12:47:37,1790167657402,www.coconutstation.com/terms,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en,200,4h6w2-1790167657402-53ed0c1d2591,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/terms.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,15,iad1,241,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374XB1M3KN625CTKGM51WNE,lVVtoUufnL91,1,,
+2026-09-23 12:47:37,1790167657402,www.coconutstation.com/terms,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en,200,4h6w2-1790167657402-53ed0c1d2591,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,10,bom1,220,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374XAXYC4M3ASCYTB0RTK4D,Nf3HNauptrMN,1,,
+2026-09-23 12:47:37,1790167657103,www.coconutstation.com/privacy,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en,200,4h6w2-1790167657103-9f363d4c158f,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/privacy.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,10,iad1,240,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374XARFXQ0HQNQWDMZAW0S3,lVVtoUufnL91,1,,
+2026-09-23 12:47:37,1790167657103,www.coconutstation.com/privacy,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en,200,4h6w2-1790167657103-9f363d4c158f,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,11,bom1,220,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374XAMR53P9WWNQZ78TWVA4,Nf3HNauptrMN,1,,
+2026-09-23 12:47:37,1790167657075,www.coconutstation.com/terms,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en,200,72zkt-1790167657075-b24d553c8ed4,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/terms.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,19,iad1,231,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374XAQMZXH27AAZWT6MZ16A,Dxzo3n8e0m6O,1,,
+2026-09-23 12:47:37,1790167657075,www.coconutstation.com/terms,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en,200,72zkt-1790167657075-b24d553c8ed4,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,9,bom1,220,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374XAKPG9HRWNDDZ24CTVGD,Nf3HNauptrMN,1,,
+2026-09-23 12:47:36,1790167656808,www.coconutstation.com/privacy,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en,200,4h6w2-1790167656808-e60607adae1d,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/privacy.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,14,iad1,239,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374XAF0KG4D4PRB18BDPM0H,lVVtoUufnL91,1,,
+2026-09-23 12:47:36,1790167656808,www.coconutstation.com/privacy,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en,200,4h6w2-1790167656808-e60607adae1d,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,9,bom1,220,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374XABEMNTZN7KR8KQ5TMJD,Nf3HNauptrMN,1,,
+2026-09-23 12:47:36,1790167656389,www.coconutstation.com/blog/from-tree-to-bottle,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en&nxtPslug=from-tree-to-bottle,200,8xmsf-1790167656389-0622fa558251,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/blog/[slug].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,366,iad1,238,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374XA21GKXDBWXH2M2C2061,lVVtoUufnL91,1,,
+2026-09-23 12:47:36,1790167656389,www.coconutstation.com/blog/from-tree-to-bottle,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en&nxtPslug=from-tree-to-bottle,200,8xmsf-1790167656389-0622fa558251,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,10,bom1,219,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X9YAB80JSRSFV5D2X39Y,Nf3HNauptrMN,1,,
+2026-09-23 12:47:36,1790167656389,www.coconutstation.com/blog/zero-waste-promise,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en&nxtPslug=zero-waste-promise,200,72zkt-1790167656389-4f30fa1f8349,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/blog/[slug].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,432,iad1,252,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374XA1XNRFEPWTHW9Q4RNZE,odAxs9kmjFHZ,1,,
+2026-09-23 12:47:36,1790167656389,www.coconutstation.com/blog/zero-waste-promise,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en&nxtPslug=zero-waste-promise,200,72zkt-1790167656389-4f30fa1f8349,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,11,bom1,217,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X9Y8XS4DA0Y8QF4XRWBN,amPaoaZZXOQG,1,,
+2026-09-23 12:47:36,1790167656388,www.coconutstation.com/blog/health-benefits-of-coconut-water,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en&nxtPslug=health-benefits-of-coconut-water,200,xgc96-1790167656388-184a6f8a3cc7,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/blog/[slug].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,878,iad1,231,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374XA1XFJ6T0YXRPQPP2XB3,Dxzo3n8e0m6O,1,,
+2026-09-23 12:47:36,1790167656388,www.coconutstation.com/blog/health-benefits-of-coconut-water,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en&nxtPslug=health-benefits-of-coconut-water,200,xgc96-1790167656388-184a6f8a3cc7,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,9,bom1,218,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X9YCWV6D4168MMT262VG,J1kvUOFiNb5b,1,,
+2026-09-23 12:47:36,1790167656371,www.coconutstation.com/blog,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en,200,jqsxl-1790167656371-22081ff5afd5,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/blog.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,18,iad1,222,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374XA1RE4XF4ZJCJHATZC40,lVVtoUufnL91,1,,
+2026-09-23 12:47:36,1790167656371,www.coconutstation.com/blog,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en,200,jqsxl-1790167656371-22081ff5afd5,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,11,bom1,218,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X9Y57JWQK1GS819ETXBH,1HbGM0DhGdnr,1,,
+2026-09-23 12:47:33,1790167653814,www.coconutstation.com/menu/coconut-coffee,GET,_rsc=1vwYfVB7_E9t4fEj,200,72zkt-1790167653676-68034b57b40d,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",error,production,main,MISS,function,/[locale]/menu/[slug],www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,,,,,"Failed to fetch catalog overrides, returning static catalog: Error: Failed query: select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""
+params: 
+    at eB.queryWithCache (.next/server/chunks/ssr/src_1v9cc11._.js:28:33964)
+    at async (.next/server/chunks/ssr/src_1v9cc11._.js:28:36373)
+    at async Object.getHydratedCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:6499)
+    at async Object.getProductBySlug (.next/server/chunks/ssr/src_1v9cc11._.js:1:7431)
+    at async Module.h [as generateMetadata] (.next/server/chunks/ssr/[root-of-the-server]__1_chgq0._.js:1:4831) {
+  query: 'select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""',
+  params: [],
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:5432
+      at <unknown> (Error: connect ECONNREFUSED 127.0.0.1:5432) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 5432
+  }
+}",prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,,,,,
+2026-09-23 12:47:33,1790167653676,www.coconutstation.com/menu/coconut-coffee,GET,_rsc=1vwYfVB7_E9t4fEj,200,72zkt-1790167653676-68034b57b40d,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,9,bom1,217,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X79FJJYT86SVC0R0PP5H,1HbGM0DhGdnr,1,,
+2026-09-23 12:47:33,1790167653676,www.coconutstation.com/menu/coconut-coffee,GET,_rsc=1vwYfVB7_E9t4fEj,200,72zkt-1790167653676-68034b57b40d,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu/[slug].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,15,iad1,222,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X7CZ7RQBGK8MCETFH2M5,lVVtoUufnL91,1,,
+2026-09-23 12:47:33,1790167653601,www.coconutstation.com/menu/coconut-milk-shake,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en&nxtPslug=coconut-milk-shake,200,rw6st-1790167653461-b21e9ecca64f,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",error,production,main,MISS,function,/[locale]/menu/[slug],www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,,,,,"Failed to fetch catalog overrides, returning static catalog: Error: Failed query: select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""
+params: 
+    at eB.queryWithCache (.next/server/chunks/ssr/src_1v9cc11._.js:28:33964)
+    at async (.next/server/chunks/ssr/src_1v9cc11._.js:28:36373)
+    at async Object.getHydratedCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:6499)
+    at async Object.getProductBySlug (.next/server/chunks/ssr/src_1v9cc11._.js:1:7431)
+    at async Module.h [as generateMetadata] (.next/server/chunks/ssr/[root-of-the-server]__1_chgq0._.js:1:4831) {
+  query: 'select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""',
+  params: [],
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:5432
+      at <unknown> (Error: connect ECONNREFUSED 127.0.0.1:5432) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 5432
+  }
+}",prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,,,,,
+2026-09-23 12:47:33,1790167653461,www.coconutstation.com/menu/coconut-milk-shake,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en&nxtPslug=coconut-milk-shake,200,rw6st-1790167653461-b21e9ecca64f,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu/[slug].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,18,iad1,220,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X768H61YM6GTSR18F4Z1,lVVtoUufnL91,1,,
+2026-09-23 12:47:33,1790167653461,www.coconutstation.com/menu/coconut-milk-shake,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en&nxtPslug=coconut-milk-shake,200,rw6st-1790167653461-b21e9ecca64f,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,9,bom1,217,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X72R2NB4SA120W3DGYAQ,amPaoaZZXOQG,1,,
+2026-09-23 12:47:33,1790167653650,www.coconutstation.com/menu/coconut-milk-shake-basil,GET,_rsc=1vwYfVB7_E9t4fEj,200,fbx6z-1790167653461-704180960a6e,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",error,production,main,MISS,function,/[locale]/menu/[slug],www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,,,,,"Failed to fetch catalog overrides, returning static catalog: Error: Failed query: select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""
+params: 
+    at eB.queryWithCache (.next/server/chunks/ssr/src_1v9cc11._.js:28:33964)
+    at async (.next/server/chunks/ssr/src_1v9cc11._.js:28:36373)
+    at async Object.getHydratedCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:6499)
+    at async Object.getProductBySlug (.next/server/chunks/ssr/src_1v9cc11._.js:1:7431)
+    at async Module.h [as generateMetadata] (.next/server/chunks/ssr/[root-of-the-server]__1_chgq0._.js:1:4831) {
+  query: 'select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""',
+  params: [],
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:5432
+      at <unknown> (Error: connect ECONNREFUSED 127.0.0.1:5432) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 5432
+  }
+}",prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,,,,,
+2026-09-23 12:47:33,1790167653461,www.coconutstation.com/menu/coconut-milk-shake-basil,GET,_rsc=1vwYfVB7_E9t4fEj,200,fbx6z-1790167653461-704180960a6e,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,27,bom1,217,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X72RDXMRQVPKQE933QAZ,1HbGM0DhGdnr,1,,
+2026-09-23 12:47:33,1790167653461,www.coconutstation.com/menu/coconut-milk-shake-basil,GET,_rsc=1vwYfVB7_E9t4fEj,200,fbx6z-1790167653461-704180960a6e,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu/[slug].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,13,iad1,221,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X77YC9RHGYDWR7SM6RF2,lVVtoUufnL91,1,,
+2026-09-23 12:47:33,1790167653591,www.coconutstation.com/menu/coconut-pudding,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en&nxtPslug=coconut-pudding,200,s5tgv-1790167653451-2610050fcf67,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",error,production,main,MISS,function,/[locale]/menu/[slug],www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,,,,,"Failed to fetch catalog overrides, returning static catalog: Error: Failed query: select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""
+params: 
+    at eB.queryWithCache (.next/server/chunks/ssr/src_1v9cc11._.js:28:33964)
+    at async (.next/server/chunks/ssr/src_1v9cc11._.js:28:36373)
+    at async Object.getHydratedCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:6499)
+    at async Object.getProductBySlug (.next/server/chunks/ssr/src_1v9cc11._.js:1:7431)
+    at async Module.h [as generateMetadata] (.next/server/chunks/ssr/[root-of-the-server]__1_chgq0._.js:1:4831) {
+  query: 'select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""',
+  params: [],
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:5432
+      at <unknown> (Error: connect ECONNREFUSED 127.0.0.1:5432) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 5432
+  }
+}",prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,,,,,
+2026-09-23 12:47:33,1790167653451,www.coconutstation.com/menu/coconut-pudding,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en&nxtPslug=coconut-pudding,200,s5tgv-1790167653451-2610050fcf67,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu/[slug].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,11,iad1,236,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X76653SFS862WNPAZQTX,odAxs9kmjFHZ,1,,
+2026-09-23 12:47:33,1790167653451,www.coconutstation.com/menu/coconut-pudding,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en&nxtPslug=coconut-pudding,200,s5tgv-1790167653451-2610050fcf67,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,10,bom1,219,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X72JMQXMFK7SSH89R7YD,Nf3HNauptrMN,1,,
+2026-09-23 12:47:33,1790167653514,www.coconutstation.com/menu/thai-ice-cream,GET,_rsc=1vwYfVB7_E9t4fEj,200,72zkt-1790167653365-d10f5160da67,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",error,production,main,MISS,function,/[locale]/menu/[slug],www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,,,,,"Failed to fetch catalog overrides, returning static catalog: Error: Failed query: select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""
+params: 
+    at eB.queryWithCache (.next/server/chunks/ssr/src_1v9cc11._.js:28:33964)
+    at async (.next/server/chunks/ssr/src_1v9cc11._.js:28:36373)
+    at async Object.getHydratedCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:6499)
+    at async Object.getProductBySlug (.next/server/chunks/ssr/src_1v9cc11._.js:1:7431)
+    at async Module.h [as generateMetadata] (.next/server/chunks/ssr/[root-of-the-server]__1_chgq0._.js:1:4831) {
+  query: 'select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""',
+  params: [],
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:5432
+      at <unknown> (Error: connect ECONNREFUSED 127.0.0.1:5432) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 5432
+  }
+}",prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,,,,,
+2026-09-23 12:47:33,1790167653365,www.coconutstation.com/menu/thai-ice-cream,GET,_rsc=1vwYfVB7_E9t4fEj,200,72zkt-1790167653365-d10f5160da67,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,22,bom1,218,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X6ZSFF0V2Z807QWMABE8,Nf3HNauptrMN,1,,
+2026-09-23 12:47:33,1790167653365,www.coconutstation.com/menu/thai-ice-cream,GET,_rsc=1vwYfVB7_E9t4fEj,200,72zkt-1790167653365-d10f5160da67,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu/[slug].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,11,iad1,236,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X73PJK2F72ZZ97FNDD8F,odAxs9kmjFHZ,1,,
+2026-09-23 12:47:33,1790167653313,www.coconutstation.com/menu/coconut-water,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en&nxtPslug=coconut-water,200,rw6st-1790167653162-66718d4b6d28,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",error,production,main,MISS,function,/[locale]/menu/[slug],www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,,,,,"Failed to fetch catalog overrides, returning static catalog: Error: Failed query: select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""
+params: 
+    at eB.queryWithCache (.next/server/chunks/ssr/src_1v9cc11._.js:28:33964)
+    at async (.next/server/chunks/ssr/src_1v9cc11._.js:28:36373)
+    at async Object.getHydratedCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:6499)
+    at async Object.getProductBySlug (.next/server/chunks/ssr/src_1v9cc11._.js:1:7431)
+    at async Module.h [as generateMetadata] (.next/server/chunks/ssr/[root-of-the-server]__1_chgq0._.js:1:4831) {
+  query: 'select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""',
+  params: [],
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:5432
+      at <unknown> (Error: connect ECONNREFUSED 127.0.0.1:5432) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 5432
+  }
+}",prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,,,,,
+2026-09-23 12:47:33,1790167653162,www.coconutstation.com/menu/coconut-water,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en&nxtPslug=coconut-water,200,rw6st-1790167653162-66718d4b6d28,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu/[slug].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,10,iad1,236,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X6XC9FT44E6Z9093F4DJ,odAxs9kmjFHZ,1,,
+2026-09-23 12:47:33,1790167653162,www.coconutstation.com/menu/coconut-water,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en&nxtPslug=coconut-water,200,rw6st-1790167653162-66718d4b6d28,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,22,bom1,218,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X6SGMNJZW29WECDNQ06C,Nf3HNauptrMN,1,,
+2026-09-23 12:47:33,1790167653294,www.coconutstation.com/menu/live-coconut,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en&nxtPslug=live-coconut,200,s5tgv-1790167653152-f51fee1dd406,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",error,production,main,MISS,function,/[locale]/menu/[slug],www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,,,,,"Failed to fetch catalog overrides, returning static catalog: Error: Failed query: select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""
+params: 
+    at eB.queryWithCache (.next/server/chunks/ssr/src_1v9cc11._.js:28:33964)
+    at async (.next/server/chunks/ssr/src_1v9cc11._.js:28:36373)
+    at async Object.getHydratedCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:6499)
+    at async Object.getProductBySlug (.next/server/chunks/ssr/src_1v9cc11._.js:1:7431)
+    at async Module.h [as generateMetadata] (.next/server/chunks/ssr/[root-of-the-server]__1_chgq0._.js:1:4831) {
+  query: 'select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""',
+  params: [],
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:5432
+      at <unknown> (Error: connect ECONNREFUSED 127.0.0.1:5432) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 5432
+  }
+}",prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,,,,,
+2026-09-23 12:47:33,1790167653152,www.coconutstation.com/menu/live-coconut,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en&nxtPslug=live-coconut,200,s5tgv-1790167653152-f51fee1dd406,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu/[slug].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,14,iad1,236,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X6WQZV5T2QW5TJNJ2WQG,odAxs9kmjFHZ,1,,
+2026-09-23 12:47:33,1790167653152,www.coconutstation.com/menu/live-coconut,GET,_rsc=1vwYfVB7_E9t4fEj&nxtPlocale=en&nxtPslug=live-coconut,200,s5tgv-1790167653152-f51fee1dd406,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,10,bom1,217,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X6S6DRP2PCM5WD9DFE2S,amPaoaZZXOQG,1,,
+2026-09-23 12:47:33,1790167653116,www.coconutstation.com/menu/coconut-coffee,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en&nxtPslug=coconut-coffee,200,jqsxl-1790167653116-99276a6e15eb,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu/[slug].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,8,iad1,220,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X6WNE7C20WNKJJHK5EJ7,lVVtoUufnL91,1,,
+2026-09-23 12:47:33,1790167653116,www.coconutstation.com/menu/coconut-coffee,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en&nxtPslug=coconut-coffee,200,jqsxl-1790167653116-99276a6e15eb,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,19,bom1,217,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X6R1WPVG67V6PTA2FE7Z,Nf3HNauptrMN,1,,
+2026-09-23 12:47:33,1790167653108,www.coconutstation.com/menu/coconut-milk-shake-basil,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en&nxtPslug=coconut-milk-shake-basil,200,qpt48-1790167653108-564ac25c9a9b,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu/[slug].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,12,iad1,221,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X6W0D298XSRJRJA44PDH,lVVtoUufnL91,1,,
+2026-09-23 12:47:33,1790167653108,www.coconutstation.com/menu/coconut-milk-shake-basil,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en&nxtPslug=coconut-milk-shake-basil,200,qpt48-1790167653108-564ac25c9a9b,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,30,bom1,217,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X6QRAE8VJG16DAF94C5G,amPaoaZZXOQG,1,,
+2026-09-23 12:47:32,1790167652820,www.coconutstation.com/menu/coconut-pudding,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en&nxtPslug=coconut-pudding,200,qpt48-1790167652820-5b14ebac10a3,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu/[slug].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,25,iad1,219,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X6KS26BHCZF1E9TS60VG,lVVtoUufnL91,1,,
+2026-09-23 12:47:32,1790167652820,www.coconutstation.com/menu/coconut-pudding,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en&nxtPslug=coconut-pudding,200,qpt48-1790167652820-5b14ebac10a3,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,575,bom1,216,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X6ES7X3FX92SK6CH2WGJ,Nf3HNauptrMN,1,,
+2026-09-23 12:47:32,1790167652816,www.coconutstation.com/menu/coconut-milk-shake,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en&nxtPslug=coconut-milk-shake,200,jqsxl-1790167652816-a81cfa4d55e7,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu/[slug].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,7,iad1,235,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X6KFS7KR9BRDD54ZB0CS,odAxs9kmjFHZ,1,,
+2026-09-23 12:47:32,1790167652816,www.coconutstation.com/menu/coconut-milk-shake,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en&nxtPslug=coconut-milk-shake,200,jqsxl-1790167652816-a81cfa4d55e7,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,581,bom1,216,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X6EQE4T27YHCCHYGT9E1,amPaoaZZXOQG,1,,
+2026-09-23 12:47:32,1790167652816,www.coconutstation.com/menu/coconut-water,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en&nxtPslug=coconut-water,200,8xmsf-1790167652816-7bc737a4adbb,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu/[slug].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,14,iad1,217,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X6J7B5PTDS869VADT8TA,lVVtoUufnL91,1,,
+2026-09-23 12:47:32,1790167652816,www.coconutstation.com/menu/coconut-water,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en&nxtPslug=coconut-water,200,8xmsf-1790167652816-7bc737a4adbb,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,9,bom1,218,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X6ENYWAEMC2NPDZ0E7R8,J1kvUOFiNb5b,1,,
+2026-09-23 12:47:32,1790167652816,www.coconutstation.com/menu/live-coconut,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en&nxtPslug=live-coconut,200,72zkt-1790167652816-0413a7633d6c,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu/[slug].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,7,iad1,235,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X6JPFRR5Q45B0FQMQRZC,odAxs9kmjFHZ,1,,
+2026-09-23 12:47:32,1790167652816,www.coconutstation.com/menu/live-coconut,GET,_rsc=ry-B8umWgNEV4JR9&nxtPlocale=en&nxtPslug=live-coconut,200,72zkt-1790167652816-0413a7633d6c,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,27,bom1,215,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X6EQG93P9518452WSHS8,1HbGM0DhGdnr,1,,
+2026-09-23 12:47:30,1790167650640,www.coconutstation.com/,GET,_rsc=NFO0wNhZ4dqesNuh&nxtPlocale=en,200,6jsrn-1790167650640-6d197582930e,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,17,iad1,215,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X4EX1W5F4MGEM63KXSYR,lVVtoUufnL91,1,,
+2026-09-23 12:47:30,1790167650640,www.coconutstation.com/,GET,_rsc=NFO0wNhZ4dqesNuh&nxtPlocale=en,200,6jsrn-1790167650640-6d197582930e,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,12,bom1,216,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X4AMVJDKH6QQ0D1Z9BN8,J1kvUOFiNb5b,1,,
+2026-09-23 12:47:29,1790167649109,www.coconutstation.com/events,GET,_rsc=AkT7BPPe36YEjOzh&nxtPlocale=en,200,fbx6z-1790167649109-2da97d482c86,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/events.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,9,iad1,234,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X2YBW8S070J1SD3PG50X,odAxs9kmjFHZ,1,,
+2026-09-23 12:47:29,1790167649109,www.coconutstation.com/events,GET,_rsc=AkT7BPPe36YEjOzh&nxtPlocale=en,200,fbx6z-1790167649109-2da97d482c86,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,11,bom1,215,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X2TRJBF16BNVRS43S4DD,J1kvUOFiNb5b,1,,
+2026-09-23 12:47:29,1790167649073,www.coconutstation.com/outlets,GET,_rsc=AkT7BPPe36YEjOzh,200,8nb52-1790167649073-69b5b349f7b1,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,10,bom1,215,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X2SMWWVRNRH3RJW46R8H,J1kvUOFiNb5b,1,,
+2026-09-23 12:47:29,1790167649073,www.coconutstation.com/outlets,GET,_rsc=AkT7BPPe36YEjOzh,200,8nb52-1790167649073-69b5b349f7b1,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/outlets.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,8,iad1,233,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X2XFRWFRV6F5SP8RX2A5,odAxs9kmjFHZ,1,,
+2026-09-23 12:47:28,1790167648980,www.coconutstation.com/why-coconut,GET,_rsc=AkT7BPPe36YEjOzh&nxtPlocale=en,200,5ffdw-1790167648980-6ab23fd83eae,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/why-coconut.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,10,iad1,234,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X30KHHGYES0YDN13PQA5,odAxs9kmjFHZ,1,,
+2026-09-23 12:47:28,1790167648980,www.coconutstation.com/why-coconut,GET,_rsc=AkT7BPPe36YEjOzh&nxtPlocale=en,200,5ffdw-1790167648980-6ab23fd83eae,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,10,bom1,216,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X2WG1N812F4HJBBX4S6S,J1kvUOFiNb5b,1,,
+2026-09-23 12:47:28,1790167648830,www.coconutstation.com/,GET,_rsc=AkT7BPPe36YEjOzh,200,qpt48-1790167648830-535fce0d955e,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,563,bom1,214,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X2J3YWRWN9Q8BBCEPF44,1HbGM0DhGdnr,1,,
+2026-09-23 12:47:28,1790167648830,www.coconutstation.com/,GET,_rsc=AkT7BPPe36YEjOzh,200,qpt48-1790167648830-535fce0d955e,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,513,iad1,214,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X2YHNXJPA3SH0WJ269R3,lVVtoUufnL91,1,,
+2026-09-23 12:47:28,1790167648824,www.coconutstation.com/menu,GET,_rsc=AkT7BPPe36YEjOzh&nxtPlocale=en,200,8nb52-1790167648824-8f03ed719899,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,10,iad1,232,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X2NKK31VQCBXQ77D5T6H,odAxs9kmjFHZ,1,,
+2026-09-23 12:47:28,1790167648824,www.coconutstation.com/menu,GET,_rsc=AkT7BPPe36YEjOzh&nxtPlocale=en,200,8nb52-1790167648824-8f03ed719899,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,9,bom1,215,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X2J156DW1Q4M9D0J8PC4,J1kvUOFiNb5b,1,,
+2026-09-23 12:47:28,1790167648773,www.coconutstation.com/events,GET,_rsc=XG642ZU36-_gkx01&nxtPlocale=en,200,8xmsf-1790167648773-988f4a61730b,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/events.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,13,iad1,231,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X2KYKVBKY6J83VW354TT,odAxs9kmjFHZ,1,,
+2026-09-23 12:47:28,1790167648773,www.coconutstation.com/events,GET,_rsc=XG642ZU36-_gkx01&nxtPlocale=en,200,8xmsf-1790167648773-988f4a61730b,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,10,bom1,215,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X2GA1NXQZ4J1BP64HD7M,J1kvUOFiNb5b,1,,
+2026-09-23 12:47:28,1790167648404,www.coconutstation.com/outlets,GET,_rsc=XG642ZU36-_gkx01&nxtPlocale=en,200,5dgst-1790167648404-1b79e085191b,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/outlets.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,23,iad1,232,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X2A9WGFAX8TV8QDH8HHK,odAxs9kmjFHZ,1,,
+2026-09-23 12:47:28,1790167648404,www.coconutstation.com/outlets,GET,_rsc=XG642ZU36-_gkx01&nxtPlocale=en,200,5dgst-1790167648404-1b79e085191b,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,10,bom1,214,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X24Y4VYSJ9AH5J10E208,J1kvUOFiNb5b,1,,
+2026-09-23 12:47:28,1790167648402,www.coconutstation.com/menu,GET,_rsc=XG642ZU36-_gkx01&nxtPlocale=en,200,8xmsf-1790167648402-347ec9dc4952,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,15,iad1,232,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X2ATAECSVH1780AN94W4,odAxs9kmjFHZ,1,,
+2026-09-23 12:47:28,1790167648402,www.coconutstation.com/menu,GET,_rsc=XG642ZU36-_gkx01&nxtPlocale=en,200,8xmsf-1790167648402-347ec9dc4952,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,11,bom1,215,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X24X9G14T3HGMY07JNDJ,J1kvUOFiNb5b,1,,
+2026-09-23 12:47:28,1790167648402,www.coconutstation.com/why-coconut,GET,_rsc=XG642ZU36-_gkx01&nxtPlocale=en,200,6jsrn-1790167648402-a337e0f87cbb,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/why-coconut.rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,24,iad1,230,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X29R4SCR3YMNDDG8AX2W,odAxs9kmjFHZ,1,,
+2026-09-23 12:47:28,1790167648402,www.coconutstation.com/why-coconut,GET,_rsc=XG642ZU36-_gkx01&nxtPlocale=en,200,6jsrn-1790167648402-a337e0f87cbb,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,52,bom1,214,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X24V19C9RF9910T72DQZ,J1kvUOFiNb5b,1,,
+2026-09-23 12:47:28,1790167648401,www.coconutstation.com/,GET,_rsc=XG642ZU36-_gkx01&nxtPlocale=en,200,fbx6z-1790167648401-df43014dc7ac,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale].rsc,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,8,iad1,231,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X2BD9QB92JAAFSQ15A1A,odAxs9kmjFHZ,1,,
+2026-09-23 12:47:28,1790167648401,www.coconutstation.com/,GET,_rsc=XG642ZU36-_gkx01&nxtPlocale=en,200,fbx6z-1790167648401-df43014dc7ac,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,10,bom1,215,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X24XFNFG0SGEZB2RFC28,J1kvUOFiNb5b,1,,
+2026-09-23 12:47:28,1790167648397,www.coconutstation.com/favicon.ico,GET,nxtPlocale=favicon.ico,404,qpt48-1790167648397-8973b95c880c,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale],www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,36,iad1,228,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X27NY5ADYZZDE6VGXP3R,odAxs9kmjFHZ,1,,
+2026-09-23 12:47:27,1790167647787,www.coconutstation.com/menu/thai-ice-cream,GET,nxtPlocale=en&nxtPslug=thai-ice-cream,200,fq7vt-1790167646812-3acdc83cf0d6,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",error,production,main,MISS,function,/[locale]/menu/[slug],www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,,,,,"Failed to fetch catalog overrides, returning static catalog: Error: Failed query: select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""
+params: 
+    at eB.queryWithCache (.next/server/chunks/ssr/src_1v9cc11._.js:28:33964)
+    at async (.next/server/chunks/ssr/src_1v9cc11._.js:28:36373)
+    at async Object.getHydratedCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:6499)
+    at async Object.getProductBySlug (.next/server/chunks/ssr/src_1v9cc11._.js:1:7431)
+    at async i (.next/server/chunks/ssr/[root-of-the-server]__1_chgq0._.js:1:5011) {
+  query: 'select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""',
+  params: [],
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:5432
+      at <unknown> (Error: connect ECONNREFUSED 127.0.0.1:5432) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 5432
+  }
+}",prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,,,,,
+2026-09-23 12:47:27,1790167647795,www.coconutstation.com/menu/thai-ice-cream,GET,nxtPlocale=en&nxtPslug=thai-ice-cream,200,fq7vt-1790167646812-3acdc83cf0d6,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",error,production,main,MISS,function,/[locale]/menu/[slug],www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,,,,,"Failed to fetch catalog overrides, returning static catalog: Error: Failed query: select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""
+params: 
+    at eB.queryWithCache (.next/server/chunks/ssr/src_1v9cc11._.js:28:33964)
+    at async (.next/server/chunks/ssr/src_1v9cc11._.js:28:36373)
+    at async Object.getHydratedCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:6499)
+    at async Object.getVisibleCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:7307)
+    at async Q (.next/server/chunks/ssr/[root-of-the-server]__0smdevw._.js:1:11837) {
+  query: 'select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""',
+  params: [],
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:5432
+      at <unknown> (Error: connect ECONNREFUSED 127.0.0.1:5432) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 5432
+  }
+}",prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,,,,,
+2026-09-23 12:47:27,1790167647795,www.coconutstation.com/menu/thai-ice-cream,GET,nxtPlocale=en&nxtPslug=thai-ice-cream,200,fq7vt-1790167646812-3acdc83cf0d6,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",error,production,main,MISS,function,/[locale]/menu/[slug],www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,,,,,"Failed to fetch catalog overrides, returning static catalog: Error: Failed query: select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""
+params: 
+    at eB.queryWithCache (.next/server/chunks/ssr/src_1v9cc11._.js:28:33964)
+    at async (.next/server/chunks/ssr/src_1v9cc11._.js:28:36373)
+    at async Object.getHydratedCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:6499)
+    at async Object.getProductBySlug (.next/server/chunks/ssr/src_1v9cc11._.js:1:7431)
+    at async Module.h [as generateMetadata] (.next/server/chunks/ssr/[root-of-the-server]__1_chgq0._.js:1:4831) {
+  query: 'select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""',
+  params: [],
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:5432
+      at <unknown> (Error: connect ECONNREFUSED 127.0.0.1:5432) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 5432
+  }
+}",prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,,,,,
+2026-09-23 12:47:26,1790167646812,www.coconutstation.com/menu/thai-ice-cream,GET,nxtPlocale=en&nxtPslug=thai-ice-cream,200,fq7vt-1790167646812-3acdc83cf0d6,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale]/menu/[slug],www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,156,iad1,236,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X1EG3898A21MZEER9RNV,odAxs9kmjFHZ,1,,
+2026-09-23 12:47:26,1790167646812,www.coconutstation.com/menu/thai-ice-cream,GET,nxtPlocale=en&nxtPslug=thai-ice-cream,200,fq7vt-1790167646812-3acdc83cf0d6,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,563,bom1,213,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374X0KP8QGNWVYCKBVHA3JQ,J1kvUOFiNb5b,1,,
+2026-09-23 12:42:36,1790167356654,www.coconutstation.com/,GET,nxtPlocale=en,200,xrwbs-1790167354739-940ae25b51ff,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",error,production,main,MISS,function,/[locale],www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,,,,,"Failed to fetch catalog overrides, returning static catalog: Error: Failed query: select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""
+params: 
+    at eB.queryWithCache (.next/server/chunks/ssr/src_1v9cc11._.js:28:33964)
+    at async (.next/server/chunks/ssr/src_1v9cc11._.js:28:36373)
+    at async Object.getHydratedCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:6499)
+    at async Object.getVisibleCatalog (.next/server/chunks/ssr/src_1v9cc11._.js:1:7307)
+    at async Q (.next/server/chunks/ssr/[root-of-the-server]__0smdevw._.js:1:11837) {
+  query: 'select ""sku"", ""is_sold_out"", ""price_bdt"", ""updated_at"" from ""catalog_overrides""',
+  params: [],
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:5432
+      at <unknown> (Error: connect ECONNREFUSED 127.0.0.1:5432) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 5432
+  }
+}",prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,,,,,
+2026-09-23 12:42:34,1790167354739,www.coconutstation.com/,GET,nxtPlocale=en,200,xrwbs-1790167354739-940ae25b51ff,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",,production,main,MISS,middleware,_middleware,www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,534,iad1,213,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374M3CT7M9AS8W63BF4QS4N,BewV1do7MrYX,1,,
+2026-09-23 12:42:34,1790167354739,www.coconutstation.com/,GET,nxtPlocale=en,200,xrwbs-1790167354739-940ae25b51ff,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",,production,main,MISS,function,/[locale],www.coconutstation.com,coconutstation-cvinc9sio-nkthedecent2002-9922s-projects.vercel.app,dpl_7m9RozGm4hSe5AufmFwM91s7eL5K,814,iad1,233,2048,,prj_PfFpvRQ97vYLH16JDhJAKoej9knR,,,01M374M48BGN4GTSMKFH6T2RHN,odAxs9kmjFHZ,1,,

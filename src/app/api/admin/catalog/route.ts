@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { revalidatePath } from 'next/cache'
 import { catalogRepo } from '@/core/di'
 
 export async function GET() {
@@ -39,6 +40,8 @@ export async function POST(request: NextRequest) {
       isSoldOut: Boolean(isSoldOut),
       priceBDT: priceBDT ? parseInt(priceBDT, 10) : undefined,
     })
+
+    revalidatePath('/', 'layout')
 
     return NextResponse.json({ success: true })
   } catch (error) {

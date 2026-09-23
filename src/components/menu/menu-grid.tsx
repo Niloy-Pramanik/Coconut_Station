@@ -115,12 +115,21 @@ function ProductCard({ product }: { product: Product }) {
             )}
             {product.status === 'active' && (
               <div className="flex gap-2 relative z-20">
-                <Link
-                  href={`/menu/${product.slug}`}
-                  className="w-full bg-leaf-800 text-canvas hover:bg-leaf-900 py-2.5 px-3 rounded-lg font-bold flex items-center justify-center transition-colors focus-ring text-sm"
-                >
-                  Order now
-                </Link>
+                {isOrderable(activeVariant) ? (
+                  <Link
+                    href={`/menu/${product.slug}`}
+                    className="w-full bg-leaf-800 text-canvas hover:bg-leaf-900 py-2.5 px-3 rounded-lg font-bold flex items-center justify-center transition-colors focus-ring text-sm"
+                  >
+                    Order now
+                  </Link>
+                ) : (
+                  <button
+                    disabled
+                    className="w-full bg-line text-ink-muted py-2.5 px-3 rounded-lg font-bold flex items-center justify-center text-sm cursor-not-allowed"
+                  >
+                    Sold Out
+                  </button>
+                )}
               </div>
             )}
           </div>

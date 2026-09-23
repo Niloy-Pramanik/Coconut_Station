@@ -4,6 +4,7 @@ import * as React from 'react'
 import Image from 'next/image'
 import { Plus, Minus, MessageCircle, Facebook } from 'lucide-react'
 import { Product, Variant } from '@/core/domain/types'
+import { isOrderable } from '@/features/catalog/utils'
 import { AnimatePresence, motion } from 'motion/react'
 
 export function ProductDetailsClient({ product }: { product: Product }) {
@@ -107,46 +108,54 @@ export function ProductDetailsClient({ product }: { product: Product }) {
                 </div>
               </div>
 
-              {product.status === 'active' && true && (
+              {product.status === 'active' && (
                 <div className="flex items-center gap-4">
-                  <div className="flex items-center border-2 border-line rounded-lg bg-canvas h-12">
-                    <button 
-                      type="button"
-                      className="w-10 h-full flex items-center justify-center text-ink-soft hover:text-leaf-800 hover:bg-leaf-50 transition-colors rounded-l-md"
-                      onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                    >
-                      <Minus className="w-4 h-4" />
-                    </button>
-                    <span className="w-10 text-center font-bold text-ink">
-                      {quantity}
-                    </span>
-                    <button 
-                      type="button"
-                      className="w-10 h-full flex items-center justify-center text-ink-soft hover:text-leaf-800 hover:bg-leaf-50 transition-colors rounded-r-md"
-                      onClick={() => setQuantity(Math.min(99, quantity + 1))}
-                    >
-                      <Plus className="w-4 h-4" />
-                    </button>
-                  </div>
-                  
-                  <div className="flex gap-3">
-                    <button 
-                      type="button"
-                      onClick={() => window.open(getWhatsappUrl(), '_blank')}
-                      className="h-12 px-6 flex items-center justify-center gap-2 bg-leaf-800 text-canvas font-bold rounded-lg hover:bg-leaf-900 transition-colors shadow-sm focus-ring"
-                    >
-                      <MessageCircle className="w-5 h-5" />
-                      WhatsApp
-                    </button>
-                    <button 
-                      type="button"
-                      onClick={() => window.open(facebookUrl, '_blank')}
-                      className="h-12 px-6 flex items-center justify-center gap-2 bg-leaf-100 text-leaf-900 font-bold rounded-lg hover:bg-leaf-200 transition-colors shadow-sm focus-ring"
-                    >
-                      <Facebook className="w-5 h-5" />
-                      Facebook
-                    </button>
-                  </div>
+                  {isOrderable(activeVariant) ? (
+                    <>
+                      <div className="flex items-center border-2 border-line rounded-lg bg-canvas h-12">
+                        <button 
+                          type="button"
+                          className="w-10 h-full flex items-center justify-center text-ink-soft hover:text-leaf-800 hover:bg-leaf-50 transition-colors rounded-l-md"
+                          onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                        >
+                          <Minus className="w-4 h-4" />
+                        </button>
+                        <span className="w-10 text-center font-bold text-ink">
+                          {quantity}
+                        </span>
+                        <button 
+                          type="button"
+                          className="w-10 h-full flex items-center justify-center text-ink-soft hover:text-leaf-800 hover:bg-leaf-50 transition-colors rounded-r-md"
+                          onClick={() => setQuantity(Math.min(99, quantity + 1))}
+                        >
+                          <Plus className="w-4 h-4" />
+                        </button>
+                      </div>
+                      
+                      <div className="flex gap-3">
+                        <button 
+                          type="button"
+                          onClick={() => window.open(getWhatsappUrl(), '_blank')}
+                          className="h-12 px-6 flex items-center justify-center gap-2 bg-leaf-800 text-canvas font-bold rounded-lg hover:bg-leaf-900 transition-colors shadow-sm focus-ring"
+                        >
+                          <MessageCircle className="w-5 h-5" />
+                          WhatsApp
+                        </button>
+                        <button 
+                          type="button"
+                          onClick={() => window.open(facebookUrl, '_blank')}
+                          className="h-12 px-6 flex items-center justify-center gap-2 bg-leaf-100 text-leaf-900 font-bold rounded-lg hover:bg-leaf-200 transition-colors shadow-sm focus-ring"
+                        >
+                          <Facebook className="w-5 h-5" />
+                          Facebook
+                        </button>
+                      </div>
+                    </>
+                  ) : (
+                    <div className="h-12 px-6 w-full sm:w-auto flex items-center justify-center bg-line text-ink-muted font-bold rounded-lg cursor-not-allowed">
+                      Currently Sold Out
+                    </div>
+                  )}
                 </div>
               )}
             </div>
