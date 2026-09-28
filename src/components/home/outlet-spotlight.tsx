@@ -7,6 +7,7 @@ import { motion } from "motion/react"
 import { MapPin, Clock, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { Input } from "@/components/ui/input"
 import { siteConfig } from "@/content/site.config"
 import { useStoreHours } from "@/features/hours/use-store-hours"
 
@@ -102,11 +103,44 @@ export function OutletSpotlight() {
               </div>
 
               {/* Expanding Card */}
-              <div className="border-2 border-dashed border-leaf-300 rounded-xl p-8 bg-leaf-50/50 flex-1 flex flex-col justify-center items-center text-center">
-                <h3 className="text-xl font-bold text-leaf-900 mb-2">Expanding Soon!</h3>
-                <p className="text-ink-soft">
-                  We are bringing Coconut Station to <span className="font-semibold text-leaf-700">Dhaka</span> and <span className="font-semibold text-leaf-700">Bogura</span>. Stay tuned!
+              <div className="border border-leaf-200 rounded-xl p-8 bg-canvas shadow-sm flex-1 flex flex-col justify-center">
+                <h3 className="text-2xl font-bold text-leaf-900 mb-2">We Are Expanding!</h3>
+                <p className="text-ink-soft mb-6">
+                  Want Coconut Station in your city? Leave your contact info and select your city to get notified when we launch.
                 </p>
+                <form 
+                  className="flex flex-col gap-4 w-full" 
+                  onSubmit={(e) => { 
+                    e.preventDefault(); 
+                    alert("Thank you! We will notify you when we reach your city."); 
+                    (e.target as HTMLFormElement).reset();
+                  }}
+                >
+                  <div className="flex flex-col gap-1.5">
+                    <label className="text-sm font-semibold text-leaf-900">Contact Information</label>
+                    <Input type="text" placeholder="Email or Phone number" required className="w-full bg-leaf-50" />
+                  </div>
+                  <div className="flex flex-col gap-1.5">
+                    <label className="text-sm font-semibold text-leaf-900">Select City</label>
+                    <select 
+                      className="flex h-10 w-full rounded-md border border-line bg-leaf-50 px-3 py-2 text-sm text-ink focus:outline-none focus:ring-2 focus:ring-leaf-500 focus:border-transparent transition-colors" 
+                      required
+                      defaultValue=""
+                    >
+                      <option value="" disabled>Choose a city</option>
+                      <option value="dhaka">Dhaka</option>
+                      <option value="bogura">Bogura</option>
+                      <option value="chittagong">Chittagong</option>
+                      <option value="sylhet">Sylhet</option>
+                      <option value="rajshahi">Rajshahi</option>
+                      <option value="khulna">Khulna</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <Button type="submit" variant="primary" className="w-full mt-2">
+                    Notify Me
+                  </Button>
+                </form>
               </div>
             </div>
 
