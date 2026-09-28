@@ -119,12 +119,12 @@ export function ProductDetailsClient({ product }: { product: Product }) {
               
               <div className="flex gap-4 mt-6">
                 {siteConfig.deliveryPartners?.map(partner => (
-                  <div key={`${partner.id}-poster`} className="relative w-40 h-24 md:w-56 md:h-32 rounded-xl overflow-hidden shadow-sm border border-line bg-leaf-50">
+                  <div key={`${partner.id}-poster`} className="relative w-56 md:w-72 aspect-video rounded-xl overflow-hidden shadow-sm border border-line bg-leaf-50">
                     <Image 
                       src={partner.poster} 
                       alt={partner.posterAlt} 
                       fill 
-                      className="object-contain p-2" 
+                      className="object-cover" 
                     />
                   </div>
                 ))}
