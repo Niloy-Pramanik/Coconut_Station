@@ -64,7 +64,7 @@ export function Hero() {
       </motion.div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 lg:px-8 py-20 lg:py-24 pointer-events-none">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 lg:px-8 pt-20 pb-36 lg:py-24 pointer-events-none">
         <div className="flex flex-col items-start max-w-2xl pointer-events-auto">
           <motion.div
             initial={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
