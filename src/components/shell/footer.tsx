@@ -70,18 +70,6 @@ export function Footer() {
             <div className="mt-2 text-leaf-200 text-sm">
               Coming soon: Dhaka · Bogura
             </div>
-            <div className="mt-4 flex gap-4">
-              {siteConfig.deliveryPartners.map((partner) => (
-                <div key={partner.id} className="relative w-32 h-20 rounded-lg overflow-hidden border border-leaf-700 shadow-sm bg-leaf-800">
-                  <Image 
-                    src={partner.poster} 
-                    alt={partner.posterAlt} 
-                    fill 
-                    className="object-contain" 
-                  />
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Column 4: Contact & Legal */}
