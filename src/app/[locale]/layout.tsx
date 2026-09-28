@@ -19,7 +19,7 @@ import { MobileBottomBar } from "@/components/shell/mobile-bottom-bar"
 import { QuickContact } from "@/components/shell/quick-contact"
 import { SkipLink } from "@/components/shell/skip-link"
 import { Toaster } from "@/components/ui/sonner"
-import { CartSheet } from "@/components/cart/cart-sheet"
+
 import { CatalogProvider } from "@/components/catalog-provider"
 import { getVisibleProducts } from "@/features/catalog/queries"
 import { ConsentBanner } from "@/components/shell/consent-banner"
@@ -78,7 +78,7 @@ export default async function LocaleLayout({
             <MobileBottomBar />
             <QuickContact />
             <Toaster />
-            <CartSheet />
+
             <ConsentBanner />
             <CookieBanner />
           </CatalogProvider>
