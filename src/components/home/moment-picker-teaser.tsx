@@ -12,8 +12,8 @@ const MOMENTS = [
     title: "Morning Boost",
     blurb: "Start your day with natural hydration and a clean energy kick.",
     products: [
-      { id: "water", name: "Coconut Water", price: "৳50", image: "/assets/products/water-300ml.webp" },
-      { id: "coffee", name: "Coconut Coffee", price: "৳120", image: "/assets/posters/poster-coconut-water.webp" },
+      { id: "water", name: "Premium Coconut Water", image: "/assets/products/water-300ml.webp" },
+      { id: "coffee", name: "Coconut Coffee", image: "/assets/products/coffee.webp" },
     ],
   },
   {
@@ -21,8 +21,8 @@ const MOMENTS = [
     title: "Post-Workout",
     blurb: "Replenish your electrolytes naturally after a hard session.",
     products: [
-      { id: "water-large", name: "Coconut Water 1L", price: "৳180", image: "/assets/products/water-1l.webp" },
-      { id: "meat", name: "Fresh Coconut Meat", price: "৳60", image: "/assets/posters/poster-live-coconut.webp" },
+      { id: "coconut", name: "Fresh Raw Coconut", image: "/assets/products/coconut-premium.webp" },
+      { id: "water-small", name: "Coconut Water 200ml", image: "/assets/products/water-200ml.webp" },
     ],
   },
   {
@@ -30,8 +30,8 @@ const MOMENTS = [
     title: "Guilt-free Dessert",
     blurb: "Satisfy your sweet tooth with our natural, low-sugar treats.",
     products: [
-      { id: "pudding", name: "Coconut Pudding", price: "৳90", image: "/assets/products/pudding-classic-v2.png" },
-      { id: "shake", name: "Classic Shake", price: "৳140", image: "/assets/posters/poster-pudding.webp" },
+      { id: "pudding", name: "Classic Pudding", image: "/assets/products/pudding-classic-v2.png" },
+      { id: "shake", name: "Signature Shake", image: "/assets/products/shake-classic.webp" },
     ],
   },
 ]
@@ -97,17 +97,17 @@ export function MomentPickerTeaser() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.32, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
-                      className="bg-canvas rounded-lg p-6 shadow-soft flex flex-col items-center text-center group tile"
+                      className="bg-canvas border border-line rounded-2xl p-6 flex flex-col items-center text-center group tile hover:border-leaf-200 hover:shadow-lift transition-all duration-300 cursor-default"
                     >
-                      <div className="relative w-32 h-32 mb-4">
+                      <div className="relative w-40 h-40 mb-6 bg-leaf-50/50 rounded-full flex items-center justify-center p-4">
                         <Image
                           src={product.image}
                           alt={product.name}
                           fill
-                          className="object-contain mix-blend-multiply transition-transform duration-320 group-hover:scale-105"
+                          className="object-contain drop-shadow-md transition-transform duration-500 group-hover:scale-110 p-2"
                         />
                       </div>
-                      <h4 className="text-lg font-semibold text-ink mb-1 group-hover:text-leaf-800 transition-colors">
+                      <h4 className="text-xl font-bold text-ink mb-1 group-hover:text-leaf-800 transition-colors">
                         {product.name}
                       </h4>
                     </motion.div>
