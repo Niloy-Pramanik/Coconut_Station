@@ -1,14 +1,13 @@
 import { Hero } from "@/components/home/hero"
-import { SignatureMenu } from "@/components/home/signature-menu"
 import dynamic from 'next/dynamic'
 import { siteConfig } from "@/content/site.config"
-import { getVisibleProducts } from "@/features/catalog/queries"
 import { buildMetadata } from "@/lib/seo"
 
-import { StoryIntro } from "@/components/home/story-intro"
+const MomentPickerTeaser = dynamic(() => import("@/components/home/moment-picker-teaser").then(mod => mod.MomentPickerTeaser), { ssr: true })
 const WhyCoconut = dynamic(() => import("@/components/home/why-coconut").then(mod => mod.WhyCoconut), { ssr: true })
-const OutletSpotlight = dynamic(() => import("@/components/home/outlet-spotlight").then(mod => mod.OutletSpotlight), { ssr: true })
+const BlogTeasers = dynamic(() => import("@/components/home/blog-teasers").then(mod => mod.BlogTeasers), { ssr: true })
 const PastryBand = dynamic(() => import("@/components/home/pastry-band").then(mod => mod.PastryBand), { ssr: true })
+const Faq = dynamic(() => import("@/components/home/faq").then(mod => mod.Faq), { ssr: true })
 
 export const metadata = buildMetadata({
   title: "Home",
@@ -17,16 +16,14 @@ export const metadata = buildMetadata({
 })
 
 export default async function HomePage() {
-  const products = await getVisibleProducts();
-
   return (
     <>
       <Hero />
-      <StoryIntro />
+      <MomentPickerTeaser />
       <WhyCoconut />
-      <SignatureMenu products={products} />
+      <BlogTeasers />
       <PastryBand />
-      <OutletSpotlight />
+      <Faq />
     </>
   )
 }
