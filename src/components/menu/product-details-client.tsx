@@ -96,7 +96,7 @@ export function ProductDetailsClient({ product }: { product: Product }) {
                   Find an Outlet
                 </Link>
                 {siteConfig.deliveryPartners?.map(partner => (
-                  partner.url && (
+                  partner.url ? (
                     <a
                       key={partner.id}
                       href={partner.url}
@@ -106,7 +106,27 @@ export function ProductDetailsClient({ product }: { product: Product }) {
                     >
                       Order on {partner.name}
                     </a>
+                  ) : (
+                    <span
+                      key={partner.id}
+                      className="px-6 py-3 bg-leaf-50 text-leaf-700 font-bold rounded-lg cursor-not-allowed shadow-sm border border-leaf-200"
+                    >
+                      Available on {partner.name}
+                    </span>
                   )
+                ))}
+              </div>
+              
+              <div className="flex gap-4 mt-6">
+                {siteConfig.deliveryPartners?.map(partner => (
+                  <div key={`${partner.id}-poster`} className="relative w-32 h-32 md:w-40 md:h-40 rounded-xl overflow-hidden shadow-sm border border-line bg-leaf-50">
+                    <Image 
+                      src={partner.poster} 
+                      alt={partner.posterAlt} 
+                      fill 
+                      className="object-cover" 
+                    />
+                  </div>
                 ))}
               </div>
             </div>
