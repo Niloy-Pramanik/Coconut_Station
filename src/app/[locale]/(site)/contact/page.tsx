@@ -2,8 +2,6 @@ import * as React from "react"
 import { Metadata } from "next"
 import { MapPin, Phone, Mail, MessageCircle } from "lucide-react"
 import { siteConfig } from "@/content/site.config"
-import { Faq } from "@/components/home/faq"
-
 export const metadata: Metadata = {
   title: "Contact Us | Coconut Station",
   description: "Get in touch with Coconut Station. For general inquiries, feedback, or bulk orders.",
@@ -95,7 +93,6 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-      <Faq />
     </div>
   )
 }
