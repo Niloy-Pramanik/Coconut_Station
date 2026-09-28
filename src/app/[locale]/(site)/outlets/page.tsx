@@ -100,12 +100,13 @@ export default function OutletsPage() {
           <div className="flex flex-wrap justify-center gap-8">
             {siteConfig.deliveryPartners.map((partner) => (
               <div key={partner.id} className="flex flex-col items-center">
-                <div className="relative w-72 md:w-96 aspect-video rounded-2xl overflow-hidden shadow-soft border border-leaf-200 bg-leaf-50 mb-6 transition-transform hover:scale-105 duration-300">
+                <div className="w-full max-w-md rounded-2xl overflow-hidden shadow-soft border border-leaf-200 bg-leaf-50 mb-6 transition-transform hover:scale-105 duration-300">
                   <Image 
                     src={partner.poster} 
                     alt={partner.posterAlt} 
-                    fill 
-                    className="object-cover" 
+                    width={800}
+                    height={400}
+                    className="w-full h-auto object-contain" 
                   />
                 </div>
                 {partner.url ? (
