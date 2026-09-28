@@ -40,8 +40,8 @@ export const siteConfig: SiteConfig = {
   url: 'https://www.coconutstation.com',
   openingDate: '2026-08-16T10:00:00+06:00', // TODO_OPENING_DATE
   contact: {
-    phone: '8801796894640', // from wa.me/8801796894640
-    whatsapp: '8801796894640',
+    phone: '8801833181360', 
+    whatsapp: '8801833181360',
     email: 'smshoaib001@gmail.com', // leaving this here but not public
     publicEmail: null, // TODO_PUBLIC_EMAIL
   },
