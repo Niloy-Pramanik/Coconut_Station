@@ -17,12 +17,12 @@ export default function PastryStationPage() {
           
           {/* Left: Image */}
           <div className="w-full md:w-1/2 relative h-[500px] md:h-[650px]">
-            <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-soft border-4 border-canvas">
+            <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-soft border-4 border-canvas bg-white">
               <Image
                 src="/assets/posters/PASTRY_STATION.jpg"
                 alt="Pastry Station"
                 fill
-                className="object-cover hover:scale-105 transition-transform duration-700"
+                className="object-contain hover:scale-105 transition-transform duration-700 p-2"
               />
             </div>
           </div>
