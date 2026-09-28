@@ -76,6 +76,52 @@ export default function OutletsPage() {
             </div>
           ))}
 
+          {/* Coming Soon Card */}
+          <div className="bg-canvas border-2 border-dashed border-leaf-200 rounded-xl overflow-hidden flex flex-col items-center justify-center p-8 text-center min-h-[400px]">
+            <MapPin className="w-12 h-12 text-leaf-300 mb-6" />
+            <h2 className="text-3xl font-bold text-leaf-800 mb-4">Coming Soon</h2>
+            <p className="text-ink-soft text-lg max-w-sm mb-8">
+              We are expanding to Dhaka and Bogura. Stay tuned for our new locations!
+            </p>
+          </div>
+        </div>
+
+        {/* Delivery Partners Section */}
+        <div className="mt-20">
+          <header className="mb-12 text-center">
+            <h2 className="text-4xl font-extrabold text-leaf-900 uppercase tracking-tight mb-4">
+              Order Online
+            </h2>
+            <p className="text-lg text-ink-soft max-w-xl mx-auto">
+              Craving coconut but can&apos;t visit us? Get it delivered straight to your door.
+            </p>
+          </header>
+          
+          <div className="flex flex-wrap justify-center gap-8">
+            {siteConfig.deliveryPartners.map((partner) => (
+              <div key={partner.id} className="flex flex-col items-center">
+                <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden shadow-soft border border-leaf-200 bg-leaf-50 mb-6 transition-transform hover:scale-105 duration-300">
+                  <Image 
+                    src={partner.poster} 
+                    alt={partner.posterAlt} 
+                    fill 
+                    className="object-cover" 
+                  />
+                </div>
+                {partner.url ? (
+                  <Button asChild variant="primary" className="w-full max-w-[200px]">
+                    <a href={partner.url} target="_blank" rel="noopener noreferrer">
+                      Order on {partner.name}
+                    </a>
+                  </Button>
+                ) : (
+                  <Button variant="secondary" className="w-full max-w-[200px] cursor-not-allowed opacity-80" disabled>
+                    Available on {partner.name}
+                  </Button>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       
         {/* Full-width Map Below Grid */}
