@@ -72,12 +72,12 @@ export function Footer() {
             </div>
             <div className="mt-4 flex gap-4">
               {siteConfig.deliveryPartners.map((partner) => (
-                <div key={partner.id} className="relative w-24 h-24 rounded-lg overflow-hidden border border-leaf-700 shadow-sm bg-leaf-800">
+                <div key={partner.id} className="relative w-32 h-20 rounded-lg overflow-hidden border border-leaf-700 shadow-sm bg-leaf-800">
                   <Image 
                     src={partner.poster} 
                     alt={partner.posterAlt} 
                     fill 
-                    className="object-cover" 
+                    className="object-contain" 
                   />
                 </div>
               ))}
