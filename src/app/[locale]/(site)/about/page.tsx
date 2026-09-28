@@ -20,13 +20,13 @@ export default function AboutPage() {
           </p>
         </header>
 
-        {/* Placeholder image */}
-        <div className="w-full aspect-[21/9] relative rounded-2xl overflow-hidden shadow-soft mb-16 bg-leaf-50">
+        <div className="w-full rounded-2xl overflow-hidden shadow-soft mb-16 bg-leaf-50">
           <Image
             src="/assets/scenes/outlet-exterior.webp"
             alt="Coconut Station team"
-            fill
-            className="object-cover"
+            width={1200}
+            height={675}
+            className="w-full h-auto object-contain"
           />
         </div>
 
