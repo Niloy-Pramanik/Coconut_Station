@@ -60,14 +60,14 @@ export const siteConfig: SiteConfig = {
       id: 'foodpanda', 
       name: 'Foodpanda', 
       url: null, /* TODO_FOODPANDA_URL */
-      poster: '/assets/posters/WhatsApp Image 2026-09-26 at 13.51.58.jpeg', // Temp name, optimize later
+      poster: '/assets/posters/FOODPANDA.jpeg', 
       posterAlt: 'Order Coconut Station on Foodpanda' 
     },
     { 
       id: 'foodi', 
       name: 'foodi', 
       url: null, /* TODO_FOODI_URL */
-      poster: '/assets/posters/WhatsApp Image 2026-09-26 at 13.52.16.jpeg', 
+      poster: '/assets/posters/FOODI.jpeg', 
       posterAlt: 'Order Coconut Station on foodi' 
     },
   ],
