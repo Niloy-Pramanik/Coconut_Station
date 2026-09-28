@@ -1,6 +1,8 @@
 import * as React from "react"
 import { Metadata } from "next"
-import { MapPin, Phone, Mail } from "lucide-react"
+import { MapPin, Phone, Mail, MessageCircle } from "lucide-react"
+import { siteConfig } from "@/content/site.config"
+import { Faq } from "@/components/home/faq"
 
 export const metadata: Metadata = {
   title: "Contact Us | Coconut Station",
@@ -29,50 +31,71 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold text-ink">Headquarters</h3>
                   <p className="text-ink-soft">
-                    Bottola Bazar More, Bibekanondo School Market<br />
-                    Tangail
+                    {siteConfig.outlets[0].address}
                   </p>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
-                <Phone className="w-6 h-6 text-leaf-700 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-ink">Phone</h3>
-                  <p className="text-ink-soft">+880 1234 567 890</p>
+              {siteConfig.contact.phone && (
+                <div className="flex items-start gap-4">
+                  <Phone className="w-6 h-6 text-leaf-700 mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-ink">Phone</h3>
+                    <p className="text-ink-soft">
+                      <a href={`tel:${siteConfig.contact.phone}`} className="hover:text-leaf-800 transition-colors">
+                        +{siteConfig.contact.phone}
+                      </a>
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <Mail className="w-6 h-6 text-leaf-700 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-ink">Email</h3>
-                  <p className="text-ink-soft">hello@coconutstation.com</p>
+              )}
+              {siteConfig.contact.whatsapp && (
+                <div className="flex items-start gap-4">
+                  <MessageCircle className="w-6 h-6 text-leaf-700 mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-ink">WhatsApp</h3>
+                    <p className="text-ink-soft">
+                      <a href={`https://wa.me/${siteConfig.contact.whatsapp}`} target="_blank" rel="noopener noreferrer" className="hover:text-leaf-800 transition-colors">
+                        +{siteConfig.contact.whatsapp}
+                      </a>
+                    </p>
+                  </div>
                 </div>
-              </div>
+              )}
+              {siteConfig.contact.publicEmail && (
+                <div className="flex items-start gap-4">
+                  <Mail className="w-6 h-6 text-leaf-700 mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-ink">Email</h3>
+                    <p className="text-ink-soft">
+                      <a href={`mailto:${siteConfig.contact.publicEmail}`} className="hover:text-leaf-800 transition-colors">
+                        {siteConfig.contact.publicEmail}
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
           
-          <div className="bg-leaf-50 p-8 rounded-xl">
-            <h2 className="text-2xl font-bold text-leaf-900 mb-6">Send a Message</h2>
-            <form className="flex flex-col gap-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-ink mb-2">Name</label>
-                <input id="name" type="text" className="w-full px-4 py-2 rounded-lg border-line bg-canvas focus:ring-1 focus:ring-leaf-700 outline-none" required />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-ink mb-2">Email</label>
-                <input id="email" type="email" className="w-full px-4 py-2 rounded-lg border-line bg-canvas focus:ring-1 focus:ring-leaf-700 outline-none" required />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-ink mb-2">Message</label>
-                <textarea id="message" rows={4} className="w-full px-4 py-2 rounded-lg border-line bg-canvas focus:ring-1 focus:ring-leaf-700 outline-none resize-none" required />
-              </div>
-              <button type="submit" className="mt-4 bg-leaf-800 text-canvas px-6 py-3 rounded-lg font-bold hover:bg-leaf-900 transition-colors focus-ring">
-                Send Message
-              </button>
-            </form>
+          <div className="bg-leaf-50 p-8 rounded-xl h-fit">
+            <h2 className="text-2xl font-bold text-leaf-900 mb-6">Let's Connect</h2>
+            <p className="text-ink-soft mb-6 leading-relaxed">
+              For general inquiries or to discuss a bulk order for an upcoming event, you can reach us via phone or WhatsApp. We recommend WhatsApp for the fastest response.
+            </p>
+            {siteConfig.contact.whatsapp && (
+              <a 
+                href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-[#25D366] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#20bd5a] transition-colors focus-ring w-full sm:w-auto"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" /> Message on WhatsApp
+              </a>
+            )}
           </div>
         </div>
       </div>
+      <Faq />
     </div>
   )
 }

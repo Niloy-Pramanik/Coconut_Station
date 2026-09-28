@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { motion, useReducedMotion } from "motion/react"
-import { IconNatural, IconFreshDaily, IconHygienic, IconPremium, IconSmartCut, IconDigitalPayment, IconHomeDelivery } from "@/components/icons"
+import { IconNatural, IconFreshDaily, IconHygienic, IconPremium, IconSmartCut, IconSealedStraw, IconHomeDelivery } from "@/components/icons"
 import {
   Tooltip,
   TooltipContent,
@@ -24,12 +24,12 @@ const TRUST_ITEMS = [
   {
     label: "Hygienic & Safe",
     icon: IconHygienic,
-    proof: "Prepared in a sterile environment following strict safety protocols.",
+    proof: "Hygienically prepared.",
   },
   {
     label: "Premium Quality",
     icon: IconPremium,
-    proof: "Only A-grade coconuts selected by our experts.",
+    proof: "Carefully selected coconuts.",
   },
   {
     label: "Smart Cutting",
@@ -37,14 +37,14 @@ const TRUST_ITEMS = [
     proof: "Precision tools ensure a clean, mess-free experience.",
   },
   {
-    label: "Digital Payment",
-    icon: IconDigitalPayment,
-    proof: "Pay easily with bKash, Nagad, Rocket or Card.",
+    label: "Sealed Straw",
+    icon: IconSealedStraw,
+    proof: "Every coconut is served with an individually sealed straw.",
   },
   {
     label: "Home Delivery",
     icon: IconHomeDelivery,
-    proof: "Fast, spill-proof delivery straight to your doorstep.",
+    proof: "Order for delivery on Foodpanda or foodi.",
   },
 ]
 

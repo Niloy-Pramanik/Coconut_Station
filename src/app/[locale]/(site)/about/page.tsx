@@ -30,31 +30,34 @@ export default function AboutPage() {
           />
         </div>
 
-        <div className="prose prose-lg prose-leaf mx-auto text-ink">
-          <h2>The Beginning</h2>
-          <p>
-            Coconut Station was born out of a frustration with the way fresh coconut water was traditionally sold—often unhygienic, improperly chilled, and lacking the premium experience such a natural superfood deserves.
-          </p>
-          <p>
-            We realized that while people loved the taste and health benefits of coconuts, they hesitated due to hygiene concerns. That's when we decided to elevate the humble street-side coconut into a premium, trustworthy experience.
-          </p>
-
-          <h2>Our Mission</h2>
-          <p>
-            Our mission is to make natural hydration accessible, hygienic, and delightful. We carefully select the best coconuts, chill them to the perfect temperature, and serve them with our signature "smart cut" and a sealed straw. No added sugar. No preservatives. Just 100% natural goodness.
-          </p>
+        <div className="mx-auto max-w-3xl flex flex-col gap-8 text-ink text-lg leading-relaxed">
+          <section id="who-we-are">
+            <h2 className="text-3xl font-extrabold text-leaf-900 uppercase mb-4">Our Mission</h2>
+            <p className="mb-4">
+              Our mission is to make natural hydration accessible, hygienic, and delightful. We carefully select the best coconuts, chill them to the perfect temperature, and serve them with our signature "smart cut" and a sealed straw. No added sugar. No preservatives. Just 100% natural goodness.
+            </p>
+          </section>
           
-          <blockquote className="border-l-4 border-leaf-700 pl-6 my-10 italic text-xl text-leaf-900 font-medium">
+          <blockquote className="border-l-4 border-leaf-700 pl-6 my-4 italic text-2xl text-leaf-900 font-medium leading-snug">
             "Nature already made the perfect drink. Our job is simply to serve it to you exactly as nature intended—pure, fresh, and cold."
           </blockquote>
 
-          <h2>Looking Forward</h2>
-          <p>
-            What started as a single flagship outlet in Tangail is growing. We are constantly experimenting with new ways to bring the goodness of coconut to you, from our signature coconut coffee to our guilt-free coconut pudding. 
-          </p>
-          <p>
-            Thank you for being part of our journey. Stay hydrated, stay healthy.
-          </p>
+          <section id="why-coconut">
+            <h2 className="text-3xl font-extrabold text-leaf-900 uppercase mb-4 mt-4">Why Coconut?</h2>
+            <p className="mb-4">
+              Coconut water is a natural source of electrolytes, keeping you hydrated and refreshed. We serve it in its purest form, exactly as nature intended.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-3xl font-extrabold text-leaf-900 uppercase mb-4 mt-4">Looking Forward</h2>
+            <p className="mb-4">
+              What started as a single flagship outlet in Tangail is growing. We are constantly experimenting with new ways to bring the goodness of coconut to you, from our signature coconut coffee to our guilt-free coconut pudding. 
+            </p>
+            <p>
+              Thank you for being part of our journey. Stay hydrated, stay healthy.
+            </p>
+          </section>
         </div>
       </div>
     </div>

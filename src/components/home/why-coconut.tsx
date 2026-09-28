@@ -67,7 +67,7 @@ export function WhyCoconut() {
 
         <div className="text-center">
           <Button variant="secondary" size="lg" asChild className="bg-canvas">
-            <Link href="/why-coconut">Learn more about our coconuts</Link>
+            <Link href="/about#why-coconut">Learn more about our coconuts</Link>
           </Button>
         </div>
       </div>

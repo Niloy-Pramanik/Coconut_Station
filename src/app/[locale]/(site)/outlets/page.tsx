@@ -76,17 +76,6 @@ export default function OutletsPage() {
             </div>
           ))}
 
-          {/* Coming Soon Card */}
-          <div className="bg-canvas border-2 border-dashed border-leaf-200 rounded-xl overflow-hidden flex flex-col items-center justify-center p-8 text-center min-h-[400px]">
-            <MapPin className="w-12 h-12 text-leaf-300 mb-6" />
-            <h2 className="text-3xl font-bold text-leaf-800 mb-4">Coming Soon</h2>
-            <p className="text-ink-soft text-lg max-w-sm mb-8">
-              We are expanding to Dhaka and Bogura. Stay tuned for our new locations!
-            </p>
-            <Button variant="secondary" asChild>
-              <Link href="/#notify">Notify Me</Link>
-            </Button>
-          </div>
         </div>
       
         {/* Full-width Map Below Grid */}

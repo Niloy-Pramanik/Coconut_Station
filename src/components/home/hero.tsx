@@ -56,7 +56,7 @@ export function Hero() {
         <picture>
           <source media="(min-width: 1024px)" srcSet={desktopSrcSet} />
           <source media="(max-width: 1023px)" srcSet={mobileSrcSet} />
-          <img {...desktopRest} alt="Coconut Station Fresh Products" fetchPriority="high" className="object-cover object-center w-full h-full" />
+          <img {...desktopRest} alt="Coconut Station Fresh Products" fetchPriority="high" sizes="100vw" className="object-cover object-center w-full h-full" />
         </picture>
         {/* Left Gradient Mask */}
         <div className="absolute inset-0 bg-gradient-to-r from-canvas via-canvas/80 to-transparent w-full lg:w-2/3" />
