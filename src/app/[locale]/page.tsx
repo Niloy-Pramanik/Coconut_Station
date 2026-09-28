@@ -19,8 +19,8 @@ export default async function HomePage() {
   return (
     <>
       <Hero />
-      <MomentPickerTeaser />
       <WhyCoconut />
+      <MomentPickerTeaser />
       <BlogTeasers />
       <PastryBand />
       <Faq />
