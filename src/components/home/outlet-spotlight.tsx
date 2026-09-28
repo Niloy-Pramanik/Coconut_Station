@@ -78,25 +78,35 @@ export function OutletSpotlight() {
               Visit Us
             </h2>
             
-            <div className="bg-leaf-50 rounded-xl p-8 shadow-sm mb-8">
-              <div className="flex items-center gap-3 mb-6">
-                <h3 className="text-2xl font-bold text-leaf-900">{outlet.name}</h3>
-                <Badge variant={badgeVariant}>{badgeText}</Badge>
-              </div>
-
-              <div className="flex items-start gap-4 mb-6">
-                <MapPin className="w-6 h-6 text-leaf-700 shrink-0 mt-0.5" />
-                <p className="text-ink-soft text-lg leading-relaxed">
-                  {outlet.address}
-                </p>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <Clock className="w-6 h-6 text-leaf-700 shrink-0 mt-0.5" />
-                <div className="text-ink-soft text-lg leading-relaxed">
-                  <p>{message}</p>
-                  <p className="font-medium text-ink">{outlet.hours}</p>
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <div className="bg-leaf-50 rounded-xl p-8 shadow-sm flex-1">
+                <div className="flex items-center gap-3 mb-6">
+                  <h3 className="text-2xl font-bold text-leaf-900">{outlet.name}</h3>
+                  <Badge variant={badgeVariant}>{badgeText}</Badge>
                 </div>
+
+                <div className="flex items-start gap-4 mb-6">
+                  <MapPin className="w-6 h-6 text-leaf-700 shrink-0 mt-0.5" />
+                  <p className="text-ink-soft text-lg leading-relaxed">
+                    {outlet.address}
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <Clock className="w-6 h-6 text-leaf-700 shrink-0 mt-0.5" />
+                  <div className="text-ink-soft text-lg leading-relaxed">
+                    <p>{message}</p>
+                    <p className="font-medium text-ink">{outlet.hours}</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Expanding Card */}
+              <div className="border-2 border-dashed border-leaf-300 rounded-xl p-8 bg-leaf-50/50 flex-1 flex flex-col justify-center items-center text-center">
+                <h3 className="text-xl font-bold text-leaf-900 mb-2">Expanding Soon!</h3>
+                <p className="text-ink-soft">
+                  We are bringing Coconut Station to <span className="font-semibold text-leaf-700">Dhaka</span> and <span className="font-semibold text-leaf-700">Bogura</span>. Stay tuned!
+                </p>
               </div>
             </div>
 

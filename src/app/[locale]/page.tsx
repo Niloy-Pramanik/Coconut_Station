@@ -8,6 +8,7 @@ const WhyCoconut = dynamic(() => import("@/components/home/why-coconut").then(mo
 const BlogTeasers = dynamic(() => import("@/components/home/blog-teasers").then(mod => mod.BlogTeasers), { ssr: true })
 const PastryBand = dynamic(() => import("@/components/home/pastry-band").then(mod => mod.PastryBand), { ssr: true })
 const Faq = dynamic(() => import("@/components/home/faq").then(mod => mod.Faq), { ssr: true })
+const OutletSpotlight = dynamic(() => import("@/components/home/outlet-spotlight").then(mod => mod.OutletSpotlight), { ssr: true })
 
 export const metadata = buildMetadata({
   title: "Home",
@@ -24,6 +25,7 @@ export default async function HomePage() {
       <BlogTeasers />
       <PastryBand />
       <Faq />
+      <OutletSpotlight />
     </>
   )
 }
