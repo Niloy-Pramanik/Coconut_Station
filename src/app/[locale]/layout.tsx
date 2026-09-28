@@ -1,5 +1,4 @@
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+
 import { NextIntlClientProvider } from 'next-intl';
 import NextTopLoader from 'nextjs-toploader';
 import { getMessages } from 'next-intl/server';
@@ -8,8 +7,7 @@ import { routing } from '@/i18n/routing';
 import type { Metadata, Viewport } from "next";
 import { fontFira, fontMarck, fontHind } from '@/lib/fonts';
 import "../globals.css";
-import { CookieBanner } from '@/components/ui/cookie-banner';
-import { AnalyticsScripts } from '@/features/analytics/scripts';
+
 
 import { siteConfig } from "@/content/site.config"
 import { Header } from "@/components/shell/header"
@@ -22,7 +20,7 @@ import { Toaster } from "@/components/ui/sonner"
 
 import { CatalogProvider } from "@/components/catalog-provider"
 import { getVisibleProducts } from "@/features/catalog/queries"
-import { ConsentBanner } from "@/components/shell/consent-banner"
+
 
 export const viewport: Viewport = {
   themeColor: "#052210", // leaf-900
@@ -79,13 +77,10 @@ export default async function LocaleLayout({
             <QuickContact />
             <Toaster />
 
-            <ConsentBanner />
-            <CookieBanner />
+
           </CatalogProvider>
         </NextIntlClientProvider>
-        <AnalyticsScripts />
-        <Analytics />
-        <SpeedInsights />
+
       </body>
     </html>
   );
