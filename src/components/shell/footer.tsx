@@ -49,9 +49,11 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <h3 className="font-semibold text-lg">Menu</h3>
             <nav className="flex flex-col gap-3">
-              <Link href="/menu" className="text-leaf-100 hover:text-white transition-colors w-fit focus-ring rounded-sm">All Products</Link>
-              <Link href="/why-coconut" className="text-leaf-100 hover:text-white transition-colors w-fit focus-ring rounded-sm">Why Coconut?</Link>
-              <Link href="/events" className="text-leaf-100 hover:text-white transition-colors w-fit focus-ring rounded-sm">Bulk & Events</Link>
+              <Link href="/" className="text-leaf-100 hover:text-white transition-colors w-fit focus-ring rounded-sm">Home</Link>
+              <Link href="/menu" className="text-leaf-100 hover:text-white transition-colors w-fit focus-ring rounded-sm">Menu</Link>
+              <Link href="/pastry-station" className="text-leaf-100 hover:text-white transition-colors w-fit focus-ring rounded-sm">Pastry Station</Link>
+              <Link href="/about" className="text-leaf-100 hover:text-white transition-colors w-fit focus-ring rounded-sm">About Us</Link>
+              <Link href="/contact" className="text-leaf-100 hover:text-white transition-colors w-fit focus-ring rounded-sm">Contact Us</Link>
             </nav>
           </div>
 
@@ -67,6 +69,9 @@ export function Footer() {
             ))}
             <div className="mt-2 text-leaf-200 text-sm">
               Coming soon: Dhaka · Bogura
+            </div>
+            <div className="mt-2 text-leaf-100 font-medium">
+              Order on Foodpanda · foodi
             </div>
           </div>
 
@@ -84,28 +89,18 @@ export function Footer() {
                   WhatsApp Us
                 </a>
               )}
-              {siteConfig.contact.email && (
-                <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-white transition-colors w-fit focus-ring rounded-sm">
-                  {siteConfig.contact.email}
+              {siteConfig.contact.publicEmail && (
+                <a href={`mailto:${siteConfig.contact.publicEmail}`} className="hover:text-white transition-colors w-fit focus-ring rounded-sm">
+                  {siteConfig.contact.publicEmail}
                 </a>
               )}
-              <div className="flex flex-col gap-1 mt-2">
                 <Link href="/privacy" className="hover:text-white transition-colors w-fit focus-ring rounded-sm">Privacy Policy</Link>
-                <Link href="/terms" className="hover:text-white transition-colors w-fit focus-ring rounded-sm">Terms of Service</Link>
-              </div>
             </div>
           </div>
         </div>
 
         <div className="pt-8 border-t-[1.5px] border-leaf-800 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-leaf-200">
           <p>&copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
-          
-          <div className="flex items-center gap-2">
-            <span>Payment Methods:</span>
-            <span className="font-medium text-white">
-              Cash on Delivery
-            </span>
-          </div>
         </div>
       </div>
     </footer>

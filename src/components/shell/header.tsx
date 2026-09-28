@@ -4,28 +4,23 @@ import * as React from "react"
 import { Link } from "@/i18n/routing"
 import Image from "next/image"
 import { usePathname } from "@/i18n/routing"
-import { ShoppingBag, Menu, Globe } from "lucide-react"
-
+import { Menu } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetHeader } from "@/components/ui/sheet"
-import { Badge } from "@/components/ui/badge"
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/menu", label: "Menu" },
-  { href: "/why-coconut", label: "Why Coconut?" },
   { href: "/outlets", label: "Outlets" },
-  { href: "/events", label: "Events" },
+  { href: "/menu", label: "Menu" },
+  { href: "/about", label: "About Us" },
+  { href: "/contact", label: "Contact Us" },
 ]
 
 export function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false)
   const pathname = usePathname()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
-
-  // TODO: connect to real cart store
-  const cartItemCount = 0
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -72,7 +67,7 @@ export function Header() {
               href={link.href}
               className={cn(
                 "text-sm font-semibold transition-colors focus-ring rounded-sm py-1 hover:text-leaf-700",
-                pathname === link.href ? "text-leaf-700" : "text-ink"
+                (link.href === '/' ? pathname === '/' : pathname.startsWith(link.href)) ? "text-leaf-700" : "text-ink"
               )}
             >
               {link.label}
@@ -81,18 +76,7 @@ export function Header() {
         </nav>
 
         {/* Right: Actions */}
-        <div className="flex items-center gap-4">
-          <button
-            type="button"
-            className="hidden lg:flex items-center justify-center h-11 w-11 rounded-full text-ink hover:bg-leaf-50 hover:text-leaf-800 transition-colors focus-ring"
-            aria-label="Change language"
-          >
-            <Globe className="h-5 w-5" strokeWidth={1.75} />
-          </button>
-
-
-
-          <Button asChild variant="primary" className="hidden lg:inline-flex">
+        <div className="flex items-center gap-4">          <Button asChild variant="primary" className="hidden lg:inline-flex">
             <Link href="/outlets">Find an Outlet</Link>
           </Button>
 
@@ -118,7 +102,7 @@ export function Header() {
                     href={link.href}
                     className={cn(
                       "text-2xl font-semibold transition-colors focus-ring rounded-sm w-fit hover:text-leaf-700",
-                      pathname === link.href ? "text-leaf-700" : "text-ink"
+                      (link.href === '/' ? pathname === '/' : pathname.startsWith(link.href)) ? "text-leaf-700" : "text-ink"
                     )}
                   >
                     {link.label}
@@ -126,10 +110,6 @@ export function Header() {
                 ))}
               </nav>
               <div className="p-6 border-t-[1.5px] border-line flex flex-col gap-4">
-                <Button variant="secondary" className="w-full justify-center">
-                  <Globe className="h-5 w-5 mr-2" />
-                  বাংলা
-                </Button>
                 <Button asChild variant="primary" className="w-full justify-center">
                   <Link href="/outlets">Find an Outlet</Link>
                 </Button>

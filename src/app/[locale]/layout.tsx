@@ -1,5 +1,5 @@
-
 import { NextIntlClientProvider } from 'next-intl';
+import { Analytics } from '@vercel/analytics/next';
 import NextTopLoader from 'nextjs-toploader';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -13,21 +13,14 @@ import { siteConfig } from "@/content/site.config"
 import { Header } from "@/components/shell/header"
 import { Footer } from "@/components/shell/footer"
 import { AnnouncementBar } from "@/components/shell/announcement-bar"
-import { MobileBottomBar } from "@/components/shell/mobile-bottom-bar"
 import { QuickContact } from "@/components/shell/quick-contact"
 import { SkipLink } from "@/components/shell/skip-link"
-import { Toaster } from "@/components/ui/sonner"
-
-import { CatalogProvider } from "@/components/catalog-provider"
-import { getVisibleProducts } from "@/features/catalog/queries"
 
 
 export const viewport: Viewport = {
   themeColor: "#052210", // leaf-900
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
 }
 
 export const metadata: Metadata = {
@@ -56,30 +49,24 @@ export default async function LocaleLayout({
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
-  const catalog = await getVisibleProducts();
 
   return (
     <html lang={locale} className={`${fontFira.variable} ${fontMarck.variable} ${fontHind.variable} antialiased scroll-smooth`}>
       <body className="flex min-h-screen flex-col bg-canvas font-sans text-ink selection:bg-leaf-700 selection:text-white">
         <NextIntlClientProvider messages={messages}>
           <NextTopLoader color="#0D4F25" showSpinner={false} />
-          <CatalogProvider catalog={catalog}>
-            <SkipLink />
-            <AnnouncementBar />
-            <Header />
-            
-            <main id="main-content" className="flex-1 outline-none relative z-0">
-              {children}
-            </main>
+          <SkipLink />
+          <AnnouncementBar />
+          <Header />
+          
+          <main id="main-content" className="flex-1 outline-none relative z-0">
+            {children}
+          </main>
 
-            <Footer />
-            <MobileBottomBar />
-            <QuickContact />
-            <Toaster />
-
-
-          </CatalogProvider>
+          <Footer />
+          <QuickContact />
         </NextIntlClientProvider>
+        <Analytics />
 
       </body>
     </html>
