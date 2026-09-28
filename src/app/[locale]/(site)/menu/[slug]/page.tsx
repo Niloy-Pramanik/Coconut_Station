@@ -2,12 +2,12 @@ import * as React from 'react'
 import { notFound } from 'next/navigation'
 import { Link } from "@/i18n/routing"
 import { ArrowLeft } from 'lucide-react'
-import { getProductBySlug } from '@/features/catalog/resolve'
+import { getProduct, getVisibleProducts } from '@/features/catalog/queries'
 import { ProductDetailsClient } from '@/components/menu/product-details-client'
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const product = await getProductBySlug(slug);
+  const product = await getProduct(slug);
   if (!product) return { title: 'Not Found' }
   return {
     title: `${product.nameEn} | Coconut Station`,
@@ -15,9 +15,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 }
 
+export async function generateStaticParams() {
+  const products = await getVisibleProducts();
+  return products.map(p => ({ slug: p.slug }));
+}
+
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const product = await getProductBySlug(slug)
+  const product = await getProduct(slug)
   if (!product) notFound()
 
   // Simple JSON-LD for SEO
@@ -27,12 +32,6 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     name: product.nameEn,
     description: product.descriptionEn,
     image: product.variants[0]?.imageSrc,
-    offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'BDT',
-      lowPrice: Math.min(...product.variants.map(v => v.priceBDT || 0).filter(p => p > 0)),
-      offerCount: product.variants.length,
-    }
   }
 
   return (

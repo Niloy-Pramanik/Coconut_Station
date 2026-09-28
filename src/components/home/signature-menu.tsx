@@ -5,11 +5,10 @@ import { Link } from "@/i18n/routing"
 import Image from "next/image"
 import { motion } from "motion/react"
 import { Button } from "@/components/ui/button"
-import { useCatalog } from "@/components/catalog-provider"
+import { Product } from "@/core/domain/types"
 
-export function SignatureMenu() {
-  const catalog = useCatalog()
-  const products = catalog.filter(p => p.status !== 'hidden').sort((a, b) => a.sort - b.sort).slice(0, 8)
+export function SignatureMenu({ products }: { products: Product[] }) {
+  const displayProducts = products.slice(0, 8)
   
   return (
     <section className="py-24 bg-canvas overflow-hidden">
@@ -38,7 +37,7 @@ export function SignatureMenu() {
           {/* spacer for first item */}
           <div className="shrink-0 w-0 lg:w-[max(0px,calc((100vw-80rem)/2))]" />
           
-          {products.map((product, i) => {
+          {displayProducts.map((product, i) => {
             const variant = product.variants[0]
             if (!variant) return null
             
@@ -56,31 +55,21 @@ export function SignatureMenu() {
                     <div className="absolute inset-0 bg-gradient-to-t from-leaf-100/50 to-transparent" />
                     <div className="relative h-full w-full">
                       <Image
-                        src={variant.imageSrc}
-                        alt={variant.imageAlt}
-                        fill
-                        className="object-contain mix-blend-multiply transition-transform duration-320 group-hover:scale-105 origin-bottom"
+                         src={variant.imageSrc}
+                         alt={variant.imageAlt}
+                         fill
+                         sizes="(max-width: 640px) 100vw, 260px"
+                         className="object-contain mix-blend-multiply transition-transform duration-320 group-hover:scale-105 origin-bottom"
                       />
                     </div>
                   </div>
                   
+                  <div className="text-xs font-semibold text-leaf-700 uppercase tracking-wider mb-1">
+                    {product.category}
+                  </div>
                   <h3 className="text-xl font-semibold text-ink mb-1 group-hover:text-leaf-800 transition-colors">
                     {product.nameEn}
                   </h3>
-                  <div className="flex items-center justify-between mb-3">
-                    {variant.priceBDT && (
-                      <span className="text-leaf-900 font-bold">
-                        ৳{variant.priceBDT}
-                      </span>
-                    )}
-                  </div>
-                  {product.status === 'active' && (
-                    <div className="w-full mt-auto">
-                      <div className="h-9 w-full flex items-center justify-center bg-leaf-800 text-canvas group-hover:bg-leaf-900 transition-colors rounded-md font-semibold text-xs">
-                        Order Now
-                      </div>
-                    </div>
-                  )}
                 </Link>
               </motion.div>
             )

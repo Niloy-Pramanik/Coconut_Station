@@ -4,10 +4,7 @@ import { siteConfig } from "@/content/site.config"
 import { Facebook, Instagram, Youtube } from "lucide-react"
 
 export function Footer() {
-  const enabledPayments = Object.entries(siteConfig.payments.wallets)
-    .filter(([_key, value]) => value !== null)
-    .map(([key]) => key.charAt(0).toUpperCase() + key.slice(1))
-    
+  
   return (
     <footer className="bg-leaf-900 text-white pt-16 pb-8">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
@@ -106,7 +103,7 @@ export function Footer() {
           <div className="flex items-center gap-2">
             <span>Payment Methods:</span>
             <span className="font-medium text-white">
-              Cash on Delivery{enabledPayments.length > 0 ? `, ${enabledPayments.join(", ")}` : ""}
+              Cash on Delivery
             </span>
           </div>
         </div>

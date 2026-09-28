@@ -4,6 +4,7 @@ import { PickYourSize } from "@/components/home/pick-your-size"
 import { SignatureMenu } from "@/components/home/signature-menu"
 import dynamic from 'next/dynamic'
 import { siteConfig } from "@/content/site.config"
+import { getVisibleProducts } from "@/features/catalog/queries"
 import { buildMetadata } from "@/lib/seo"
 
 const WhyCoconut = dynamic(() => import("@/components/home/why-coconut").then(mod => mod.WhyCoconut), { ssr: true })
@@ -20,12 +21,14 @@ export const metadata = buildMetadata({
   path: "/",
 })
 
-export default function HomePage() {
+export default async function HomePage() {
+  const products = await getVisibleProducts();
+
   return (
     <>
-      {siteConfig.hero.mode === 'video' ? <HeroVideo /> : <Hero />}
+      <Hero />
       <PickYourSize />
-      <SignatureMenu />
+      <SignatureMenu products={products} />
       <WhyCoconut />
       <MomentPickerTeaser />
       <OutletSpotlight />

@@ -7,7 +7,7 @@ describe("getOpeningState", () => {
     name: "Coconut Station",
     tagline: "",
     description: "",
-    contact: { phone: "", whatsapp: "", email: null },
+    contact: { phone: "", whatsapp: "", email: null, publicEmail: null },
     openingDate: "2026-08-16T10:00:00+06:00",
     outlets: [
       {
@@ -19,11 +19,9 @@ describe("getOpeningState", () => {
         directionsUrl: null,
       },
     ],
-    delivery: { zones: [], freeDeliveryThreshold: null },
-    payments: { wallets: { bkash: null, nagad: null, rocket: null } },
+    url: "https://example.com",
+    deliveryPartners: [],
     social: { facebook: null, instagram: null, tiktok: null, youtube: null },
-    imagery: { showIllustrativeLabel: true },
-    hero: { mode: 'scene' },
   }
 
   it("should return pre_opening state before opening date", () => {

@@ -21,7 +21,7 @@ import { SkipLink } from "@/components/shell/skip-link"
 import { Toaster } from "@/components/ui/sonner"
 import { CartSheet } from "@/components/cart/cart-sheet"
 import { CatalogProvider } from "@/components/catalog-provider"
-import { getHydratedCatalog } from "@/features/catalog/resolve"
+import { getVisibleProducts } from "@/features/catalog/queries"
 import { ConsentBanner } from "@/components/shell/consent-banner"
 
 export const viewport: Viewport = {
@@ -58,7 +58,7 @@ export default async function LocaleLayout({
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
-  const catalog = await getHydratedCatalog();
+  const catalog = await getVisibleProducts();
 
   return (
     <html lang={locale} className={`${fontFira.variable} ${fontMarck.variable} ${fontHind.variable} antialiased scroll-smooth`}>

@@ -1,7 +1,8 @@
+
 "use client"
 
 import * as React from "react"
-import { Link } from "@/i18n/routing"
+import Link from "next/link"
 import Image from "next/image"
 import { motion } from "motion/react"
 import { ArrowRight } from "lucide-react"

@@ -6,7 +6,7 @@ export interface Variant {
   nameBn: string
   descriptionEn?: string
   descriptionBn?: string
-  priceBDT: number | null
+  priceBDT?: number | null
   isSoldOut?: boolean
   imageAlt: string
   imageSrc: string

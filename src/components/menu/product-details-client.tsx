@@ -2,22 +2,13 @@
 
 import * as React from 'react'
 import Image from 'next/image'
-import { Plus, Minus, MessageCircle, Facebook } from 'lucide-react'
 import { Product, Variant } from '@/core/domain/types'
-import { isOrderable } from '@/features/catalog/utils'
 import { AnimatePresence, motion } from 'motion/react'
+import { Link } from '@/i18n/routing'
+import { siteConfig } from '@/content/site.config'
 
 export function ProductDetailsClient({ product }: { product: Product }) {
   const [activeVariant, setActiveVariant] = React.useState<Variant>(product.variants[0])
-  const [quantity, setQuantity] = React.useState(1)
-
-  const getWhatsappUrl = () => {
-    const priceText = activeVariant.priceBDT ? `৳${activeVariant.priceBDT * quantity}` : 'Price not set';
-    const msg = `Hi Coconut Station! I would like to order: ${quantity}x ${product.nameEn} (${activeVariant.nameEn}) - ${priceText}. Please let me know how to proceed with delivery.`
-    return `https://wa.me/8801796894640?text=${encodeURIComponent(msg)}`
-  }
-  
-  const facebookUrl = 'https://m.me/coconutstationbdbd'
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -80,7 +71,6 @@ export function ProductDetailsClient({ product }: { product: Product }) {
                       type="button"
                       onClick={() => {
                         setActiveVariant(variant)
-                        setQuantity(1)
                       }}
                       className={`px-4 py-2 rounded-lg font-medium border-2 transition-all focus-ring ${
                         activeVariant.sku === variant.sku
@@ -95,69 +85,30 @@ export function ProductDetailsClient({ product }: { product: Product }) {
               </div>
             )}
 
-            {/* Price & Add to Cart */}
-            <div className="flex flex-col sm:flex-row sm:items-end gap-6 pt-4">
-              <div className="flex-1">
-                {activeVariant.priceBDT && (
-                  <div className="text-3xl font-bold text-leaf-900 mb-1">
-                    ৳{(activeVariant.priceBDT * quantity).toLocaleString('en-IN')}
-                  </div>
-                )}
-                <div className="text-sm text-ink-soft">
-                  {product.status === 'coming_soon' ? 'Coming Soon' : 'Price is VAT inclusive.'}
-                </div>
+            {/* Where to get it */}
+            <div className="pt-4">
+              <h3 className="text-lg font-bold text-ink mb-4">Where to get it</h3>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/outlets"
+                  className="px-6 py-3 bg-leaf-800 text-canvas font-bold rounded-lg hover:bg-leaf-900 transition-colors shadow-sm focus-ring"
+                >
+                  Find an Outlet
+                </Link>
+                {siteConfig.deliveryPartners?.map(partner => (
+                  partner.url && (
+                    <a
+                      key={partner.id}
+                      href={partner.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-6 py-3 bg-leaf-100 text-leaf-900 font-bold rounded-lg hover:bg-leaf-200 transition-colors shadow-sm focus-ring"
+                    >
+                      Order on {partner.name}
+                    </a>
+                  )
+                ))}
               </div>
-
-              {product.status === 'active' && (
-                <div className="flex items-center gap-4">
-                  {isOrderable(activeVariant) ? (
-                    <>
-                      <div className="flex items-center border-2 border-line rounded-lg bg-canvas h-12">
-                        <button 
-                          type="button"
-                          className="w-10 h-full flex items-center justify-center text-ink-soft hover:text-leaf-800 hover:bg-leaf-50 transition-colors rounded-l-md"
-                          onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                        >
-                          <Minus className="w-4 h-4" />
-                        </button>
-                        <span className="w-10 text-center font-bold text-ink">
-                          {quantity}
-                        </span>
-                        <button 
-                          type="button"
-                          className="w-10 h-full flex items-center justify-center text-ink-soft hover:text-leaf-800 hover:bg-leaf-50 transition-colors rounded-r-md"
-                          onClick={() => setQuantity(Math.min(99, quantity + 1))}
-                        >
-                          <Plus className="w-4 h-4" />
-                        </button>
-                      </div>
-                      
-                      <div className="flex gap-3">
-                        <button 
-                          type="button"
-                          onClick={() => window.open(getWhatsappUrl(), '_blank')}
-                          className="h-12 px-6 flex items-center justify-center gap-2 bg-leaf-800 text-canvas font-bold rounded-lg hover:bg-leaf-900 transition-colors shadow-sm focus-ring"
-                        >
-                          <MessageCircle className="w-5 h-5" />
-                          WhatsApp
-                        </button>
-                        <button 
-                          type="button"
-                          onClick={() => window.open(facebookUrl, '_blank')}
-                          className="h-12 px-6 flex items-center justify-center gap-2 bg-leaf-100 text-leaf-900 font-bold rounded-lg hover:bg-leaf-200 transition-colors shadow-sm focus-ring"
-                        >
-                          <Facebook className="w-5 h-5" />
-                          Facebook
-                        </button>
-                      </div>
-                    </>
-                  ) : (
-                    <div className="h-12 px-6 w-full sm:w-auto flex items-center justify-center bg-line text-ink-muted font-bold rounded-lg cursor-not-allowed">
-                      Currently Sold Out
-                    </div>
-                  )}
-                </div>
-              )}
             </div>
           </div>
         </div>

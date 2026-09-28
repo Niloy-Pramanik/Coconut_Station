@@ -77,7 +77,7 @@ export function computePricing(items: CartItem[], catalog: Product[], zoneId: st
       continue
     }
 
-    result.subtotal += resolvedVariant.priceBDT * item.quantity
+    result.subtotal += (resolvedVariant.priceBDT || 0) * item.quantity
   }
 
   // 2. Validate Delivery Zone

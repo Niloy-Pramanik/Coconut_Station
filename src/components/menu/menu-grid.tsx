@@ -4,7 +4,6 @@ import * as React from 'react'
 import Image from 'next/image'
 import { Link } from "@/i18n/routing"
 import { Product, Variant } from '@/core/domain/types'
-import { isOrderable } from '@/features/catalog/utils'
 
 export function MenuGrid({ products }: { products: Product[] }) {
   // Extract unique categories
@@ -50,12 +49,18 @@ export function MenuGrid({ products }: { products: Product[] }) {
           <ProductCard key={product.slug} product={product} />
         ))}
       </div>
+
+      <div className="mt-12 p-6 bg-leaf-50 rounded-xl text-center shadow-soft">
+        <p className="text-leaf-900 font-semibold mb-2">Looking for cakes?</p>
+        <Link href="/pastry-station" className="text-leaf-800 font-bold hover:underline">
+          Visit Pastry Station →
+        </Link>
+      </div>
     </div>
   )
 }
 
 function ProductCard({ product }: { product: Product }) {
-  // Default to first variant
   const [activeVariant, setActiveVariant] = React.useState<Variant>(product.variants[0])
 
   return (
@@ -108,30 +113,12 @@ function ProductCard({ product }: { product: Product }) {
           )}
           
           <div className="flex flex-col gap-3 mt-4">
-            {activeVariant.priceBDT && (
-              <div className="font-bold text-lg text-leaf-900 mb-1">
-                ৳{activeVariant.priceBDT.toLocaleString('en-IN')}
-              </div>
-            )}
-            {product.status === 'active' && (
-              <div className="flex gap-2 relative z-20">
-                {isOrderable(activeVariant) ? (
-                  <Link
-                    href={`/menu/${product.slug}`}
-                    className="w-full bg-leaf-800 text-canvas hover:bg-leaf-900 py-2.5 px-3 rounded-lg font-bold flex items-center justify-center transition-colors focus-ring text-sm"
-                  >
-                    Order now
-                  </Link>
-                ) : (
-                  <button
-                    disabled
-                    className="w-full bg-line text-ink-muted py-2.5 px-3 rounded-lg font-bold flex items-center justify-center text-sm cursor-not-allowed"
-                  >
-                    Sold Out
-                  </button>
-                )}
-              </div>
-            )}
+            <Link
+              href={`/menu/${product.slug}`}
+              className="text-leaf-800 font-bold hover:underline transition-colors focus-ring text-sm inline-block"
+            >
+              View details →
+            </Link>
           </div>
         </div>
       </div>

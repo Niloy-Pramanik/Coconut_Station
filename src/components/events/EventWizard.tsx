@@ -53,7 +53,7 @@ export function EventWizard() {
       if (variant.priceBDT === null) {
         allPriced = false
       } else {
-        total += variant.priceBDT * qty
+        total += (variant.priceBDT || 0) * qty
       }
     }
     return { estimateBDT: total, allPriced: Object.keys(items).length > 0 && allPriced }

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Metadata } from 'next'
-import { getVisibleCatalog } from '@/features/catalog/resolve'
+import { getVisibleProducts } from '@/features/catalog/queries'
 import { MenuGrid } from '@/components/menu/menu-grid'
 
 export const metadata: Metadata = {
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 export default async function MenuPage() {
-  const products = await getVisibleCatalog()
+  const products = await getVisibleProducts()
 
   return (
     <div className="bg-canvas min-h-screen pt-24 pb-32">
@@ -19,7 +19,7 @@ export default async function MenuPage() {
             Our Menu
           </h1>
           <p className="text-xl text-ink-soft leading-relaxed max-w-2xl">
-            From farm-fresh coconuts to rich milkshakes, order natural goodness directly to your door.
+            Made fresh at our Tangail outlet. Also on Foodpanda and foodi.
           </p>
         </header>
         
