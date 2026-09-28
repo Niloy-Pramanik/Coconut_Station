@@ -59,7 +59,7 @@ export function PastryBand() {
                   </a>
                 </Button>
                 
-                <Button asChild variant="outline" size="lg" className="w-full sm:w-auto font-semibold">
+                <Button asChild variant="secondary" size="lg" className="w-full sm:w-auto font-semibold">
                   <a href="https://www.facebook.com/pastrystatoinbd" target="_blank" rel="noopener noreferrer">
                     Explore Menu <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
